@@ -12,11 +12,11 @@ export const experiencesList = [
         employer: "Huacomm Telecommunications",
         position: "Software Developer",
         time: "March-Aug 2021",
-        descriptions: `
-        ● Succeeded in digitalizing company’s internal workflow with development of HR Management system for data centralization process, employee data, payroll, and attendance management.
-        ● Managing the full software development life cycle and also strategized on publishing the company's internal digital workflow system as an external product for additional company’s revenue sources .
-        ● Appointed as the project team leader in the second month of internship in achieving the development earlier than target in the pandemic condition.
-        ● Working on more than 5 system projects in less than 6 months of internship, both for external and internal system clients.
-        `,
-    },
+        descriptions: [
+            "Succeeded in digitalizing company’s internal workflow with development of HR Management system for data centralization process, employee data, payroll, and attendance management.",
+            "Managing the full software development life cycle and also strategized on publishing the company's internal digital workflow system as an external product for additional company’s revenue sources .",
+            "Appointed as the project team leader in the second month of internship in achieving the development earlier than target in the pandemic condition.",
+            "Working on more than 5 system projects in less than 6 months of internship, both for external and internal system clients."
+        ]
+    }
 ]

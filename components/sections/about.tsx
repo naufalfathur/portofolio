@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Separator } from './ui/separator'
+import { Separator } from '../ui/separator'
 
 function About() {
   return (
