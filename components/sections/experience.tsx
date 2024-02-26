@@ -2,7 +2,7 @@ import React from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Separator } from '../ui/separator'
 
-import {experiencesList} from '../../public/experienceData'
+import {experiencesList} from '../../public/data/experience'
 
 function Experience() {
 
