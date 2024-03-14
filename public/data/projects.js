@@ -1,7 +1,7 @@
 export const projectList = [
     {
         name: "Wahed - Muslim Prayer Time",
-        img: "",
+        img: "/projectImg/waheed.png",
         url: "project.naufal.com",
         descTitle: "Local muslim prayer time calculator developed for research purpose of Progressive Web Apps (PWA)",
         desc: [

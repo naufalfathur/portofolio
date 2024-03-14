@@ -7,7 +7,7 @@ import {experiencesList} from '../../public/data/experience'
 function Experience() {
 
     return (
-        <div className='container flex flex-col w-1/2 min-h-max text-center my-60 p-0'>
+        <div className='container flex flex-col w-1/2 min-h-max  text-center py-60 ' id='experience'>
             <p className="font-bold text-slate-500">Experiences</p>
             <h2 className="animate-pulse scroll-m-20 text-3xl font-bold tracking-tight lg:text-3xl bg-gradient-to-r
                 from-indigo-500 via-purple-500 to-pink-500 inline-block bg-clip-text text-transparent ">

@@ -1,17 +1,19 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
+import { Button } from "@/components/ui/button"
+
 
 const navigation = [
-    { name: 'About', href: '#', current: true },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Experiences', href: '#', current: false },
-    { name: 'Contact', href: '#', current: false },
+    { name: 'About', href: '#about', current: true },
+    { name: 'Experiences', href: '#experience', current: false },
+    { name: 'Projects', href: '#project', current: false },
+    { name: 'Contact', href: '#contact', current: false },
 ]
 
 function Navbar() {
     return (
-        <div className='absolute'>
+        <div className='sticky top-0'>
             <div className='mx-auto px-2 sm:px-6 lg:px-8 w-screen '>
                 <div className="flex flex-row justify-between  h-16 items-center">
                     <div ><svg className="animate-pulse text-white hover:text-[#4485FD] hover:cursor-pointer fill-current" width="25" height="25" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,6 +38,8 @@ function Navbar() {
                                 {item.name}
                             </a>
                         ))}
+                        <Button variant="outline">Resume</Button>
+
                     </div>
                 </div>
             </div>

@@ -1,17 +1,21 @@
 import React from 'react'
-import {projectList} from '../../public/data/projects'
-
+import { projectList } from '../../public/data/projects'
+import Image from 'next/image'
 function Project() {
     return (
-        <div className='container flex flex-col w-1/2 min-h-screen justify-center text-center p-0'>
+        <div className='container flex flex-col w-1/2 min-h-screen justify-center text-center py-20' id='project'>
             <p className="font-bold text-slate-500 text-end">Projects</p>
             <h2 className="animate-pulse scroll-m-20 text-3xl font-bold tracking-tight lg:text-3xl bg-gradient-to-r
                 from-indigo-500 via-purple-500 to-pink-500 inline-block bg-clip-text text-transparent text-end mb-4">
                 Some Things I’ve Built</h2>
             {projectList.map((project, i) => (
-                <div className={`container  py-8 px-9 rounded-xl my-4 flex bg-gray-900/40 ${i%2 == 0 ? 'flex-row' : 'flex-row-reverse'}`} key={i}>
+                <div className={`container  py-8 px-9 rounded-xl my-4 flex bg-gray-900/40 ${i % 2 == 0 ? 'flex-row' : 'flex-row-reverse'}`} key={i}>
                     <div className='w-2/5 '>
-
+                        <Image
+                            alt=''
+                            src={project.img}
+                            width={400} height={0}
+                        />
                     </div>
 
                     <div className='flex flex-col w-3/5  text-start'>

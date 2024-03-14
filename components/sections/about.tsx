@@ -4,7 +4,7 @@ import { Separator } from '../ui/separator'
 
 function About() {
   return (
-    <div className='container flex flex-col w-1/2 space-y-3 min-h-screen justify-center'>
+    <div className='container flex flex-col w-1/2 space-y-3 min-h-screen justify-center' id='about'>
       <div className='flex flex-row space-x-6'>
       <p className="font-bold text-slate-500 min-w-fit">About me</p> <Separator className="my-4" />
       </div>
