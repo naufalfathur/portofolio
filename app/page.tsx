@@ -1,19 +1,13 @@
-import Image from "next/image";
-import Navbar from "@/components/navbar";
-import Hero from "@/components/sections/hero";
-import About from "@/components/sections/about";
-import Experience from "@/components/sections/experience";
-import Project from "@/components/sections/project";
-import Contact from "@/components/sections/contact";
+
+
+import dynamic from "next/dynamic";
+
+const DynamicComponent = dynamic(() => import("../components/main"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
-      <Hero />
-      <About/>
-      <Experience/>
-      <Project/>
-      <Contact/>
-    </main>
+    <DynamicComponent/>
   );
 }

@@ -2,14 +2,28 @@ import React from 'react'
 import Image from 'next/image'
 function Hero() {
     return (
-        <div className='flex flex-col min-h-screen items-center justify-center w-full'>
-            <div className="container flex-col flex animate-pulse items-center">
+        <div className='flex flex-col min-h-screen items-center justify-center w-8/12'>
+            <div className="container flex-col flex  items-center">
                 <div className='space-y-4'>
-                    <h1 className="scroll-m-20 text-5xl font-bold tracking-tight lg:text-5xl text-center">Hi, Im Naufal Fathur,</h1>
-                    <h1 className="scroll-m-20 text-8xl font-bold tracking-tight lg:text-8xl bg-gradient-to-r
-                from-indigo-500 via-purple-500 to-pink-500 inline-block bg-clip-text text-transparent text-center">
-                        I turn innovative ideas into <br></br> impactful digital solutions.</h1>
-                    <p className='font-semibold my-8 text-center'>I build engaging experiences across web, mobile, and multi-platform apps.</p>
+                    <h1 className="scroll-m-20 text-8xl font-thin tracking-tight lg:text-8xl bg-gradient-to-r
+                from-indigo-500 via-purple-500 to-pink-500 inline-block bg-clip-text text-transparent text-start animate-pulse">
+                        Unlock Digital Growth<br></br> Digitalize Your Workflow</h1>
+
+                    <div className='container rounded-full border flex flex-row min-h-fit p-5 space-x-8 justify-center items-center'>
+                        <div className='inline-block w-24 rounded-full ring-2 ring-white'>
+                            <Image
+                                alt=''
+                                src={"/profile.jpeg"}
+                                width={300} height={0}
+                                className='rounded-full'
+                            />
+                        </div>
+                        <div className='w-full text-start'>
+                            <h2 className='font-medium '>Hi, Im Naufal Fathur</h2>
+                            <h2 className='font-bold'>I'm a software developer with over 2 years of experience building engaging and responsive UIs for web, mobile, and multi-platform applications.</h2>
+                        </div>
+                    </div>
+
 
                     <div className="flex-row flex space-x-4 justify-center">
                         <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,15 +51,10 @@ function Hero() {
                     </div>
                     <Image
                         alt=''
-                        src={"/CoffeeDoddle.png"}
-                        width={300} height={0}
-                        className='absolute right-8 animate-bounce'
-                    />
-                    <Image
-                        alt=''
-                        src={"/CoffeeDoddle.png"}
-                        width={200} height={0}
-                        className='absolute top-20 left-8 animate-bounce'
+                        src={"/mainhero.png"}
+                        width={800} height={0}
+                        quality={100}
+                        className='absolute right-40 top-8 floating'
                     />
 
 

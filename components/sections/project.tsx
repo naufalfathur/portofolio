@@ -19,8 +19,7 @@ function Project() {
                     </div>
 
                     <div className='flex flex-col w-3/5  text-start'>
-                        <h2 className="scroll-m-20 text-3xl font-bold tracking-tight lg:text-3xl bg-gradient-to-r
-                       from-indigo-500 via-purple-500 to-pink-500 inline-block bg-clip-text text-transparent w-full my-1">
+                        <h2 className="scroll-m-20 text-3xl font-bold tracking-tight lg:text-3xl text-blue-500 w-full my-1">
                             {project.name}
                         </h2>
                         <p className="font-bold text-slate-500 ">{project.url}</p>

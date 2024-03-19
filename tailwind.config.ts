@@ -74,7 +74,8 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  safelist: ['animate-[fade-in_1s_ease-in-out]', 'animate-[fade-in-down_1s_ease-in-out]'],
+  plugins: [require("tailwindcss-animate"), require("tw-elements/plugin.cjs")],
 } satisfies Config
 
 export default config
