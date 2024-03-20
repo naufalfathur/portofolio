@@ -10,7 +10,7 @@ function Hero() {
             <img src="/profile.jpeg" />
           </div>
         </div>
-        <div className='flex flex-col space-y-0 text-start items-start text-base'>
+        <div className='flex flex-col space-y-0 text-start items-start text-base text-[#5B5B5B]'>
           <p>Hi, Im Naufal Fathur !</p>
           <p className='font-bold'>Im a <strong>Software Developer</strong></p>
         </div>
@@ -38,6 +38,12 @@ function Hero() {
           quality={100}
           className='rotate-6 my-2'
         />
+      </div>
+
+      <div className="flex absolute -bottom-48 left-1/3">
+        <div className="h-80 "></div>
+        <div className="divider divider-horizontal divider-start font-light text-neutral-500 animate-pulse">SCROLL</div>
+        <div className="h-80"></div>
       </div>
 
 
