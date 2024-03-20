@@ -16,5 +16,25 @@ const config: Config = {
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          "body": {
+            "background-color": "#F2F2F2",
+          },
+        }
+      },
+      // {
+      //   dark: {
+      //     ...require("daisyui/src/theming/themes")["dark"],
+      //     "body": {
+      //       "background-color": "#1d232a",
+      //     },
+      //   }
+      // }
+    ], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+  },
 };
 export default config;
