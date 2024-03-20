@@ -11,7 +11,7 @@ const navigation = [
 
 function Navbar() {
   return (
-    <div className="navbar w-7/12 absolute top-8 bg-base rounded-full border  shadow-lg">
+    <div className="navbar w-7/12 sticky top-8 glass z-50 rounded-full border  shadow-lg ">
       <div className="flex-1">
         <a className="btn btn-ghost text-xl">
         <Image

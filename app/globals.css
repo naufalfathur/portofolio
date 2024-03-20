@@ -17,3 +17,31 @@
     50%  { transform: translate(0, 15px); }
     100%   { transform: translate(0, -0px); }    
   }
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -20%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 20%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .navbar {
+    animation: fadeIn 1s ease-in both;
+  }
+

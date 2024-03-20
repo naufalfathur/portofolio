@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 function Hero() {
   return (
-    <div className='hero flex flex-col py-8 w-9/12 space-y-8 min-h-[85vh] justify-center'>
+    <div className='hero welcome flex flex-col py-8 w-9/12 space-y-8 min-h-[85vh] justify-center'>
 
       <div className="badge badge-outline h-fit py-2 px-4 flex flex-row space-x-4 shadow-lg">
         <div className="avatar">
