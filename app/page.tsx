@@ -2,7 +2,7 @@ import About from "@/components/sections/about";
 import Contact from "@/components/sections/contact";
 import Experiences from "@/components/sections/experiences";
 import Hero from "@/components/sections/hero";
-import Projects from "@/components/sections/projects";
+import SoftwareProjects from "@/components/sections/software-projects";
 import Navbar from "@/components/ui/navbar";
 import Image from "next/image";
 
@@ -13,7 +13,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <Experiences/>
-      <Projects/>
+      <SoftwareProjects/>
       <Contact/>
     </main>
   );
