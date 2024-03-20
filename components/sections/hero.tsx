@@ -30,7 +30,7 @@ function Hero() {
           <br></br> ensuring the digital solutions I create are both beautiful and performant.
         </p>
       </div>
-      <div className='absolute right-40 bottom-20 floating  tooltip tooltip-open tooltip-top tooltip-warning floating' data-tip="Click to hire me!">
+      <div className='absolute right-40 bottom-20 floating  tooltip tooltip-open tooltip-top tooltip-warning floating' data-tip="Click to work with me!">
         <Image
           alt=''
           src={"/logo.png"}

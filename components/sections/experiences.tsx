@@ -23,12 +23,12 @@ function Experiences() {
 
 
         <div className='flex flex-row-reverse'>
-          {experiencesList.map(({ employer, descriptions, time, position, logo }, i) => (
-            <div className="mockup-code bg-[#28333c] w-full mx-4 floating" key={i}>
+          {experiencesList.map(({ employer, active, time, position, logo }, i) => (
+            <div className="mockup-code bg-[#28333c] w-full mx-4" key={i}>
               <div className='container flex flex-col text-start' >
 
                 <div className=' flex flex-col space-y-1'>
-                  <h2 className='text-xl bg-warning text-warning-content font-extrabold px-4 '>{position}</h2>
+                  <h2 className='text-xl bg-warning text-warning-content font-extrabold px-4 '>{position} {active && <div className="badge badge-error">Currently</div>}</h2>
                   <h2 className='text-xl font-light px-4'>@{employer}</h2>
                   <p className='font-regular text-sm text-slate-500 px-4'>{time}</p>
                   {/* <ul className='list-disc container space-y-2 text-xs text-muted-foreground px-8 px-4'>
