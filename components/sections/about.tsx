@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Bitter } from "next/font/google";
 const bitter = Bitter({ subsets: ["latin"] });
+import { techstackList } from '../../public/data/techstacks'
 
 function About() {
   return (
@@ -28,7 +29,20 @@ function About() {
             <br></br>
             <br></br>
             Ready to discuss your next project? Contact me today!</p>
-            <h2 className={`text-2xl font-extrabold ` + bitter.className}> My Techstacks</h2>
+          <h2 className={`text-2xl font-extrabold ` + bitter.className}> My Techstacks</h2>
+          <div className='flex space-x-4'>
+            {techstackList.map((tech, i) => (
+              <div className="tooltip" data-tip={tech.name}>
+                <Image
+                  alt=''
+                  src={tech.icon}
+                  width={80} height={0}
+                  quality={100}
+                  className='w-20 h-10 saturate-0'
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

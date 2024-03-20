@@ -22,7 +22,7 @@ function Experiences() {
         </div>
 
 
-        <div className='flex flex-row'>
+        <div className='flex flex-row-reverse'>
           {experiencesList.map(({ employer, descriptions, time, position, logo }, i) => (
             <div className="mockup-code bg-[#28333c] w-full mx-4 floating" key={i}>
               <div className='container flex flex-col text-start' >

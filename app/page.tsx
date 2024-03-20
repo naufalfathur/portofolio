@@ -2,6 +2,7 @@ import About from "@/components/sections/about";
 import Agency from "@/components/sections/agency";
 import Contact from "@/components/sections/contact";
 import Experiences from "@/components/sections/experiences";
+import Extras from "@/components/sections/extras";
 import Hero from "@/components/sections/hero";
 import SoftwareProjects from "@/components/sections/software-projects";
 import WebsiteProject from "@/components/sections/website-projects";
@@ -18,6 +19,7 @@ export default function Home() {
       <SoftwareProjects/>
       <Agency/>
       <WebsiteProject/>
+      {/* <Extras/> */}
       <Contact/>
     </main>
   );
