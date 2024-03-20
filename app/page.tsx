@@ -1,8 +1,10 @@
 import About from "@/components/sections/about";
+import Agency from "@/components/sections/agency";
 import Contact from "@/components/sections/contact";
 import Experiences from "@/components/sections/experiences";
 import Hero from "@/components/sections/hero";
 import SoftwareProjects from "@/components/sections/software-projects";
+import WebsiteProject from "@/components/sections/website-projects";
 import Navbar from "@/components/ui/navbar";
 import Image from "next/image";
 
@@ -14,6 +16,8 @@ export default function Home() {
       <About/>
       <Experiences/>
       <SoftwareProjects/>
+      <Agency/>
+      <WebsiteProject/>
       <Contact/>
     </main>
   );
