@@ -38,7 +38,7 @@ function About() {
                   src={tech.icon}
                   width={80} height={0}
                   quality={100}
-                  className='w-20 h-10 saturate-0'
+                  className='w-20 h-10 saturate-0 icon'
                 />
               </div>
             ))}
