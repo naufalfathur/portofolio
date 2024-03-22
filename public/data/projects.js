@@ -1,8 +1,9 @@
 export const projectList = [
     {
         name: "Wahed - Muslim Prayer Time",
+        type: "software",
         wip: true,
-        img: "/projectImg/waheed.png",
+        img: "/img/projects/wahed.png",
         url: "project.naufal.com",
         descTitle: "Local muslim prayer time calculator developed for research purpose of Progressive Web Apps (PWA)",
         desc: [
@@ -13,9 +14,10 @@ export const projectList = [
             "React",
             "Next JS",
         ]
-    },{
+    }, {
         name: "Huacomm HR Management System",
-        img: "",
+        type: "software",
+        img: "/img/projects/huacomm.png",
         url: "project.naufal.com",
         descTitle: "HR Management System that manage HR, Payroll, Attendance, Knowledge based, Employee information and much more",
         desc: [
@@ -32,7 +34,8 @@ export const projectList = [
     },
     {
         name: "What's In My Fridge ?",
-        img: "",
+        type: "software",
+        img: "/img/projects/wimf.png",
         url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
         descTitle: "Fridge and Groceries Organizer, Fridge Sharer and Shopping note",
         desc: [
@@ -45,9 +48,10 @@ export const projectList = [
             "NodeJS",
             "Firestore",
         ]
-    },{
+    }, {
         name: "MealLy – Meal Planning and Ordering Mobile App",
-        img: "",
+        type: "software",
+        img: "/img/projects/meally.png",
         url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
         descTitle: "Final Year Project Mobile Application with personal dietary calculator, suitable for busy people that still want to have healthy meals",
         desc: [
@@ -62,7 +66,8 @@ export const projectList = [
     },
     {
         name: "Multiartha Online Reporting System",
-        img: "",
+        type: "software",
+        img: "/img/projects/multiartha.png",
         url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
         descTitle: "Desktop Based Online Reporting System for Task Auditing and Monitoring",
         desc: [
@@ -72,6 +77,136 @@ export const projectList = [
         technologies: [
             "Visual Basic",
         ]
+    }, {
+        name: "AllConnect Huacomm",
+        type: "website",
+        wip: false,
+        img: "/img/projects/allconnect.png",
+        url: "allconnect.com.my",
+        descTitle: "",
+        desc: [
+            ""
+        ],
+        technologies: [
+            "wordpress",
+        ]
+    }, {
+        name: "Generatif",
+        type: "website",
+        wip: false,
+        img: "/img/projects/generatif.png",
+        url: "generatif.io",
+        descTitle: "",
+        desc: [
+            ""
+        ],
+        technologies: [
+            "wordpress",
+        ]
+    }, {
+        name: "Low Cost ATM",
+        type: "website",
+        wip: false,
+        img: "/img/projects/lowcostatm.png",
+        url: "lowcostatm.co.id",
+        descTitle: "",
+        desc: [
+            ""
+        ],
+        technologies: [
+            "wordpress",
+        ]
+    }, {
+        name: "Viral Outsourcing",
+        type: "website",
+        wip: false,
+        img: "/img/projects/viraloutsourcing.png",
+        url: "viraloutsourcing.asia",
+        descTitle: "",
+        desc: [
+            ""
+        ],
+        technologies: [
+            "wordpress",
+        ]
+    }, {
+        name: "Wahed Travel",
+        type: "website",
+        wip: false,
+        img: "/img/projects/wahedtravel.png",
+        url: "wahedtravel.co.id",
+        descTitle: "",
+        desc: [
+            ""
+        ],
+        technologies: [
+            "wordpress",
+        ]
+    }, {
+        name: "Wahid Pro Inovasi",
+        type: "website",
+        wip: false,
+        img: "/img/projects/wahidproinovasi.png",
+        url: "wahidproinovasi.id",
+        descTitle: "",
+        desc: [
+            ""
+        ],
+        technologies: [
+            "wordpress",
+        ]
+    }, {
+        name: "Zafira Group",
+        type: "website",
+        wip: false,
+        img: "/img/projects/zafiragroup.png",
+        url: "zafiragroup.co.id",
+        descTitle: "",
+        desc: [
+            ""
+        ],
+        technologies: [
+            "wordpress",
+        ]
+    }, {
+        name: "Medical Assistance App",
+        type: "ui/ux",
+        wip: false,
+        img: "/img/projects/hospital.png",
+        url: "",
+        descTitle: "",
+        desc: [
+            ""
+        ],
+        technologies: [
+            "figma",
+        ]
+    }, {
+        name: "Food Ordering App",
+        type: "ui/ux",
+        wip: false,
+        img: "/img/projects/food.png",
+        url: "",
+        descTitle: "",
+        desc: [
+            ""
+        ],
+        technologies: [
+            "figma",
+        ]
+    }, {
+        name: "On Demand Service App",
+        type: "ui/ux",
+        wip: false,
+        img: "/img/projects/ods.png",
+        url: "",
+        descTitle: "",
+        desc: [
+            ""
+        ],
+        technologies: [
+            "figma",
+        ]
     },
-    
+
 ]

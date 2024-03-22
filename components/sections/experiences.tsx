@@ -15,7 +15,7 @@ function Experiences() {
         <div className="h-60"></div>
       </div>
 
-      <div className='bg-[#1b232a] py-20 px-[20vw] w-full flex flex-col text-neutral-content text-center space-y-8'>
+      <div className='bg-[#1b232a] py-20 px-[15vw] w-full flex flex-col text-neutral-content text-center space-y-8'>
         <div>
           <h2 className={`text-3xl font-extrabold ` + bitter.className}> My Experiences</h2>
           <p className='text-sm font-light'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

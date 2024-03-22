@@ -3,7 +3,7 @@ import React from 'react'
 
 function Agency() {
     return (
-        <div className='py-20 px-[20vw] w-full mb-10'>
+        <div className='py-20 px-[15vw] w-full mb-10'>
             <div className="card lg:card-side h-full py-10 video-container">
                 <video className="video rounded-2xl" autoPlay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
                     <source src="https://generatif.co/storage/2023/05/pexels-dan-cristian-paduret-4508069-1920x1080-50fps.mp4" type="video/mp4" />

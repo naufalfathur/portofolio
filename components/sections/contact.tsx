@@ -4,7 +4,7 @@ const bitter = Bitter({ subsets: ["latin"] });
 
 function Contact() {
   return (
-    <div className='w-full py-20 px-[20vw] text-center space-y-3'>
+    <div className='w-full py-20 px-[15vw] text-center space-y-3'>
 
       <div className="mockup-browser border border-base-300 glass shadow-lg floating">
         <div className="mockup-browser-toolbar">
