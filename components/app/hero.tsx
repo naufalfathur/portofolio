@@ -45,8 +45,6 @@ function Hero() {
         <div className="divider divider-horizontal divider-start font-light text-neutral-500 animate-pulse">SCROLL</div>
         <div className="h-80"></div>
       </div>
-
-
     </div>
   )
 }

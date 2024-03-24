@@ -4,6 +4,7 @@ import { Key, MoveRight } from 'lucide-react';
 const bitter = Bitter({ subsets: ["latin"] });
 import { projectList } from '../../public/data/projects'
 import Image from 'next/image'
+import Link from 'next/link';
 
 function SoftwareProjects() {
   const filteredObjects = projectList.filter((project) => project.type === 'software').slice(0, 4);
@@ -22,13 +23,15 @@ function SoftwareProjects() {
 
       <div className=' grid grid-cols-2 gap-4'>
         {filteredObjects.map((project, i) => (
-          <div className="card w-80 h-[400px] bg-base-100 shadow-xl image-full " key={i}>
-            <figure><img src={project.img} alt="Shoes" /></figure>
-            <div className="card-body flex flex-col justify-end transition ease-in-out hover:-translate-y-1 duration-300 hover:bg-gradient-to-b hover:from-transparent  hover:to-zinc-800/50 rounded-xl cursor-pointer ">
-              <h2 className={`text-2xl font-extrabold card-title `} >{project.name}</h2>
-              <p className='!grow-0'>{project.descTitle}</p>
+          <Link href={`/project/${project.name}`}>
+            <div className="card w-80 h-[400px] bg-base-100 shadow-xl image-full " key={i}>
+              <figure><img src={project.img} alt="Shoes" /></figure>
+              <div className="card-body flex flex-col justify-end transition ease-in-out hover:-translate-y-1 duration-300 hover:bg-gradient-to-b hover:from-transparent  hover:to-zinc-800/50 rounded-xl cursor-pointer ">
+                <h2 className={`text-2xl font-extrabold card-title `} >{project.name}</h2>
+                <p className='!grow-0'>{project.descTitle}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
