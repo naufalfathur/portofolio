@@ -1,6 +1,7 @@
 import { MoveRight } from 'lucide-react'
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 function Agency() {
     return (
         <div className='py-20 px-[15vw] w-full mb-10'>
@@ -19,12 +20,14 @@ function Agency() {
                             quality={90}
                         />
                     </div>
-                    <h2 className="card-title text-4xl font-extrabold">I also run a small agency that builds sites on a subscription.</h2>
-                    <p>We build blazing-fast sites for small businesses, based on a monthly subscription of £120 per month and £0 upfront.</p>
-                    <button className="btn  w-fit">
+                    <h2 className="card-title text-4xl font-extrabold">I also run a small agency that help your business into digital</h2>
+                    <p>Our service removes the hassle from building your online presence. We create blazing-fast, custom websites and app for small businesses at an affordable monthly rate.</p>
+                   <a href={'https://generatif.co/'}>
+                   <button className="btn  w-fit">
                         Visit Generatif
                         <MoveRight />
                     </button>
+                   </a>
                 </div>
                 <figure className='w-full -mt-20 rotate-12'>
                     <Image

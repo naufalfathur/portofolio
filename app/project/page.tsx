@@ -15,8 +15,8 @@ function ProjectsPage() {
             <Navbar />
             <div className='px-[15vw] space-y-4 py-24'>
 
-                <h2 className={`text-3xl font-extrabold text-center w-full` + bitter.className}> Showcase All Project</h2>
-                <p className='text-sm font-light text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h2 className={`text-3xl font-extrabold text-center w-full` + bitter.className}> All Project</h2>
+                <p className='text-sm font-light text-center'>Showcase of my projects for clients and self development to create user-friendly and visually digital solutions.</p>
                 <div className=' grid gap-4 grid-cols-4 pt-10'>
                     {projectList.map((project, i) => (
                         <Link href={`/project/${project.name}`} key={i}>

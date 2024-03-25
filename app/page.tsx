@@ -32,7 +32,7 @@ export default function Home() {
       <FadeInSection>
         <ProjectSection
           title={"My Software Project"}
-          desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+          desc={"I bring innovative ideas to life by building custom software applications that streamline processes and empower businesses."}
           filter={"software"}
         />
       </FadeInSection>
@@ -44,7 +44,7 @@ export default function Home() {
       <FadeInSection>
         <ProjectSection
           title={"My Website Project"}
-          desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+          desc={"Some of my projects for clients to create user-friendly and visually captivating websites."}
           filter={"website"}
           titleOnLeft={false}
         />
@@ -53,7 +53,7 @@ export default function Home() {
       <FadeInSection>
         <ProjectSection
           title={"My UI/UX Project"}
-          desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+          desc={"I craft intuitive user interfaces (UI) and user experiences (UX)"}
           filter={"ui/ux"}
         />
       </FadeInSection>
