@@ -37,7 +37,13 @@ function Experiences() {
                   ))}
                 </ul> */}
                   <div className="w-24 p-4">
-                    <img src={logo} />
+                    <Image
+                      src={logo}
+                      alt={'logo'}
+                      width={96}
+                      height={0}
+                      quality={90}
+                    />
                   </div>
                 </div>
 

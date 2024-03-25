@@ -7,7 +7,13 @@ function Hero() {
       <div className="badge badge-outline h-fit py-2 px-4 flex flex-row space-x-4 shadow-lg">
         <div className="avatar">
           <div className="w-12 rounded-full">
-            <img src="/profile.jpeg" />
+            <Image
+              src={'/profile.jpeg'}
+              alt={'naufal fathur'}
+              width={48}
+              height={0}
+              quality={90}
+            />
           </div>
         </div>
         <div className='flex flex-col space-y-0 text-start items-start text-base text-[#5B5B5B]'>
@@ -32,7 +38,7 @@ function Hero() {
       </div>
       <div className='absolute right-40 bottom-20 floating  tooltip tooltip-open tooltip-top tooltip-warning floating' data-tip="Click to work with me!">
         <Image
-          alt=''
+          alt='logo'
           src={"/logo.png"}
           width={250} height={0}
           quality={100}

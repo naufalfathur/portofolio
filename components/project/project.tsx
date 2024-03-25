@@ -20,7 +20,17 @@ function Project({ project }: ProjectProps) {
       <FadeInSection>
 
         <div className="card w-full h-[600px] bg-base-100 shadow-xl image-full ">
-          <figure><img src={project.img} alt="Shoes" /></figure>
+          <figure>
+            <Image
+              src={project.img}
+              alt={project.name}
+              width={0}
+              height={0}
+              sizes='100vw'
+              quality={90}
+              style={{ width: 'auto', height: '100%' }}
+            />
+          </figure>
           <div className="card-body flex flex-col justify-end rounded-xl cursor-pointer ">
             <h2 className={'text-8xl font-extrabold card-title uppercase'} >{project.name}</h2>
             {project.url.length > 0 &&

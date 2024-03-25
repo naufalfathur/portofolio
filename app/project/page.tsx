@@ -5,6 +5,7 @@ import { projectList } from '@/public/data/projects';
 import React from 'react'
 import { Bitter } from "next/font/google";
 const bitter = Bitter({ subsets: ["latin"] });
+import Image from 'next/image'
 
 function ProjectsPage() {
 
@@ -19,9 +20,17 @@ function ProjectsPage() {
                     {projectList.map((project, i) => (
                         <a href={`/project/${project.name}`} key={i}>
                             <div className="card w-80 h-[400px] bg-base-100 shadow-xl image-full " >
-                                <figure><img src={project.img} alt={project.name} /></figure>
+                                <figure>
+                                    <Image
+                                        src={project.img}
+                                        alt={project.name}
+                                        width={400}
+                                        height={0}
+                                        quality={90}
+                                    />
+                                </figure>
                                 <div className="card-body flex flex-col justify-end transition ease-in-out hover:-translate-y-1 duration-300 hover:bg-gradient-to-b hover:from-transparent  hover:to-zinc-800/50 rounded-xl cursor-pointer ">
-                                <div className={`badge capitalize ${project.type === 'software' ? 'badge-warning' : project.type === 'website' ? 'badge-success' :  'badge-neutral'}`}>{project.type}</div>
+                                    <div className={`badge capitalize ${project.type === 'software' ? 'badge-warning' : project.type === 'website' ? 'badge-success' : 'badge-neutral'}`}>{project.type}</div>
                                     <h2 className={`text-2xl font-extrabold card-title `} >{project.name}</h2>
                                     <p className='!grow-0'>{project.descTitle}</p>
                                 </div>

@@ -36,7 +36,15 @@ function ProjectSection({ title, desc, filter, titleOnLeft = true }: ProjectSect
                 {filteredObjects.map((project, i) => (
                     <a href={`/project/${project.name}`} key={i}>
                         <div className="card w-80 h-[400px] bg-base-100 shadow-xl image-full " >
-                            <figure><img src={project.img} alt={project.name} /></figure>
+                            <figure>
+                                <Image
+                                    src={project.img}
+                                    alt={project.name}
+                                    width={400}
+                                    height={0}
+                                    quality={90}
+                                />
+                            </figure>
                             <div className="card-body flex flex-col justify-end transition ease-in-out hover:-translate-y-1 duration-300 hover:bg-gradient-to-b hover:from-transparent  hover:to-zinc-800/50 rounded-xl cursor-pointer ">
                                 <h2 className={`text-2xl font-extrabold card-title `} >{project.name}</h2>
                                 <p className='!grow-0'>{project.descTitle}</p>
