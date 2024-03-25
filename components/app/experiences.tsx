@@ -9,22 +9,22 @@ function Experiences() {
   return (
     <div id={'experience'} className='w-full relative'>
 
-      <div className="flex w-fit absolute right-80 -top-52">
+      <div className="w-fit absolute right-80 -top-52 hidden md:flex">
         <div className="h-60 "></div>
         <div className="divider divider-horizontal divider-start font-light text-neutral-500 animate-pulse">MY EXPERIENCES</div>
         <div className="h-60"></div>
       </div>
 
-      <div className='bg-[#1b232a] py-20 px-[15vw] w-full flex flex-col text-neutral-content text-center space-y-8'>
+      <div className='bg-[#1b232a] py-20 md:px-[15vw] w-full flex flex-col text-neutral-content text-center space-y-8'>
         <div>
           <h2 className={`text-3xl font-extrabold ` + bitter.className}> My Experiences</h2>
           <p className='text-sm font-light'>A Passionate developer and designer with a knack for crafting exceptional digital experiences</p>
         </div>
 
 
-        <div className='flex flex-row-reverse'>
+        <div className='flex md:flex-row-reverse flex-col space-y-3 md:space-y-0'>
           {experiencesList.map(({ employer, active, time, position, logo }, i) => (
-            <div className="mockup-code bg-[#28333c] w-full mx-4" key={i}>
+            <div className="mockup-code bg-[#28333c] md:w-full mx-4" key={i}>
               <div className='container flex flex-col text-start' >
 
                 <div className=' flex flex-col space-y-1'>

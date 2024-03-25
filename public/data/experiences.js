@@ -11,7 +11,7 @@ export const experiencesList = [
             "Collaborated within a cross-market team and enhanced team productivity by proactively developing custom code and tools, creating feedback sessions that refine internal CRM & ERP, resulting in a high percentage of reduction in quality errors."
         ]
     }, {
-        employer: "Huacomm Telecommunications",
+        employer: "Huacomm Telecommunications Malaysia",
         active: false,
         position: "Software Developer",
         time: "March-Aug 2021",

@@ -7,7 +7,52 @@ import { techstackList } from '../../public/data/techstacks'
 function About() {
   return (
     <div id={'about'} className='about w-full h-[80vh] px-[15vw] items-center justify-center flex flex-col'>
-      <div className='flex flex-row justify-center space-x-10 py-4 mt-8'>
+
+      <div className='md:hidden flex-col space-y-4'>
+        <h2 className={`text-3xl font-extrabold ` + bitter.className}> Let&apos;s work together.</h2>
+        <p className='text-justify text-xs'>
+          With over 2 years of professional experience as a front-end developer, I leverage creativity and technical expertise to deliver
+          sleek interfaces that drive results.
+          <br></br>
+          <br></br>
+          Looking for: Projects that combine innovation and problem-solving, allowing me to collaborate
+          with passionate teams and build impactful experiences.
+          <br></br>
+          <br></br>
+          Ready to discuss your next project? Contact me today!</p>
+        <div className='flex'>
+          <div className='block place-self-center w-1/2'>
+            <Image
+              alt=''
+              src={"/profile2.png"}
+              width={100} height={0}
+              quality={100}
+              className=''
+            />
+          </div>
+          <div className='w-1/2 space-y-2'>
+            <h2 className={`text-xl font-extrabold ` + bitter.className}> My Techstacks</h2>
+            <div className='grid grid-flow-row grid-cols-5 gap-3'>
+              {techstackList.map((tech, i) => (
+                <div className="tooltip" data-tip={tech.name} key={i}>
+                  <Image
+                    alt=''
+                    src={tech.icon}
+                    width={80} height={0}
+                    quality={100}
+                    className='w-20 h-10 saturate-0 icon'
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div className='hidden md:flex flex-row justify-center space-x-10 py-4 mt-8'>
         <div className='block place-self-center'>
           <Image
             alt=''

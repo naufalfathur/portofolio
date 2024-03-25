@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 function Contact() {
   return (
-    <div className='w-full py-20 px-[15vw] text-center space-y-3'>
+    <div className='md:w-full w-[100vw] py-20 md:px-[15vw] px-4 text-center space-y-3'>
 
-      <div className="mockup-browser border border-base-300 glass shadow-lg floating">
+      <div className="mockup-browser border border-base-300 glass shadow-lg md:floating">
         <div className="mockup-browser-toolbar">
           <div className="input border border-base-300">Chat with naufalfathur</div>
         </div>

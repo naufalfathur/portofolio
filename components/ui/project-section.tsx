@@ -17,13 +17,13 @@ function ProjectSection({ title, desc, filter, titleOnLeft = true }: ProjectSect
     const filteredObjects = projectList.filter((project) => project.type === filter).reverse().slice(0, 4);
 
     return (
-        <div className='w-full h-full py-20 px-[10vw] flex flex-row justify-between'>
+        <div className='w-full h-full py-20 md:px-[10vw] px-4 flex md:flex-row flex-col justify-between space-y-4 md:space-y-0'>
 
             {titleOnLeft &&
-                <div className='w-1/4 flex flex-col  space-y-2'>
+                <div className='md:w-1/4 flex flex-col space-y-2 md:text-left text-center '>
                     <h2 className={`text-3xl font-extrabold ` + bitter.className}> {title}</h2>
                     <p className='text-sm font-light'>{desc}</p>
-                    <Link href="/project">
+                    <Link href="/project" className='hidden md:flex'>
                         <button className="btn btn-outline">
                             View All Projects
                             <MoveRight />
@@ -32,27 +32,35 @@ function ProjectSection({ title, desc, filter, titleOnLeft = true }: ProjectSect
                 </div>
             }
 
-            <div className=' grid grid-cols-2 gap-4'>
-                {filteredObjects.map((project, i) => (
-                    <Link href={`/project/${project.name}`} key={i}>
-                        <div className="card w-80 h-[400px] bg-base-100 shadow-xl image-full " >
-                            <figure>
-                                <Image
-                                    src={project.img}
-                                    alt={project.name}
-                                    width={400}
-                                    height={0}
-                                    quality={90}
-                                />
-                            </figure>
-                            <div className="card-body flex flex-col justify-end transition ease-in-out hover:-translate-y-1 duration-300 hover:bg-gradient-to-b hover:from-transparent  hover:to-zinc-800/50 rounded-xl cursor-pointer ">
-                                <h2 className={`text-2xl font-extrabold card-title `} >{project.name}</h2>
-                                <p className='!grow-0'>{project.descTitle}</p>
+            <>
+                <div className='grid grid-cols-2 gap-4'>
+                    {filteredObjects.map((project, i) => (
+                        <Link href={`/project/${project.name}`} key={i}>
+                            <div className="card md:w-80 md:h-[400px] h-[300px] bg-base-100 shadow-xl image-full " >
+                                <figure>
+                                    <Image
+                                        src={project.img}
+                                        alt={project.name}
+                                        width={400}
+                                        height={0}
+                                        quality={90}
+                                    />
+                                </figure>
+                                <div className="card-body flex flex-col justify-end transition ease-in-out md:bg-transparent bg-black/40 md:hover:-translate-y-1 duration-300 md:hover:bg-gradient-to-b md:hover:from-transparent  md:hover:to-zinc-800/50 rounded-xl cursor-pointer ">
+                                    <h2 className={`md:text-2xl text-base font-extrabold card-title `} >{project.name}</h2>
+                                    <p className='!grow-0 md:text-base text-xs '>{project.descTitle}</p>
+                                </div>
                             </div>
-                        </div>
-                    </Link>
-                ))}
-            </div>
+                        </Link>
+                    ))}
+                </div>
+                <Link href="/project" className='md:hidden'>
+                    <button className="btn btn-outline md:w-fit w-full">
+                        View All Projects
+                        <MoveRight />
+                    </button>
+                </Link>
+            </>
 
             {titleOnLeft === false &&
                 <div className='w-1/4 flex flex-col space-y-2 text-right'>
