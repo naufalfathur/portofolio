@@ -1,18 +1,31 @@
 export const projectList = [
     {
-        name: "Wahed - Muslim Prayer Time",
+        name: "Multiartha Online Reporting System",
         type: "software",
-        wip: true,
-        img: "/img/projects/wahed.png",
-        url: "project.naufal.com",
-        descTitle: "Local muslim prayer time calculator developed for research purpose of Progressive Web Apps (PWA)",
+        img: "/img/projects/multiartha.png",
+        url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
+        descTitle: "Desktop Based Online Reporting System for Task Auditing and Monitoring",
         desc: [
-            "Developed for the purpose of research, highlighting the potential of Progressive Web Apps (PWA) as a future technology, as the alternative of native mobile application",
-            "Utilized Next.js, React, and TypeScript to build a robust application that implemented real-time connections to APIs, enabling the retrieval of precise local prayer time calculations within the application."
+            "Helped in integrating routine maintenance reports from multiple ATM booths managed by the company across Indonesia.",
+            "Providing maintenance portofolio to increase company’s credibility and clients’ reliability"
         ],
         technologies: [
-            "React",
-            "Next JS",
+            "Visual Basic",
+        ]
+    }, {
+        name: "MealLy – Meal Planning and Ordering Mobile App",
+        type: "software",
+        img: "/img/projects/meally.png",
+        url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
+        descTitle: "Final Year Project Mobile Application with personal dietary calculator, suitable for busy people that still want to have healthy meals",
+        desc: [
+            "MealLy is a food planning and ordering application with an automatic calorie counting system for food by only entering its ingredients, made with the aim of ending the stigma of healthy eating not being for busy people."
+        ],
+        technologies: [
+            "Flutter",
+            "Dart",
+            "NodeJS",
+            "Firestore",
         ]
     }, {
         name: "Huacomm HR Management System",
@@ -31,8 +44,7 @@ export const projectList = [
             "Javascript",
             "Python",
         ]
-    },
-    {
+    }, {
         name: "What's In My Fridge",
         type: "software",
         img: "/img/projects/wimf.png",
@@ -49,41 +61,28 @@ export const projectList = [
             "Firestore",
         ]
     }, {
-        name: "MealLy – Meal Planning and Ordering Mobile App",
+        name: "Wahed - Muslim Prayer Time",
         type: "software",
-        img: "/img/projects/meally.png",
-        url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
-        descTitle: "Final Year Project Mobile Application with personal dietary calculator, suitable for busy people that still want to have healthy meals",
+        wip: true,
+        img: "/img/projects/wahed.png",
+        url: "project.naufal.com",
+        descTitle: "Local muslim prayer time calculator developed for research purpose of Progressive Web Apps (PWA)",
         desc: [
-            "MealLy is a food planning and ordering application with an automatic calorie counting system for food by only entering its ingredients, made with the aim of ending the stigma of healthy eating not being for busy people."
+            "Developed for the purpose of research, highlighting the potential of Progressive Web Apps (PWA) as a future technology, as the alternative of native mobile application",
+            "Utilized Next.js, React, and TypeScript to build a robust application that implemented real-time connections to APIs, enabling the retrieval of precise local prayer time calculations within the application."
         ],
         technologies: [
-            "Flutter",
-            "Dart",
-            "NodeJS",
-            "Firestore",
+            "React",
+            "Next JS",
         ]
     },
     {
-        name: "Multiartha Online Reporting System",
-        type: "software",
-        img: "/img/projects/multiartha.png",
-        url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
-        descTitle: "Desktop Based Online Reporting System for Task Auditing and Monitoring",
-        desc: [
-            "Helped in integrating routine maintenance reports from multiple ATM booths managed by the company across Indonesia.",
-            "Providing maintenance portofolio to increase company’s credibility and clients’ reliability"
-        ],
-        technologies: [
-            "Visual Basic",
-        ]
-    }, {
         name: "AllConnect Huacomm",
         type: "website",
         wip: false,
         img: "/img/projects/allconnect.png",
         url: "allconnect.com.my",
-        descTitle: "",
+        descTitle: "Website designed for Huacomm Telecommunications",
         desc: [
             ""
         ],
@@ -96,7 +95,7 @@ export const projectList = [
         wip: false,
         img: "/img/projects/generatif.png",
         url: "generatif.io",
-        descTitle: "",
+        descTitle: "Website for my small digital agency project",
         desc: [
             ""
         ],
@@ -109,7 +108,7 @@ export const projectList = [
         wip: false,
         img: "/img/projects/lowcostatm.png",
         url: "lowcostatm.co.id",
-        descTitle: "",
+        descTitle: "Website for PT Multiartha Adhirajasa",
         desc: [
             ""
         ],
@@ -122,7 +121,7 @@ export const projectList = [
         wip: false,
         img: "/img/projects/viraloutsourcing.png",
         url: "viraloutsourcing.asia",
-        descTitle: "",
+        descTitle: "Website for Viral Outsourcing company",
         desc: [
             ""
         ],
@@ -135,7 +134,7 @@ export const projectList = [
         wip: false,
         img: "/img/projects/wahedtravel.png",
         url: "wahedtravel.co.id",
-        descTitle: "",
+        descTitle: "Website for Umrah and Hajj, designed for Wahed Travel",
         desc: [
             ""
         ],
@@ -148,7 +147,7 @@ export const projectList = [
         wip: false,
         img: "/img/projects/wahidproinovasi.png",
         url: "wahidproinovasi.id",
-        descTitle: "",
+        descTitle: "Political campaign website for Abdul Wahid",
         desc: [
             ""
         ],
@@ -161,7 +160,7 @@ export const projectList = [
         wip: false,
         img: "/img/projects/zafiragroup.png",
         url: "zafiragroup.co.id",
-        descTitle: "",
+        descTitle: "Real estate profile website, designed for Zafira Group",
         desc: [
             ""
         ],
@@ -174,7 +173,7 @@ export const projectList = [
         wip: false,
         img: "/img/projects/hospital.png",
         url: "",
-        descTitle: "",
+        descTitle: "Created in Figma, medical assistance app",
         desc: [
             ""
         ],
@@ -187,7 +186,7 @@ export const projectList = [
         wip: false,
         img: "/img/projects/food.png",
         url: "",
-        descTitle: "",
+        descTitle: "Created in Figma, Food ordering app",
         desc: [
             ""
         ],
@@ -200,7 +199,7 @@ export const projectList = [
         wip: false,
         img: "/img/projects/ods.png",
         url: "",
-        descTitle: "",
+        descTitle: "Created in Figma, On Demand Service app",
         desc: [
             ""
         ],

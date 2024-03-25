@@ -14,7 +14,7 @@ interface ProjectSectionProps {
 }
 
 function ProjectSection({ title, desc, filter, titleOnLeft = true }: ProjectSectionProps) {
-    const filteredObjects = projectList.filter((project) => project.type === filter).slice(0, 4);
+    const filteredObjects = projectList.filter((project) => project.type === filter).reverse().slice(0, 4);
 
     return (
         <div className='w-full h-full py-20 px-[10vw] flex flex-row justify-between'>
