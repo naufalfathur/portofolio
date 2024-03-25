@@ -6,10 +6,10 @@ function Agency() {
     return (
         <div className='md:py-20 md:px-[15vw] px-4 w-full mb-10'>
             <div className="card lg:card-side h-full py-10 video-container">
-                <video className="video rounded-2xl" autoPlay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
-                    <source src="https://generatif.co/storage/2023/05/pexels-dan-cristian-paduret-4508069-1920x1080-50fps.mp4" type="video/mp4" className='hidden md:flex'/>
+                <video className="video rounded-2xl hidden md:flex" autoPlay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                    <source src="https://generatif.co/storage/2023/05/pexels-dan-cristian-paduret-4508069-1920x1080-50fps.mp4" type="video/mp4" />
                 </video>
-                <div className='overlay bg-[#181C1F]/80 rounded-2xl'></div>
+                <div className='overlay md:bg-[#181C1F]/80 bg-[#171E38] rounded-2xl'></div>
                 <div className="card-body w-full caption py-10 text-neutral-content">
                     <div className='w-[150px] py-4'>
                         <Image
@@ -22,12 +22,12 @@ function Agency() {
                     </div>
                     <h2 className="card-title text-4xl font-extrabold">I also run a small agency that help your business into digital</h2>
                     <p>Our service removes the hassle from building your online presence. We create blazing-fast, custom websites and app for small businesses at an affordable monthly rate.</p>
-                   <a href={'https://generatif.co/'}>
-                   <button className="btn  w-fit">
-                        Visit Generatif
-                        <MoveRight />
-                    </button>
-                   </a>
+                    <a href={'https://generatif.co/'}>
+                        <button className="btn  w-fit">
+                            Visit Generatif
+                            <MoveRight />
+                        </button>
+                    </a>
                 </div>
                 <figure className='w-full md:-mt-20 md:rotate-12 rotate-0'>
                     <Image
