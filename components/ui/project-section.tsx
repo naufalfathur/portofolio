@@ -23,10 +23,12 @@ function ProjectSection({ title, desc, filter, titleOnLeft = true }: ProjectSect
                 <div className='w-1/4 space-y-2'>
                     <h2 className={`text-3xl font-extrabold ` + bitter.className}> {title}</h2>
                     <p className='text-sm font-light'>{desc}</p>
-                    <button className="btn btn-outline">
-                        View All Projects
-                        <MoveRight />
-                    </button>
+                    <a href="/project">
+                        <button className="btn btn-outline">
+                            View All Projects
+                            <MoveRight />
+                        </button>
+                    </a>
                 </div>
             }
 
@@ -48,10 +50,13 @@ function ProjectSection({ title, desc, filter, titleOnLeft = true }: ProjectSect
                 <div className='w-1/4 space-y-2 text-right'>
                     <h2 className={`text-3xl font-extrabold ` + bitter.className}> {title}</h2>
                     <p className='text-sm font-light'>{desc}</p>
-                    <button className="btn btn-outline">
-                        <MoveLeft/>
-                        View All Projects
-                    </button>
+                    <a href="/project">
+                        <button className="btn btn-outline">
+
+                            <MoveLeft />
+                            View All Projects
+                        </button>
+                    </a>
                 </div>
             }
 
