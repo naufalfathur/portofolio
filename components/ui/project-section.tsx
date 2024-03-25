@@ -1,6 +1,6 @@
 import React from 'react'
 import { Bitter } from "next/font/google";
-import { Key, MoveRight } from 'lucide-react';
+import { Key, MoveLeft, MoveRight } from 'lucide-react';
 const bitter = Bitter({ subsets: ["latin"] });
 import { projectList } from '../../public/data/projects'
 import Image from 'next/image'
@@ -45,12 +45,12 @@ function ProjectSection({ title, desc, filter, titleOnLeft = true }: ProjectSect
             </div>
 
             {titleOnLeft === false &&
-                <div className='w-1/4 space-y-2'>
+                <div className='w-1/4 space-y-2 text-right'>
                     <h2 className={`text-3xl font-extrabold ` + bitter.className}> {title}</h2>
                     <p className='text-sm font-light'>{desc}</p>
                     <button className="btn btn-outline">
+                        <MoveLeft/>
                         View All Projects
-                        <MoveRight />
                     </button>
                 </div>
             }

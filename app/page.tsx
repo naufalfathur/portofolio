@@ -4,12 +4,10 @@ import Contact from "@/components/app/contact";
 import Experiences from "@/components/app/experiences";
 import Extras from "@/components/app/extras";
 import Hero from "@/components/app/hero";
-import SoftwareProjects from "@/components/app/software-projects";
-import UIUXProjects from "@/components/app/ui-ux-projects";
-import WebsiteProject from "@/components/app/website-projects";
 import FadeInSection from "@/components/ui/fade-in-section";
 import Footer from "@/components/ui/footer";
 import Navbar from "@/components/ui/navbar";
+import ProjectSection from "@/components/ui/project-section";
 
 import Image from "next/image";
 
@@ -32,7 +30,11 @@ export default function Home() {
       </FadeInSection>
 
       <FadeInSection>
-        <SoftwareProjects />
+        <ProjectSection
+          title={"My Software Project"}
+          desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+          filter={"software"}
+        />
       </FadeInSection>
 
       <FadeInSection>
@@ -40,11 +42,20 @@ export default function Home() {
       </FadeInSection>
 
       <FadeInSection>
-        <WebsiteProject />
+        <ProjectSection
+          title={"My Website Project"}
+          desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+          filter={"website"}
+          titleOnLeft={false}
+        />
       </FadeInSection>
 
       <FadeInSection>
-        <UIUXProjects />
+        <ProjectSection
+          title={"My UI/UX Project"}
+          desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+          filter={"ui/ux"}
+        />
       </FadeInSection>
 
       {/* <Extras/> */}
@@ -52,7 +63,7 @@ export default function Home() {
       <FadeInSection>
         <Contact />
       </FadeInSection>
-      
+
       <Footer />
     </main>
   );
