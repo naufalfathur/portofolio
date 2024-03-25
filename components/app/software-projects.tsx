@@ -23,7 +23,7 @@ function SoftwareProjects() {
 
       <div className=' grid grid-cols-2 gap-4'>
         {filteredObjects.map((project, i) => (
-          <Link href={`/project/${project.name}`}>
+          <a href={`/project/${project.name}`}>
             <div className="card w-80 h-[400px] bg-base-100 shadow-xl image-full " key={i}>
               <figure><img src={project.img} alt="Shoes" /></figure>
               <div className="card-body flex flex-col justify-end transition ease-in-out hover:-translate-y-1 duration-300 hover:bg-gradient-to-b hover:from-transparent  hover:to-zinc-800/50 rounded-xl cursor-pointer ">
@@ -31,7 +31,7 @@ function SoftwareProjects() {
                 <p className='!grow-0'>{project.descTitle}</p>
               </div>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
 

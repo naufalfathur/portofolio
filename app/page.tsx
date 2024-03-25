@@ -19,15 +19,40 @@ export default function Home() {
 
       <Navbar />
 
-      <Hero />
-      <About />
-      <Experiences />
-      <SoftwareProjects />
-      <Agency />
-      <WebsiteProject />
-      <UIUXProjects />
+      <FadeInSection>
+        <Hero />
+      </FadeInSection>
+
+      <FadeInSection>
+        <About />
+      </FadeInSection>
+
+      <FadeInSection>
+        <Experiences />
+      </FadeInSection>
+
+      <FadeInSection>
+        <SoftwareProjects />
+      </FadeInSection>
+
+      <FadeInSection>
+        <Agency />
+      </FadeInSection>
+
+      <FadeInSection>
+        <WebsiteProject />
+      </FadeInSection>
+
+      <FadeInSection>
+        <UIUXProjects />
+      </FadeInSection>
+
       {/* <Extras/> */}
-      <Contact />
+
+      <FadeInSection>
+        <Contact />
+      </FadeInSection>
+      
       <Footer />
     </main>
   );
