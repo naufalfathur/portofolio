@@ -32,7 +32,7 @@ function About() {
           <h2 className={`text-2xl font-extrabold ` + bitter.className}> My Techstacks</h2>
           <div className='flex space-x-4'>
             {techstackList.map((tech, i) => (
-              <div className="tooltip" data-tip={tech.name}>
+              <div className="tooltip" data-tip={tech.name} key={i}>
                 <Image
                   alt=''
                   src={tech.icon}

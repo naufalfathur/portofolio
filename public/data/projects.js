@@ -33,7 +33,7 @@ export const projectList = [
         ]
     },
     {
-        name: "What's In My Fridge ?",
+        name: "What's In My Fridge",
         type: "software",
         img: "/img/projects/wimf.png",
         url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
@@ -88,7 +88,7 @@ export const projectList = [
             ""
         ],
         technologies: [
-            "wordpress",
+            "Wordpress",
         ]
     }, {
         name: "Generatif",
@@ -101,7 +101,7 @@ export const projectList = [
             ""
         ],
         technologies: [
-            "wordpress",
+            "Wordpress",
         ]
     }, {
         name: "Low Cost ATM",
@@ -114,7 +114,7 @@ export const projectList = [
             ""
         ],
         technologies: [
-            "wordpress",
+            "Wordpress",
         ]
     }, {
         name: "Viral Outsourcing",
@@ -127,7 +127,7 @@ export const projectList = [
             ""
         ],
         technologies: [
-            "wordpress",
+            "Wordpress",
         ]
     }, {
         name: "Wahed Travel",
@@ -140,7 +140,7 @@ export const projectList = [
             ""
         ],
         technologies: [
-            "wordpress",
+            "Wordpress",
         ]
     }, {
         name: "Wahid Pro Inovasi",
@@ -153,7 +153,7 @@ export const projectList = [
             ""
         ],
         technologies: [
-            "wordpress",
+            "Wordpress",
         ]
     }, {
         name: "Zafira Group",
@@ -166,7 +166,7 @@ export const projectList = [
             ""
         ],
         technologies: [
-            "wordpress",
+            "Wordpress",
         ]
     }, {
         name: "Medical Assistance App",
