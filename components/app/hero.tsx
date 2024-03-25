@@ -31,7 +31,7 @@ function Hero() {
 
       <div className='text-center'>
         <p className='font-bold'>
-          I'm a software developer with over 2 years of experience building engaging and responsive UIs for web, mobile,<br></br>
+          I&apos;m a software developer with over 2 years of experience building engaging and responsive UIs for web, mobile,<br></br>
           and multi-platform applications. My background in development allows me to bridge the gap between design and functionality,
           <br></br> ensuring the digital solutions I create are both beautiful and performant.
         </p>

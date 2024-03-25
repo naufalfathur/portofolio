@@ -18,7 +18,7 @@ function About() {
           />
         </div>
         <div className='w-[55%] space-y-4'>
-          <h2 className={`text-3xl font-extrabold ` + bitter.className}> Let's work together.</h2>
+          <h2 className={`text-3xl font-extrabold ` + bitter.className}> Let&apos;s work together.</h2>
           <p className='text-justify'>
             With over 2 years of professional experience as a front-end developer, I leverage creativity and technical expertise to deliver
             sleek interfaces that drive results.
