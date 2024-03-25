@@ -1,6 +1,7 @@
 import React from 'react'
 import { Bitter } from "next/font/google";
 const bitter = Bitter({ subsets: ["latin"] });
+import Link from 'next/link';
 
 function Contact() {
   return (
@@ -13,11 +14,11 @@ function Contact() {
         <div className="flex flex-col justify-center items-center px-4 py-16 border-t border-base-300 space-y-4">
           <h2 className={`text-3xl font-extrabold ` + bitter.className}>Would you like to work with me?</h2>
           <p className=' font-light'>I&apos;d love to learn more. Hit the button below to get in touch!</p>
-          <a href="/contact">
+          <Link href="/contact">
             <button className="btn btn-outline w-fit">
               Contact Me
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

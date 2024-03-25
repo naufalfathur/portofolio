@@ -20,21 +20,21 @@ function ProjectSection({ title, desc, filter, titleOnLeft = true }: ProjectSect
         <div className='w-full h-full py-20 px-[10vw] flex flex-row justify-between'>
 
             {titleOnLeft &&
-                <div className='w-1/4 space-y-2'>
+                <div className='w-1/4 flex flex-col  space-y-2'>
                     <h2 className={`text-3xl font-extrabold ` + bitter.className}> {title}</h2>
                     <p className='text-sm font-light'>{desc}</p>
-                    <a href="/project">
+                    <Link href="/project">
                         <button className="btn btn-outline">
                             View All Projects
                             <MoveRight />
                         </button>
-                    </a>
+                    </Link>
                 </div>
             }
 
             <div className=' grid grid-cols-2 gap-4'>
                 {filteredObjects.map((project, i) => (
-                    <a href={`/project/${project.name}`} key={i}>
+                    <Link href={`/project/${project.name}`} key={i}>
                         <div className="card w-80 h-[400px] bg-base-100 shadow-xl image-full " >
                             <figure>
                                 <Image
@@ -50,21 +50,21 @@ function ProjectSection({ title, desc, filter, titleOnLeft = true }: ProjectSect
                                 <p className='!grow-0'>{project.descTitle}</p>
                             </div>
                         </div>
-                    </a>
+                    </Link>
                 ))}
             </div>
 
             {titleOnLeft === false &&
-                <div className='w-1/4 space-y-2 text-right'>
+                <div className='w-1/4 flex flex-col space-y-2 text-right'>
                     <h2 className={`text-3xl font-extrabold ` + bitter.className}> {title}</h2>
                     <p className='text-sm font-light'>{desc}</p>
-                    <a href="/project">
+                    <Link href="/project">
                         <button className="btn btn-outline">
 
                             <MoveLeft />
                             View All Projects
                         </button>
-                    </a>
+                    </Link>
                 </div>
             }
 

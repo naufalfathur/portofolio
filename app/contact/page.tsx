@@ -15,7 +15,7 @@ function ProjectsPage() {
                     <h1 className="text-7xl font-extrabold text-left text-[#1F2937]">
                         Hi 👋, Interested to colaborate ?</h1>
                     <h1 className="text-4xl font-extrabold text-left text-[#B3B6BA]">
-                        Fill out your details and I'll be in touch.</h1>
+                        Fill out your details and I&apos;ll be in touch.</h1>
                 </div>
                 <Form title='Contact Form' />
             </div>

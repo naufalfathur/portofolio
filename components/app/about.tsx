@@ -6,7 +6,7 @@ import { techstackList } from '../../public/data/techstacks'
 
 function About() {
   return (
-    <div className='w-full h-[80vh] px-[15vw] items-center justify-center flex flex-col'>
+    <div id={'about'} className='about w-full h-[80vh] px-[15vw] items-center justify-center flex flex-col'>
       <div className='flex flex-row justify-center space-x-10 py-4 mt-8'>
         <div className='block place-self-center'>
           <Image

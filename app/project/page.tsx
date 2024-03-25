@@ -6,6 +6,7 @@ import React from 'react'
 import { Bitter } from "next/font/google";
 const bitter = Bitter({ subsets: ["latin"] });
 import Image from 'next/image'
+import Link from 'next/link';
 
 function ProjectsPage() {
 
@@ -18,7 +19,7 @@ function ProjectsPage() {
                 <p className='text-sm font-light text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div className=' grid gap-4 grid-cols-4 pt-10'>
                     {projectList.map((project, i) => (
-                        <a href={`/project/${project.name}`} key={i}>
+                        <Link href={`/project/${project.name}`} key={i}>
                             <div className="card w-80 h-[400px] bg-base-100 shadow-xl image-full " >
                                 <figure>
                                     <Image
@@ -35,7 +36,7 @@ function ProjectsPage() {
                                     <p className='!grow-0'>{project.descTitle}</p>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>

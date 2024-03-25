@@ -7,7 +7,7 @@ import { experiencesList } from '../../public/data/experiences'
 
 function Experiences() {
   return (
-    <div className='w-full relative'>
+    <div id={'experience'} className='w-full relative'>
 
       <div className="flex w-fit absolute right-80 -top-52">
         <div className="h-60 "></div>

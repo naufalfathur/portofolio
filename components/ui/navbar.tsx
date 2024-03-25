@@ -1,6 +1,7 @@
 import React from 'react'
 import ThemeChanger from '../theme-changer'
 import Image from 'next/image'
+import Link from 'next/link';
 
 const navigation = [
   { name: 'About', href: '/#about', current: true },
@@ -13,7 +14,7 @@ function Navbar() {
   return (
     <div className="navbar w-7/12 sticky top-8 glass z-50 rounded-full border  shadow-lg ">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl" href='/'>
+        <Link className="btn btn-ghost text-xl" href='/'>
           <Image
             alt=''
             src={"/logo.png"}
@@ -21,18 +22,18 @@ function Navbar() {
             quality={100}
             className=''
           />
-        </a>
+        </Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           {navigation.map((item, key) => (
             <li key={key}>
-              <a
+              <Link
                 href={item.href}
                 aria-current={item.current ? 'page' : undefined}
               >
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
           <li className='font-bold'><a href="./cv.pdf">Download CV</a></li>
