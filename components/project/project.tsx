@@ -15,11 +15,11 @@ interface ProjectProps {
 
 function Project({ project }: ProjectProps) {
   return (
-    <div className='px-[20vw] space-y-4 py-10'>
+    <div className='md:px-[20vw] space-y-4 py-10 px-4'>
 
       <FadeInSection>
 
-        <div className="card w-full h-[600px] bg-base-100 shadow-xl image-full ">
+        <div className="card w-full md:h-[65vh] h-[40vh] bg-base-100 shadow-xl image-full ">
           <figure>
             <Image
               src={project.img}
@@ -32,7 +32,7 @@ function Project({ project }: ProjectProps) {
             />
           </figure>
           <div className="card-body flex flex-col justify-end rounded-xl cursor-pointer ">
-            <h2 className={'text-8xl font-extrabold card-title uppercase'} >{project.name}</h2>
+            <h2 className={'md:text-8xl text-4xl font-extrabold card-title uppercase'} >{project.name}</h2>
             {project.url.length > 0 &&
               <Link href={project.url} className="btn w-fit">
                 Visit Site
@@ -44,7 +44,7 @@ function Project({ project }: ProjectProps) {
       </FadeInSection>
 
       <FadeInSection>
-        <div className='flex space-x-8 py-6'>
+        <div className='md:space-x-8 py-6 flex md:flex-row flex-col'>
           <article className="prose space-y-4  w-full">
 
             <h2 className={`text-xl font-extrabold ` + bitter.className}> Techstacks</h2>
@@ -82,7 +82,7 @@ function Project({ project }: ProjectProps) {
             </div>
           </article>
 
-          <div className='w-1/2 space-y-4 py-10 px-10 '>
+          <div className='md:w-1/2 space-y-4 py-10 md:px-10 '>
 
             <Form title='Interested with this project ?' />
           </div>
