@@ -32,9 +32,9 @@ function ProjectSection({ title, desc, filter, titleOnLeft = true }: ProjectSect
 
             <div className=' grid grid-cols-2 gap-4'>
                 {filteredObjects.map((project, i) => (
-                    <a href={`/project/${project.name}`}>
-                        <div className="card w-80 h-[400px] bg-base-100 shadow-xl image-full " key={i}>
-                            <figure><img src={project.img} alt="Shoes" /></figure>
+                    <a href={`/project/${project.name}`} key={i}>
+                        <div className="card w-80 h-[400px] bg-base-100 shadow-xl image-full " >
+                            <figure><img src={project.img} alt={project.name} /></figure>
                             <div className="card-body flex flex-col justify-end transition ease-in-out hover:-translate-y-1 duration-300 hover:bg-gradient-to-b hover:from-transparent  hover:to-zinc-800/50 rounded-xl cursor-pointer ">
                                 <h2 className={`text-2xl font-extrabold card-title `} >{project.name}</h2>
                                 <p className='!grow-0'>{project.descTitle}</p>
