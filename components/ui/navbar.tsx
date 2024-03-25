@@ -35,7 +35,7 @@ function Navbar() {
               </a>
             </li>
           ))}
-          <li className='font-bold'><a href="">Download CV</a></li>
+          <li className='font-bold'><a href="./cv.pdf">Download CV</a></li>
           {/* <li><ThemeChanger/></li> */}
         </ul>
 

@@ -11,7 +11,7 @@ interface FormProps {
 
 function Form({ title }: FormProps) {
     return (
-        <div className='flex flex-col space-y-2 '>
+        <div className='flex flex-col space-y-2 w-full'>
             <div className="chat chat-start">
                 <div className=" text-3xl font-extrabold  chat-bubble">{title}</div>
             </div>
