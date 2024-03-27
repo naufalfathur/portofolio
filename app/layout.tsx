@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Naufal Fathur",
   description: "Software Developer with Interactive Design Background",
   icons: {
-    icon: "/img/favicon.png",
+    icon: "/faviconn.png",
   },
 };
 
@@ -20,9 +20,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
       <script src='script.js' defer></script>
       <body className={figtree.className}>
         {children}
