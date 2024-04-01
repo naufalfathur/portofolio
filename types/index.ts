@@ -1,7 +1,7 @@
 export type TProject ={
     name: string,
     type: string,
-    wip: boolean,
+    featured: boolean,
     img: string,
     url: string,
     descTitle: string,

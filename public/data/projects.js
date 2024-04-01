@@ -2,6 +2,7 @@ export const projectList = [
     {
         name: "Multiartha Online Reporting System",
         type: "software",
+        featured: false,
         img: "/img/projects/multiartha.png",
         url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
         descTitle: "Desktop Based Online Reporting System for Task Auditing and Monitoring",
@@ -15,6 +16,7 @@ export const projectList = [
     }, {
         name: "MealLy – Meal Planning and Ordering Mobile App",
         type: "software",
+        featured: false,
         img: "/img/projects/meally.png",
         url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
         descTitle: "Final Year Project Mobile Application with personal dietary calculator, suitable for busy people that still want to have healthy meals",
@@ -30,6 +32,7 @@ export const projectList = [
     }, {
         name: "Huacomm HR Management System",
         type: "software",
+        featured: false,
         img: "/img/projects/huacomm.png",
         url: "project.naufal.com",
         descTitle: "HR Management System that manage HR, Payroll, Attendance, Knowledge based, Employee information and much more",
@@ -47,6 +50,7 @@ export const projectList = [
     }, {
         name: "What's In My Fridge",
         type: "software",
+        featured: false,
         img: "/img/projects/wimf.png",
         url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
         descTitle: "Fridge and Groceries Organizer, Fridge Sharer and Shopping note",
@@ -63,13 +67,14 @@ export const projectList = [
     }, {
         name: "Wahed - Muslim Prayer Time",
         type: "software",
-        wip: true,
+        featured: true,
         img: "/img/projects/wahed.png",
         url: "project.naufal.com",
         descTitle: "Local muslim prayer time calculator developed for research purpose of Progressive Web Apps (PWA)",
         desc: [
-            "Developed for the purpose of research, highlighting the potential of Progressive Web Apps (PWA) as a future technology, as the alternative of native mobile application",
-            "Utilized Next.js, React, and TypeScript to build a robust application that implemented real-time connections to APIs, enabling the retrieval of precise local prayer time calculations within the application."
+            `
+            <p><strong><span style="font-size:11pt;">Executive Summary</span></strong></p><p style="text-align: justify;"><span style="font-size:10pt;">Muslim Prayer time checker with No Ads and no installation necessary. Developed for the purpose of research, highlighting the potential of Progressive Web Apps (PWA) as a future technology, as the alternative of native mobile application. Utilized Next.js, React, and TypeScript to build a robust application that implemented real-time connections to APIs, enabling the retrieval of precise local prayer time calculations within the application.</span></p><p><br></p><p style="text-align: justify;"><strong><span style="font-size:10pt;">Phase 1: Ideation and Research</span></strong></p><p><br></p><ul> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><strong><span style="font-size:10pt;">Problem:</span></strong><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Existing app contain ads, track user data to external parties</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><strong><span style="font-size:10pt;">Target Audience:</span></strong><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Muslim&nbsp;</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><strong><span style="font-size:10pt;">Competitive Analysis:</span></strong><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Athan, Muslim Pro</span></p> </li></ul><p style="text-align: justify;"><span style="font-size:10pt;"><br></span><strong><span style="font-size:10pt;">Phase 2: Planning and Strategy</span></strong></p><p style="text-align: justify;"><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Core functionalities will include:</span></p><ul> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Realtime Prayer Time Checker</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Prayer time notification</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Muslim quotes</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Quran</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Tasbih</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Dua and Dzikr</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Qibla</span></p> </li></ul><p><br></p><p style="text-align: justify;"><strong><span style="font-size:10pt;">Phase 3: Design and UX/UI</span></strong><strong><span style="font-size:10pt;"><br><br></span></strong></p><p><br></p><p style="text-align: justify;"><strong><span style="font-size:10pt;">Phase 4: Development (current)</span></strong></p><ul> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Realtime Prayer Time Checker (Done)</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Prayer time notification (Ongoing)</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Muslim quotes</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Quran</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Tasbih</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Dua and Dzikr</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Qibla</span></p> </li></ul><p><br></p><p style="text-align: justify;"><strong><span style="color:#999999;font-size:10pt;">Phase 5: Testing and QA</span></strong><span style="color:#999999;font-size:10pt;">&nbsp;</span><span style="color:#999999;font-size:10pt;"><br></span><span style="color:#999999;font-size:10pt;">Bug testing, user testing, and refinement of the app.</span></p><p><br></p><p style="text-align: justify;"><strong><span style="color:#999999;font-size:10pt;">Phase 6: Deployment and Launch</span></strong><span style="color:#999999;font-size:10pt;">&nbsp;</span><span style="color:#999999;font-size:10pt;"><br></span><span style="color:#999999;font-size:10pt;">App store submission and launch of Langaroo.</span></p><p><br></p><p style="text-align: justify;"><strong><span style="color:#999999;font-size:10pt;">Phase 7: Post-Launch and Maintenance</span></strong><span style="color:#999999;font-size:10pt;"><br></span><span style="color:#999999;font-size:10pt;">Ongoing monitoring, updates, and new feature development for Langaroo.</span></p><p><span style="font-size:12pt;"><br></span></p>
+            `
         ],
         technologies: [
             "React",
@@ -79,7 +84,7 @@ export const projectList = [
     {
         name: "AllConnect Huacomm",
         type: "website",
-        wip: false,
+        featured: false,
         img: "/img/projects/allconnect.png",
         url: "allconnect.com.my",
         descTitle: "Website designed for Huacomm Telecommunications",
@@ -92,7 +97,7 @@ export const projectList = [
     }, {
         name: "Generatif",
         type: "website",
-        wip: false,
+        featured: false,
         img: "/img/projects/generatif.png",
         url: "generatif.io",
         descTitle: "Website for my small digital agency project",
@@ -105,7 +110,7 @@ export const projectList = [
     }, {
         name: "Low Cost ATM",
         type: "website",
-        wip: false,
+        featured: false,
         img: "/img/projects/lowcostatm.png",
         url: "lowcostatm.co.id",
         descTitle: "Website for PT Multiartha Adhirajasa",
@@ -118,7 +123,7 @@ export const projectList = [
     }, {
         name: "Viral Outsourcing",
         type: "website",
-        wip: false,
+        featured: false,
         img: "/img/projects/viraloutsourcing.png",
         url: "viraloutsourcing.asia",
         descTitle: "Website for Viral Outsourcing company",
@@ -131,7 +136,7 @@ export const projectList = [
     }, {
         name: "Wahed Travel",
         type: "website",
-        wip: false,
+        featured: false,
         img: "/img/projects/wahedtravel.png",
         url: "wahedtravel.co.id",
         descTitle: "Website for Umrah and Hajj, designed for Wahed Travel",
@@ -144,7 +149,7 @@ export const projectList = [
     }, {
         name: "Wahid Pro Inovasi",
         type: "website",
-        wip: false,
+        featured: false,
         img: "/img/projects/wahidproinovasi.png",
         url: "wahidproinovasi.id",
         descTitle: "Political campaign website for Abdul Wahid",
@@ -157,7 +162,7 @@ export const projectList = [
     }, {
         name: "Zafira Group",
         type: "website",
-        wip: false,
+        featured: false,
         img: "/img/projects/zafiragroup.png",
         url: "zafiragroup.co.id",
         descTitle: "Real estate profile website, designed for Zafira Group",
@@ -170,7 +175,7 @@ export const projectList = [
     }, {
         name: "Medical Assistance App",
         type: "ui/ux",
-        wip: false,
+        featured: false,
         img: "/img/projects/hospital.png",
         url: "",
         descTitle: "Created in Figma, medical assistance app",
@@ -183,7 +188,7 @@ export const projectList = [
     }, {
         name: "Food Ordering App",
         type: "ui/ux",
-        wip: false,
+        featured: false,
         img: "/img/projects/food.png",
         url: "",
         descTitle: "Created in Figma, Food ordering app",
@@ -196,7 +201,7 @@ export const projectList = [
     }, {
         name: "On Demand Service App",
         type: "ui/ux",
-        wip: false,
+        featured: false,
         img: "/img/projects/ods.png",
         url: "",
         descTitle: "Created in Figma, On Demand Service app",

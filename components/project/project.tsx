@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { MoveRight } from 'lucide-react';
 import Form from '../ui/form';
 import FadeInSection from '../ui/fade-in-section';
+import parse from 'html-react-parser';
 
 interface ProjectProps {
   project: TProject
@@ -32,6 +33,9 @@ function Project({ project }: ProjectProps) {
             />
           </figure>
           <div className="card-body flex flex-col justify-end rounded-xl cursor-pointer ">
+            {project.featured && 
+              <div className={`badge capitalize badge-primary`}>Featured</div>
+            }
             <h2 className={'md:text-8xl text-4xl font-extrabold card-title uppercase'} >{project.name}</h2>
             {project.url.length > 0 &&
               <Link href={project.url} className="btn w-fit">
@@ -76,7 +80,7 @@ function Project({ project }: ProjectProps) {
 
               {project.desc.map((des, i) => (
                 <ul key={i}>
-                  <li>{des}</li>
+                  <li>{parse(des)}</li>
                 </ul>
               ))}
             </div>
