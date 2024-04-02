@@ -21,7 +21,9 @@ export const projectList = [
         url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
         descTitle: "Final Year Project Mobile Application with personal dietary calculator, suitable for busy people that still want to have healthy meals",
         desc: [
-            "MealLy is a food planning and ordering application with an automatic calorie counting system for food by only entering its ingredients, made with the aim of ending the stigma of healthy eating not being for busy people."
+            "MealLy is a food planning and ordering application with an automatic calorie counting system for food by only entering its ingredients, made with the aim of ending the stigma of healthy eating not being for busy people.",
+            `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FwbAHpDDVYf1RbDxmT2vdnb%2FProject-MealLy%3Ftype%3Ddesign%26node-id%3D609-3%26t%3DEN6NLJZd4R2Gwp80-1%26scaling%3Dmin-zoom%26page-id%3D590%253A396%26starting-point-node-id%3D609%253A3%26mode%3Ddesign" allowfullscreen></iframe>`,
+            'Fullscreen above frame to view the slides'
         ],
         technologies: [
             "Flutter",
