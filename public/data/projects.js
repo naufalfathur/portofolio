@@ -1,7 +1,6 @@
 export const projectList = [
     {
         name: "Multiartha Online Reporting System",
-        id: "mors",
         type: "software",
         featured: false,
         img: "/img/projects/multiartha.png",
@@ -16,7 +15,6 @@ export const projectList = [
         ]
     }, {
         name: "MealLy – Meal Planning and Ordering Mobile App",
-        id: "meally",
         type: "software",
         featured: false,
         img: "/img/projects/meally.png",
@@ -35,7 +33,6 @@ export const projectList = [
         ]
     }, {
         name: "Huacomm HR Management System",
-        id: "huacommhr",
         type: "software",
         featured: false,
         img: "/img/projects/huacomm.png",
@@ -54,7 +51,6 @@ export const projectList = [
         ]
     }, {
         name: "What's In My Fridge",
-        id: "wimf",
         type: "software",
         featured: false,
         img: "/img/projects/wimf.png",
@@ -72,11 +68,10 @@ export const projectList = [
         ]
     }, {
         name: "Wahed - Muslim Prayer Time",
-        id: "wahed",
         type: "software",
         featured: true,
         img: "/img/projects/wahed.png",
-        url: "project.naufal.com",
+        url: "https://wahed-muslimhub.vercel.app/",
         descTitle: "Local muslim prayer time calculator developed for research purpose of Progressive Web Apps (PWA)",
         desc: [
             `
@@ -90,7 +85,6 @@ export const projectList = [
     },
     {
         name: "AllConnect Huacomm",
-        id: "allconnectwebsite",
         type: "website",
         featured: false,
         img: "/img/projects/allconnect.png",
@@ -104,7 +98,6 @@ export const projectList = [
         ]
     }, {
         name: "Generatif",
-        id: "generatifwebsite",
         type: "website",
         featured: false,
         img: "/img/projects/generatif.png",
@@ -118,7 +111,6 @@ export const projectList = [
         ]
     }, {
         name: "Low Cost ATM",
-        id: "lowcostatmwebsite",
         type: "website",
         featured: false,
         img: "/img/projects/lowcostatm.png",
@@ -132,7 +124,6 @@ export const projectList = [
         ]
     }, {
         name: "Viral Outsourcing",
-        id: "viraloutsourcingwebsite",
         type: "website",
         featured: false,
         img: "/img/projects/viraloutsourcing.png",
@@ -146,7 +137,6 @@ export const projectList = [
         ]
     }, {
         name: "Wahed Travel",
-        id: "wahedtravelwebsite",
         type: "website",
         featured: false,
         img: "/img/projects/wahedtravel.png",
@@ -160,7 +150,6 @@ export const projectList = [
         ]
     }, {
         name: "Wahid Pro Inovasi",
-        id: "wpiwebsite",
         type: "website",
         featured: false,
         img: "/img/projects/wahidproinovasi.png",
@@ -174,7 +163,6 @@ export const projectList = [
         ]
     }, {
         name: "Zafira Group",
-        id: "zafirawebsite",
         type: "website",
         featured: false,
         img: "/img/projects/zafiragroup.png",
@@ -188,7 +176,6 @@ export const projectList = [
         ]
     }, {
         name: "Medical Assistance App",
-        id: "medui",
         type: "ui/ux",
         featured: false,
         img: "/img/projects/hospital.png",
@@ -202,7 +189,6 @@ export const projectList = [
         ]
     }, {
         name: "Food Ordering App",
-        id: "foodui",
         type: "ui/ux",
         featured: false,
         img: "/img/projects/food.png",
@@ -216,7 +202,6 @@ export const projectList = [
         ]
     }, {
         name: "On Demand Service App",
-        id: "odsui",
         type: "ui/ux",
         featured: false,
         img: "/img/projects/ods.png",
