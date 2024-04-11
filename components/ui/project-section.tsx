@@ -35,7 +35,7 @@ function ProjectSection({ title, desc, filter, titleOnLeft = true }: ProjectSect
             <>
                 <div className='grid grid-cols-2 gap-4'>
                     {filteredObjects.map((project, i) => (
-                        <Link href={`/project/${project.name}`} key={i}>
+                        <Link href={`/project/${project.id}`} key={i}>
                             <div className="card md:w-80 md:h-[400px] h-[300px] bg-base-100 shadow-xl image-full " >
                                 <figure>
                                     <Image

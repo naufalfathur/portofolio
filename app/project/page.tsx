@@ -18,7 +18,7 @@ function ProjectsPage() {
                 <p className='text-sm font-light text-center'>Showcase of my projects for clients and self development to create user-friendly and visually digital solutions.</p>
                 <div className='grid gap-4 md:grid-cols-3 grid-cols-2 pt-10'>
                     {projectList.map((project, i) => (
-                        <Link href={`/project/${project.name}`} key={i}>
+                        <Link href={`/project/${project.id}`} key={i}>
                             <div className="card md:w-auto h-[300px] bg-black shadow-xl image-full" >
                                 <figure>
                                     <Image

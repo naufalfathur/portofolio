@@ -6,8 +6,8 @@ import { projectList } from '@/public/data/projects';
 import { TProject } from '@/types';
 import React from 'react'
 
-function ProjectPage( { params }: { params: { name: string } }) {
-  const filteredObjects = projectList.filter((project) => project.name === decodeURI(params.name))[0] as TProject
+function ProjectPage( { params }: { params: { id: string } }) {
+  const filteredObjects = projectList.filter((project) => project.id === params.id)[0] as TProject
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between  ">
