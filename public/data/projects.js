@@ -5,7 +5,7 @@ export const projectList = [
         type: "software",
         featured: false,
         img: "/img/projects/multiartha.png",
-        url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
+        url: "",
         descTitle: "Desktop Based Online Reporting System for Task Auditing and Monitoring",
         desc: [
             "Helped in integrating routine maintenance reports from multiple ATM booths managed by the company across Indonesia.",
@@ -20,7 +20,7 @@ export const projectList = [
         type: "software",
         featured: false,
         img: "/img/projects/meally.png",
-        url: "https://play.google.com/store/apps/details?id=com.naufalfathur.wimf",
+        url: "",
         descTitle: "Final Year Project Mobile Application with personal dietary calculator, suitable for busy people that still want to have healthy meals",
         desc: [
             "MealLy is a food planning and ordering application with an automatic calorie counting system for food by only entering its ingredients, made with the aim of ending the stigma of healthy eating not being for busy people.",
@@ -39,7 +39,7 @@ export const projectList = [
         type: "software",
         featured: false,
         img: "/img/projects/huacomm.png",
-        url: "project.naufal.com",
+        url: "",
         descTitle: "HR Management System that manage HR, Payroll, Attendance, Knowledge based, Employee information and much more",
         desc: [
             "Developed specifically for workflow digitalization of Huacomm Telecommunication Sdn. Bhd, based on Frappe framework, using Python as the backend and Javascript, PHP, HTML as the frontend",
@@ -76,7 +76,7 @@ export const projectList = [
         type: "software",
         featured: true,
         img: "/img/projects/wahed.png",
-        url: "project.naufal.com",
+        url: "https://wahed-muslimhub.vercel.app/",
         descTitle: "Local muslim prayer time calculator developed for research purpose of Progressive Web Apps (PWA)",
         desc: [
             `
