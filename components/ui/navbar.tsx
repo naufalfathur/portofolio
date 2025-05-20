@@ -55,22 +55,27 @@ function Navbar() {
           {/* <li className='font-bold'><a href="./cv.pdf">Download CV</a></li> */}
         </ul>
         <ul className="menu menu-horizontal px-1 hidden md:flex">
-          {navigation.map((item, key) => (
-            <li key={key}>
-              <Link
-                href={item.href}
-                aria-current={item.current ? 'page' : undefined}
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-          <li className='font-bold'>  <a href='https://github.com/naufalfathur'>
-            <Image src="/github-icon.svg" height={20} width={20} alt={'github'} className='saturate-0 brightness-200' />
-          </a></li>
-          <li className='font-bold'>   <a href='https://www.linkedin.com/in/naufalfathur/'>
-            <Image src="/linkedin-icon.svg" height={20} width={20} alt={'github'} className='saturate-0 brightness-200' />
-          </a></li>
+
+          <div className="flex w-full">
+            {navigation.map((item, key) => (
+              <li key={key}>
+                <Link
+                  href={item.href}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+            <div className="divider divider-horizontal"/>
+            <li className='font-bold'>  <a href='https://github.com/naufalfathur'>
+              <Image src="/github-icon.svg" height={20} width={20} alt={'github'} className='saturate-0 brightness-200' />
+            </a></li>
+            <li className='font-bold'>   <a href='https://www.linkedin.com/in/naufalfathur/'>
+              <Image src="/linkedin-icon.svg" height={20} width={20} alt={'github'} className='saturate-0 brightness-200' />
+            </a></li>
+          </div>
+
           {/* <li className='font-bold'><a href="./cv.pdf">Download CV</a></li> */}
           {/* <li><ThemeChanger/></li> */}
         </ul>
