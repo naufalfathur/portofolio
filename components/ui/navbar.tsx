@@ -45,7 +45,14 @@ function Navbar() {
               </ul>
             </details>
           </li>
-          <li className='font-bold'><a href="./cv.pdf">Download CV</a></li>
+          <li className='font-bold'>  <a href='https://github.com/naufalfathur'>
+            <Image src="/github-icon.svg" height={20} width={20} alt={'github'} className='saturate-0 brightness-200' />
+          </a></li>
+          <li className='font-bold'>   <a href='https://www.linkedin.com/in/naufalfathur/'>
+            <Image src="/linkedin-icon.svg" height={20} width={20} alt={'github'} className='saturate-0 brightness-200' />
+          </a></li>
+
+          {/* <li className='font-bold'><a href="./cv.pdf">Download CV</a></li> */}
         </ul>
         <ul className="menu menu-horizontal px-1 hidden md:flex">
           {navigation.map((item, key) => (
@@ -58,7 +65,13 @@ function Navbar() {
               </Link>
             </li>
           ))}
-          <li className='font-bold'><a href="./cv.pdf">Download CV</a></li>
+          <li className='font-bold'>  <a href='https://github.com/naufalfathur'>
+            <Image src="/github-icon.svg" height={20} width={20} alt={'github'} className='saturate-0 brightness-200' />
+          </a></li>
+          <li className='font-bold'>   <a href='https://www.linkedin.com/in/naufalfathur/'>
+            <Image src="/linkedin-icon.svg" height={20} width={20} alt={'github'} className='saturate-0 brightness-200' />
+          </a></li>
+          {/* <li className='font-bold'><a href="./cv.pdf">Download CV</a></li> */}
           {/* <li><ThemeChanger/></li> */}
         </ul>
 
