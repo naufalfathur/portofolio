@@ -1,7 +1,7 @@
 export const experiencesList = [
     {
         employer: "TDCX Malaysia",
-        active: true,
+        active: false,
         position: "Front End Developer (Google Tech Specialist)",
         time: "Sept 2021-Present",
         logo:"/img/tdcx.png",
