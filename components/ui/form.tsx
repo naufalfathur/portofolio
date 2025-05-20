@@ -14,7 +14,7 @@ function Form({ title }: FormProps) {
     const [message, setMessage] = useState("")
 
     function sendEmail(){
-        window.open(`mailto:fathur@generatif.co?subject=${subject}&body=${message}`, '_blank', 'noopener,noreferrer');
+        window.open(`mailto:fathur@generatif.co?subject=${subject}&body=${message}&cc=naufalfathur@gmail.com`, '_blank', 'noopener,noreferrer');
       }
 
 

@@ -228,6 +228,28 @@ export const projectList = [
         technologies: [
             "figma",
         ]
+    },{
+        name: "Swif - Focus Mastering App",
+        id: "swif",
+        type: "software",
+        featured: true,
+        img: "/img/projects/swif.png",
+        url: "",
+        descTitle: "A focus mastering app that encourages distraction-free focus. When in Focus Mode, the screen goes dark and distractions are discouraged with subtle haptics.",
+        desc: [
+            `
+            <p>Features (MVP)&nbsp;</p> <ul>
+    <li>Customisable Focus timer with auto-switch to custom-minute break&nbsp;</li>
+    <li>Anti-distraction Mode screen&nbsp;</li>
+    <li>Vibration alert if user breaks focus (navigates away)&nbsp;</li>
+    <li>Works offline, no account needed</li>
+    </ul>
+            `
+        ],
+        technologies: [
+            "React",
+            "Typescript"
+        ]
     },
 
 ]

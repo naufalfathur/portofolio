@@ -64,7 +64,7 @@ function Hero() {
         </Link>
       </div>
 
-      <div className="phone-floating absolute md:left-20 -bottom-5 ">
+      <div className="phone-floating absolute md:left-20 -bottom-5 hidden md:block">
         <Link href={'/'}>
           <Image
             alt='logo'
