@@ -15,23 +15,21 @@ export const projectList = [
             "Visual Basic",
         ]
     }, {
-        name: "MealLy – Meal Planning and Ordering Mobile App",
-        id: "meally",
+        name: "Wahed - Muslim Prayer Time",
+        id: "wahed",
         type: "software",
-        featured: false,
-        img: "/img/projects/meally.png",
-        url: "",
-        descTitle: "Final Year Project Mobile Application with personal dietary calculator, suitable for busy people that still want to have healthy meals",
+        featured: true,
+        img: "/img/projects/wahed.png",
+        url: "https://wahed-muslimhub.vercel.app/",
+        descTitle: "Local muslim prayer time calculator developed for research purpose of Progressive Web Apps (PWA)",
         desc: [
-            "MealLy is a food planning and ordering application with an automatic calorie counting system for food by only entering its ingredients, made with the aim of ending the stigma of healthy eating not being for busy people.",
-            `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FwbAHpDDVYf1RbDxmT2vdnb%2FProject-MealLy%3Ftype%3Ddesign%26node-id%3D609-3%26t%3DEN6NLJZd4R2Gwp80-1%26scaling%3Dmin-zoom%26page-id%3D590%253A396%26starting-point-node-id%3D609%253A3%26mode%3Ddesign" allowfullscreen></iframe>`,
-            'Fullscreen above frame to view the slides'
+            `
+            <p><strong><span style="font-size:11pt;">Executive Summary</span></strong></p><p style="text-align: justify;"><span style="font-size:10pt;">Muslim Prayer time checker with No Ads and no installation necessary. Developed for the purpose of research, highlighting the potential of Progressive Web Apps (PWA) as a future technology, as the alternative of native mobile application. Utilized Next.js, React, and TypeScript to build a robust application that implemented real-time connections to APIs, enabling the retrieval of precise local prayer time calculations within the application.</span></p><p><br></p><p style="text-align: justify;"><strong><span style="font-size:10pt;">Phase 1: Ideation and Research</span></strong></p><p><br></p><ul> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><strong><span style="font-size:10pt;">Problem:</span></strong><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Existing app contain ads, track user data to external parties</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><strong><span style="font-size:10pt;">Target Audience:</span></strong><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Muslim&nbsp;</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><strong><span style="font-size:10pt;">Competitive Analysis:</span></strong><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Athan, Muslim Pro</span></p> </li></ul><p style="text-align: justify;"><span style="font-size:10pt;"><br></span><strong><span style="font-size:10pt;">Phase 2: Planning and Strategy</span></strong></p><p style="text-align: justify;"><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Core functionalities will include:</span></p><ul> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Realtime Prayer Time Checker</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Prayer time notification</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Muslim quotes</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Quran</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Tasbih</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Dua and Dzikr</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Qibla</span></p> </li></ul><p><br></p><p style="text-align: justify;"><strong><span style="font-size:10pt;">Phase 3: Design and UX/UI</span></strong><strong><span style="font-size:10pt;"><br><br></span></strong></p><p><br></p><p style="text-align: justify;"><strong><span style="font-size:10pt;">Phase 4: Development (current)</span></strong></p><ul> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Realtime Prayer Time Checker (Done)</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Prayer time notification (Ongoing)</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Muslim quotes</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Quran</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Tasbih</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Dua and Dzikr</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Qibla</span></p> </li></ul><p><br></p><p style="text-align: justify;"><strong><span style="color:#999999;font-size:10pt;">Phase 5: Testing and QA</span></strong><span style="color:#999999;font-size:10pt;">&nbsp;</span><span style="color:#999999;font-size:10pt;"><br></span><span style="color:#999999;font-size:10pt;">Bug testing, user testing, and refinement of the app.</span></p><p><br></p><p style="text-align: justify;"><strong><span style="color:#999999;font-size:10pt;">Phase 6: Deployment and Launch</span></strong><span style="color:#999999;font-size:10pt;">&nbsp;</span><span style="color:#999999;font-size:10pt;"><br></span><span style="color:#999999;font-size:10pt;">App store submission and launch of Langaroo.</span></p><p><br></p><p style="text-align: justify;"><strong><span style="color:#999999;font-size:10pt;">Phase 7: Post-Launch and Maintenance</span></strong><span style="color:#999999;font-size:10pt;"><br></span><span style="color:#999999;font-size:10pt;">Ongoing monitoring, updates, and new feature development for Langaroo.</span></p><p><span style="font-size:12pt;"><br></span></p>
+            `
         ],
         technologies: [
-            "Flutter",
-            "Dart",
-            "NodeJS",
-            "Firestore",
+            "React",
+            "Next JS",
         ]
     }, {
         name: "Huacomm HR Management System",
@@ -62,7 +60,8 @@ export const projectList = [
         descTitle: "Fridge and Groceries Organizer, Fridge Sharer and Shopping note",
         desc: [
             "Implementing a realtime database system to organize items, notifications about expiry items, housemates fridge sharing, where they can access the same fridge and shopping notes.",
-            "Targeted for housemates and families for managing their refrigerator and groceries shopping."
+            "Targeted for housemates and families for managing their refrigerator and groceries shopping.",
+            `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/4zdlhaKitIksRXo7Cb0GMf/Naufal-Projects?node-id=6-676&embed-host=share" allowfullscreen></iframe>`
         ],
         technologies: [
             "Flutter",
@@ -70,22 +69,28 @@ export const projectList = [
             "NodeJS",
             "Firestore",
         ]
-    }, {
-        name: "Wahed - Muslim Prayer Time",
-        id: "wahed",
+    },
+    {
+        name: "MealLy – Meal Planning and Ordering Mobile App",
+        id: "meally",
         type: "software",
-        featured: true,
-        img: "/img/projects/wahed.png",
-        url: "https://wahed-muslimhub.vercel.app/",
-        descTitle: "Local muslim prayer time calculator developed for research purpose of Progressive Web Apps (PWA)",
+        featured: false,
+        img: "/img/projects/meally.png",
+        url: "",
+        descTitle: "Final Year Project Mobile Application with personal dietary calculator, suitable for busy people that still want to have healthy meals",
         desc: [
-            `
-            <p><strong><span style="font-size:11pt;">Executive Summary</span></strong></p><p style="text-align: justify;"><span style="font-size:10pt;">Muslim Prayer time checker with No Ads and no installation necessary. Developed for the purpose of research, highlighting the potential of Progressive Web Apps (PWA) as a future technology, as the alternative of native mobile application. Utilized Next.js, React, and TypeScript to build a robust application that implemented real-time connections to APIs, enabling the retrieval of precise local prayer time calculations within the application.</span></p><p><br></p><p style="text-align: justify;"><strong><span style="font-size:10pt;">Phase 1: Ideation and Research</span></strong></p><p><br></p><ul> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><strong><span style="font-size:10pt;">Problem:</span></strong><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Existing app contain ads, track user data to external parties</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><strong><span style="font-size:10pt;">Target Audience:</span></strong><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Muslim&nbsp;</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><strong><span style="font-size:10pt;">Competitive Analysis:</span></strong><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Athan, Muslim Pro</span></p> </li></ul><p style="text-align: justify;"><span style="font-size:10pt;"><br></span><strong><span style="font-size:10pt;">Phase 2: Planning and Strategy</span></strong></p><p style="text-align: justify;"><span style="font-size:10pt;"><br></span><span style="font-size:10pt;">Core functionalities will include:</span></p><ul> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Realtime Prayer Time Checker</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Prayer time notification</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Muslim quotes</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Quran</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Tasbih</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Dua and Dzikr</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Qibla</span></p> </li></ul><p><br></p><p style="text-align: justify;"><strong><span style="font-size:10pt;">Phase 3: Design and UX/UI</span></strong><strong><span style="font-size:10pt;"><br><br></span></strong></p><p><br></p><p style="text-align: justify;"><strong><span style="font-size:10pt;">Phase 4: Development (current)</span></strong></p><ul> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Realtime Prayer Time Checker (Done)</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Prayer time notification (Ongoing)</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Muslim quotes</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Quran</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Tasbih</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Dua and Dzikr</span></p> </li> <li style="list-style-type:disc;font-size:10pt;"> <p style="text-align: justify;"><span style="font-size:10pt;">Qibla</span></p> </li></ul><p><br></p><p style="text-align: justify;"><strong><span style="color:#999999;font-size:10pt;">Phase 5: Testing and QA</span></strong><span style="color:#999999;font-size:10pt;">&nbsp;</span><span style="color:#999999;font-size:10pt;"><br></span><span style="color:#999999;font-size:10pt;">Bug testing, user testing, and refinement of the app.</span></p><p><br></p><p style="text-align: justify;"><strong><span style="color:#999999;font-size:10pt;">Phase 6: Deployment and Launch</span></strong><span style="color:#999999;font-size:10pt;">&nbsp;</span><span style="color:#999999;font-size:10pt;"><br></span><span style="color:#999999;font-size:10pt;">App store submission and launch of Langaroo.</span></p><p><br></p><p style="text-align: justify;"><strong><span style="color:#999999;font-size:10pt;">Phase 7: Post-Launch and Maintenance</span></strong><span style="color:#999999;font-size:10pt;"><br></span><span style="color:#999999;font-size:10pt;">Ongoing monitoring, updates, and new feature development for Langaroo.</span></p><p><span style="font-size:12pt;"><br></span></p>
-            `
+            "MealLy is a food planning and ordering application with an automatic calorie counting system for food by only entering its ingredients, made with the aim of ending the stigma of healthy eating not being for busy people.",
+            "Finalist project at IEEE FYP Competition",
+            `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/4zdlhaKitIksRXo7Cb0GMf/Naufal-Projects?node-id=2-10&embed-host=share" allowfullscreen></iframe>`,
+            `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FwbAHpDDVYf1RbDxmT2vdnb%2FProject-MealLy%3Ftype%3Ddesign%26node-id%3D609-3%26t%3DEN6NLJZd4R2Gwp80-1%26scaling%3Dmin-zoom%26page-id%3D590%253A396%26starting-point-node-id%3D609%253A3%26mode%3Ddesign" allowfullscreen></iframe>`,
+            'Fullscreen above frame to view the slides'
         ],
         technologies: [
-            "React",
-            "Next JS",
+            "Flutter",
+            "Dart",
+            "NodeJS",
+            "Firestore",
+            "Figma"
         ]
     },
     {
@@ -228,7 +233,7 @@ export const projectList = [
         technologies: [
             "figma",
         ]
-    },{
+    }, {
         name: "Swif - Focus Mastering App",
         id: "swif",
         type: "software",
@@ -249,6 +254,22 @@ export const projectList = [
         technologies: [
             "React",
             "Typescript"
+        ]
+    }, {
+        name: "TaskNinja - Student's Productivity game changer",
+        id: "taskninja",
+        type: "software",
+        featured: true,
+        img: "/img/projects/taskninja.png",
+        url: "",
+        descTitle: "Help student tackle your tasks, in a motivating and fun game environment.",
+        desc: [
+            "This project won best pitch at Annual High Tech Entrepreneurship Competition @ University of Manchester",
+            `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/4zdlhaKitIksRXo7Cb0GMf/Naufal-Projects?node-id=6-2587&embed-host=share" allowfullscreen></iframe>`,
+        ],
+        technologies: [
+            "React",
+            "Figma"
         ]
     },
 

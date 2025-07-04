@@ -36,6 +36,12 @@ function DesignPage() {
                                 Download PDF
                             </a>
                         </div>
+                        <div className='mt-4 gap-2 grid-cols-2'>
+                            <p className="text-sm font-light text-center mb-4">
+                                Below are a few interactive showcases of my design work on Figma.
+                            </p>
+                            <iframe className="w-full h-[80vh] border" src="https://embed.figma.com/design/4zdlhaKitIksRXo7Cb0GMf/Naufal-Projects?node-id=0-1&embed-host=share" title="Figma Showcase"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
