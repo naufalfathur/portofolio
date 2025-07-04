@@ -47,23 +47,6 @@ function Hero() {
         </div> */}
       </div>
 
-
-
-      <div className='logo-floating absolute md:right-40 bottom-20 floating  tooltip tooltip-open tooltip-top tooltip-warning floating cursor-pointer' data-tip="Click to work with me!">
-        <Link href={'/contact'}>
-          <Image
-            alt='logo'
-            src={"/logo.png"}
-            width={0}
-            height={0}
-            sizes='15vw'
-            quality={100}
-            style={{ width: 'auto', height: 'auto' }}
-            className='rotate-6 my-2'
-          />
-        </Link>
-      </div>
-
       <div className="phone-floating absolute md:left-20 -bottom-5 hidden md:block">
         <Link href={'/'}>
           <Image

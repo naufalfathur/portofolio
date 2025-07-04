@@ -23,7 +23,7 @@ function Experiences() {
         </div>
 
         <div className='education-section w-full flex justify-center items-center'>
-          <ul className="timeline timeline-vertical lg:timeline-horizontal">
+          <ul className="timeline timeline-vertical md:timeline-vertical lg:timeline-horizontal">
 
             {educationList.map(({ uni, active, course, time, logo, descriptions }, i) => (
               <li key={course}>
@@ -82,7 +82,7 @@ function Experiences() {
             </div>
           ))}
         </div>
-        
+
 
       </div>
     </div>
