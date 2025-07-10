@@ -7,7 +7,8 @@ const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Design Portfolio', href: '/design', current: false },
   { name: 'Projects', href: '/project', current: false },
-  { name: 'Contact', href: '/contact', current: false },
+  { name: 'CV', href: '/cv', current: false },
+  { name: 'Contact', href: '/contact', current: false }
 ]
 
 function Navbar() {
