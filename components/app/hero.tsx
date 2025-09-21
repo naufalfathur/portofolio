@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
+import { techstackList } from '@/public/data/techstacks';
 function Hero() {
   return (
     <div className='hero welcome flex flex-col space-y-8 h-[95vh] md:min-h-[85vh] justify-center'>
 
       <div className="h-3/5 flex w-7/12 space-x-20">
-        <div className="hero-texts w-full h-full flex flex-col space-y-8 justify-center py-8 md:mt-0 -mt-10">
+        <div className="hero-texts w-1/2 h-full flex flex-col space-y-8 justify-center">
           <div className="badge badge-outline h-fit py-2 px-4 flex flex-row space-x-2 shadow-lg">
             <div className="avatar">
               <div className="md:w-10 md:h-10 w-8 h-8 rounded-full">
@@ -43,7 +44,7 @@ function Hero() {
         </div>
 
 
-        <div className="hero-widgets w-full h-full flex flex-col space-y-8 justify-center items-center py-8 md:mt-0 -mt-10">
+        <div className="hero-widgets w-1/2 h-full flex flex-col space-y-8 justify-center items-center py-8 md:mt-0 -mt-10">
           {/* Widgets container */}
           <div className="w-full h-full flex flex-col gap-6">
             {/* Row 1: two widgets, left 2/3, right 1/3 */}
@@ -100,17 +101,19 @@ function Hero() {
             </div>
 
             {/* Row 3: horizontally scrollable widget strip */}
-            <div className="bg-base-300 rounded-xl h-16 w-full overflow-x-auto">
-              <div className="flex items-center gap-4 h-full px-4 min-w-max">
-                {/* Example scroll items – replace with icons later */}
-                <div className="w-10 h-10 rounded-lg bg-base-100 shadow" />
-                <div className="w-10 h-10 rounded-lg bg-base-100 shadow" />
-                <div className="w-10 h-10 rounded-lg bg-base-100 shadow" />
-                <div className="w-10 h-10 rounded-lg bg-base-100 shadow" />
-                <div className="w-10 h-10 rounded-lg bg-base-100 shadow" />
-                <div className="w-10 h-10 rounded-lg bg-base-100 shadow" />
-                <div className="w-10 h-10 rounded-lg bg-base-100 shadow" />
-                <div className="w-10 h-10 rounded-lg bg-base-100 shadow" />
+            <div className="carousel h-full w-full">
+              <div className='items-center flex space-x-4'>
+                {techstackList.map((tech, i) => (
+                  <div className="carousel-item" key={i}>
+                    <Image
+                      alt=''
+                      src={tech.icon}
+                      width={80} height={0}
+                      quality={100}
+                      className='w-10 h-10 saturate-0 icon'
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
