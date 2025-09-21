@@ -2,8 +2,9 @@
 const nextConfig = {
     images: {
         domains: [
-            "images.pexels.com", 
-            "generatif.co"
+            "images.pexels.com",
+            "generatif.co",
+            "images.ctfassets.net"
         ]
     }
 }
