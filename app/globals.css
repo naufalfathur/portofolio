@@ -88,6 +88,7 @@
   transition: opacity 0.6s ease-out, transform 1.2s ease-out;
   will-change: opacity, visibility;
 }
+
 .fade-in-section.is-visible {
   opacity: 1;
   transform: none;
@@ -95,15 +96,60 @@
 }
 
 @keyframes brighten-on-hover {
-  from { filter: brightness(0); } /* Initial brightness */
-  to { filter: brightness(1); } /* Brightness increased to 200% */
+  from {
+    filter: brightness(0);
+  }
+
+  /* Initial brightness */
+  to {
+    filter: brightness(1);
+  }
+
+  /* Brightness increased to 200% */
 }
 
 @keyframes scale-on-hover {
-  from { transform: scale(1); } /* Initial scale */
-  to { transform: scale(1.1); } /* Scale increased to 110% */
+  from {
+    transform: scale(1);
+  }
+
+  /* Initial scale */
+  to {
+    transform: scale(1.1);
+  }
+
+  /* Scale increased to 110% */
 }
 
 .icon:hover {
   animation: brighten-on-hover 0.5s ease-in-out forwards, scale-on-hover 0.5s ease-in-out forwards;
+}
+
+/* === Custom Glass Effect (overrides DaisyUI .glass) === */
+.glass-new {
+  /* Frosted background */
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+
+  /* White border */
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  /* matches rounded-xl */
+
+  /* Text styling inside */
+  color: #ffffff;
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  /* Subtle inner/outer shadow for depth */
+  box-shadow: inset 0 1px 12px rgba(255, 255, 255, 0.06), 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Ensure nested elements inherit white text unless explicitly styled */
+.glass-new * {
+  color: inherit;
 }

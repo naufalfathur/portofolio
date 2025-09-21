@@ -7,13 +7,13 @@ function Hero() {
 
       <div className="h-3/5 flex w-7/12 space-x-20">
         <div className="hero-texts w-full h-full flex flex-col space-y-8 justify-center py-8 md:mt-0 -mt-10">
-          <div className="badge badge-outline h-fit py-2 px-4 flex flex-row space-x-4 shadow-lg">
+          <div className="badge badge-outline h-fit py-2 px-4 flex flex-row space-x-2 shadow-lg">
             <div className="avatar">
-              <div className="md:w-12 md:h-12 w-8 h-8 rounded-full">
+              <div className="md:w-10 md:h-10 w-8 h-8 rounded-full">
                 <Image
                   src={'/profile.jpeg'}
                   alt={'naufal fathur'}
-                  width={48}
+                  width={42}
                   height={0}
                   quality={90}
                 />
@@ -21,8 +21,8 @@ function Hero() {
             </div>
 
             <div className='flex flex-col space-y-0 text-start items-start text-base text-[#5B5B5B]'>
-              <p className='md:text-base text-xs'>Hi, Im <strong>Naufal Fathur</strong></p>
-              <p className='md:text-base text-xs'>Welcome to my Portfolio !</p>
+              <p className='text-xs'>Hi, Im <strong>Naufal Fathur</strong></p>
+              <p className='text-xs'>Welcome to my Portfolio !</p>
             </div>
 
           </div>
@@ -51,7 +51,7 @@ function Hero() {
               {/* Widget 1 (2/3 width) */}
               <div className="relative col-span-2 h-56 overflow-visible rounded-2xl">
                 <div className="absolute -top-4 right-4">
-                  <div className="badge badge-neutral px-4 py-3 text-base-100 text-sm rounded-full shadow">
+                  <div className="glass-new text-xs">
                     My Potograph
                   </div>
                 </div>
@@ -59,15 +59,15 @@ function Hero() {
                   className="w-full h-full rounded-2xl overflow-hidden bg-cover bg-center"
                   style={{ backgroundImage: "url('https://images.ctfassets.net/wtyk6zs1a32v/1tjUn2AJ0H7pp2FwqXvwc9/4d55f87b823680dd2c30eb07f29c8c0e/842FA9DF-D81F-4AF4-B06B-026B09018ABA.JPG')" }}
                 ></div>
-                <div className="absolute bottom-4 right-4 text-white/90 text-sm font-semibold drop-shadow">
-                  Subtitle
+                <div className="absolute bottom-4 right-4 text-white/90 text-xs font-semibold drop-shadow">
+                  📍 Taken on Leeds, UK
                 </div>
               </div>
 
               {/* Widget 2 (1/3 width) */}
               <div className="relative col-span-1 h-56 overflow-visible rounded-2xl">
                 <div className="absolute -top-4 right-0">
-                  <div className="badge glass px-4 py-3 text-base-100 text-md rounded-full shadow">
+                  <div className="glass-new text-xs">
                     This is Me!
                   </div>
                 </div>
@@ -82,7 +82,7 @@ function Hero() {
             <div className="relative">
               <div className="relative h-32 w-full overflow-visible rounded-2xl">
                 <div className="absolute -top-4 right-4 z-10">
-                  <div className="badge badge-neutral px-4 py-3 text-base-100 text-sm rounded-full shadow">
+                  <div className="glass-new text-xs">
                     Highlighted Project
                   </div>
                 </div>
