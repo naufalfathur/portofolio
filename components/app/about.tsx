@@ -39,7 +39,7 @@ function About() {
 
       <div className='flex w-full relative justify-center'>
 
-        <div className="flex-2 flex-col space-y-2 absolute -bottom-10 left-0">
+        <div className="flex-2 flex-col space-y-2 absolute -bottom-5 left-0">
           {achievements.slice(0, 4).map((ach, i) => (
             <div key={i} className="bg-[#1F2937] rounded-xl text-white p-4 shadow-xl">
               <div className="flex space-x-2">
@@ -55,9 +55,9 @@ function About() {
 
         <div className="ml-64 mr-80 px-10 text-white space-y-4">
           <h2 className={`text-3xl font-extrabold`}> Let&apos;s build something impactful.</h2>
-          <p className='text-justify text-base'>
-            Experienced software developer (3+ years), building fast, user-focused websites, apps and MVPs.
-            Currently pursuing an MSc in Innovation Management at the University of Manchester, I bridge tech and business to help startups and SMEs launch, scale, and innovate.
+          <p className='text-justify text-sm'>
+            Experienced software developer (3+ years professional exp), building fast, user-focused websites, apps and MVPs. Having Bachelor of Software Engineering degree in University of Malaysia, and
+            currently pursuing an MSc in Innovation Management at the University of Manchester, I bridge tech and business to help startups and SMEs launch, scale, and innovate.
           </p>
         </div>
 
