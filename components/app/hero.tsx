@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { techstackList } from '@/public/data/techstacks';
+import { WidgetCard } from '../ui/widget';
 
 const heroContent = {
   badgeGreetingLine1: 'Hi, Im <strong>Naufal Fathur</strong>',
@@ -14,12 +15,11 @@ With a background in digitalisation and strategy, I don’t just build things, I
 As the Technical Co-Founder of <span className="tooltip font-bold" data-tip="Visit the page"><Link href="https://generatif.co/" target="_blank" rel="noopener noreferrer">Generatif</Link></span>, I’ve worked at the intersection of creativity, technology, and business transformation.`,
   widget1Title: 'My Photograph',
   widget1Subtitle: '📍 Taken on Leeds, UK',
-  widget2Title: 'This is Me!',
-  widget3Title: 'Highlighted Project',
+  widget2Title: 'Latest Project',
+  widget3Title: 'Coming Soon',
 };
 
 const contentTitleWords = heroContent.title.split(' ');
-
 
 function Hero() {
   const [w1Offset, setW1Offset] = useState({ x: 0, y: 0 });
@@ -115,85 +115,85 @@ function Hero() {
             transition={{ duration: 0.4 }}
           >
             <div className="w-full h-full flex flex-col gap-6">
-              {/* Row 1: two widgets, left 2/3, right 1/3 */}
-              <div className="grid grid-cols-3 gap-3">
-                {/* Widget 1 (2/3 width) */}
-                <motion.div
-                  className="relative col-span-2 h-56 overflow-visible rounded-2xl"
-                  animate={{ x: w1Offset.x * 0.6, y: w1Offset.y * 0.6 }}
-                  transition={{ type: "spring", stiffness: 100, damping: 10 }}
-                >
+              {/* New 2-column layout */}
+              <div className="flex gap-3">
+                {/* Left column: Widget 1 (top) + Widget 3 (bottom) */}
+                <div className="relative flex flex-col gap-5 flex-[1.3]">
+                  <WidgetCard
+                    title={heroContent.widget1Title}
+                    subtitle={heroContent.widget1Subtitle}
+                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/1tjUn2AJ0H7pp2FwqXvwc9/4d55f87b823680dd2c30eb07f29c8c0e/842FA9DF-D81F-4AF4-B06B-026B09018ABA.JPG"
+                    offset={w1Offset}
+                    strength={0.4}
+                    heightClass="flex-[2]"
+                  />
+                  <WidgetCard
+                    title={heroContent.widget3Title}
+                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/6X40wHgGsOR1qYwJgZXJXi/f61378ef99f52839880d390d29cd04f9/swhig.png"
+                    offset={w1Offset}
+                    strength={0.4}
+                    heightClass="flex-[1]"
+                  />
+
+                  {/* Overlay element crossing between Widget 1 & 3 */}
                   <motion.div
-                    className="absolute -top-4 right-4"
+                    className="pointer-events-none absolute bottom-0 -left-10 h-48 w-52 z-20 bg-contain bg-no-repeat bg-center"
+                    style={{ backgroundImage: "url('https://images.ctfassets.net/wtyk6zs1a32v/4v5ihXSzWrKjr8GTnaY7tL/1112aadb40c4b380b74264aecd88532b/swhigphone.png')" }}
                     animate={{ x: w1Offset.x * 0.4, y: w1Offset.y * 0.4 }}
-                    transition={{ type: "spring", stiffness: 100, damping: 10 }}
-                  >
-                    <div className="glass-new text-xs">
-                      {heroContent.widget1Title}
-                    </div>
-                  </motion.div>
-                  <div
-                    className="w-full h-full rounded-2xl overflow-hidden bg-cover bg-center"
-                    style={{ backgroundImage: "url('https://images.ctfassets.net/wtyk6zs1a32v/1tjUn2AJ0H7pp2FwqXvwc9/4d55f87b823680dd2c30eb07f29c8c0e/842FA9DF-D81F-4AF4-B06B-026B09018ABA.JPG')" }}
-                  ></div>
-                  <div className="absolute bottom-4 right-4 text-white/90 text-xs font-semibold drop-shadow">
-                    {heroContent.widget1Subtitle}
+                    transition={{ type: 'spring', stiffness: 120, damping: 12 }}
+                  />
+                </div>
+
+                {/* Right column: Widget 2 full height */}
+                <WidgetCard
+                  title={heroContent.widget2Title}
+                  //bgImage="https://images.ctfassets.net/wtyk6zs1a32v/4iZFQbd2MFBMuFqHFGsBXq/a9f2702271050ae320a73f79fb939e85/Gemini_Generated_Image_fjufh2fjufh2fjuf.jpg"
+                  offset={w1Offset}
+                  strength={0.4}
+                  heightClass="h-[25rem]"
+                  className="flex-[1]"
+                >
+                  <div className="absolute bottom-4 left-4 flex-col text-black space-y-1 text-xs font-semibold">
+                    <Image src="/laurel-wreath.svg" height={30} width={30} alt={'GitHub'} className='' />
+                    <p>Best Pitch <br />Award</p>
                   </div>
-                </motion.div>
 
-                {/* Widget 2 (1/3 width) */}
-                <motion.div
-                  className="relative col-span-1 h-56 overflow-visible rounded-2xl"
-                  animate={{ x: w1Offset.x * 0.6, y: w1Offset.y * 0.6 }}
-                  transition={{ type: "spring", stiffness: 100, damping: 10 }}
-                >
                   <motion.div
-                    className="absolute -top-4 right-0"
-                    animate={{ x: w1Offset.x * 0.4, y: w1Offset.y * 0.4 }}
-                    transition={{ type: "spring", stiffness: 100, damping: 10 }}>
-                    <div className="glass-new text-xs">
-                      {heroContent.widget2Title}
-                    </div>
-                  </motion.div>
-                  <div
-                    className="w-full h-full rounded-2xl overflow-hidden bg-cover bg-center"
-                    style={{ backgroundImage: "url('https://images.ctfassets.net/wtyk6zs1a32v/4iZFQbd2MFBMuFqHFGsBXq/a9f2702271050ae320a73f79fb939e85/Gemini_Generated_Image_fjufh2fjufh2fjuf.jpg')" }}
-                  ></div>
-                </motion.div>
-              </div>
+                    className="w-full h-full flex justify-center items-center p-4"
+                    style={{ perspective: 1000 }}
+                    initial={{ rotateZ: -20, rotateX: 0, y: 0, x: 40 }}
+                    whileHover={{ rotateZ: 0, rotateX: 0, y: 0, x: 0 }}
+                    transition={{ type: 'spring', stiffness: 120, damping: 12 }}
+                  >
+                    {/* Gradient overlay (visible by default, hides on hover) */}
+                    <Image
+                      src="https://images.ctfassets.net/wtyk6zs1a32v/Kx0faiSYFGUxhDpOGGdAo/da73e0d5365ac2e987e59e0ad0a29a65/tnmockup.png"
+                      alt="TaskNinja Mockup"
+                      width={400}
+                      height={0}
+                      quality={100}
+                      className="object-contain w-full h-full will-change-transformright"
+                    />
 
-              {/* Row 2: single full-width widget with overlay on the right, overlapping Row 1 */}
-              <div className="relative">
-                <motion.div
-                  className="relative h-32 w-full overflow-visible rounded-2xl"
-                  animate={{ x: w1Offset.x * 0.4, y: w1Offset.y * 0.4 }}
-                  transition={{ type: "spring", stiffness: 100, damping: 12 }}
-                >
-                  <motion.div
-                    animate={{ x: w1Offset.x * 0.4, y: w1Offset.y * 0.4 }}
-                    transition={{ type: "spring", stiffness: 100, damping: 10 }}
-                    className="absolute -top-4 right-4 z-10">
-                    <div className="glass-new text-xs">
-                      {heroContent.widget3Title}
-                    </div>
                   </motion.div>
-                  <div
-                    className="w-full h-full rounded-2xl overflow-hidden bg-cover bg-center"
-                    style={{ backgroundImage: "url('https://images.ctfassets.net/wtyk6zs1a32v/6X40wHgGsOR1qYwJgZXJXi/f61378ef99f52839880d390d29cd04f9/swhig.png')" }}
-                  ></div>
-                </motion.div>
 
-                {/* Overlay widget (red), taller and overlapping row 1 slightly */}
-                <motion.div
-                  className="absolute -top-16 left-0 h-48 w-52 z-20 bg-contain bg-no-repeat bg-center"
-                  style={{ backgroundImage: "url('https://images.ctfassets.net/wtyk6zs1a32v/4v5ihXSzWrKjr8GTnaY7tL/1112aadb40c4b380b74264aecd88532b/swhigphone.png')" }}
-                  animate={{ x: w1Offset.x * 0.4, y: w1Offset.y * 0.4 }}
-                  transition={{ type: "spring", stiffness: 100, damping: 12 }}
-                />
+
+
+                  {/* <iframe
+                    title="TaskNinja Prototype"
+                    className="w-full h-full rounded-2xl p-4"
+                    style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
+                    src="https://embed.figma.com/proto/Dl8tGDfe5xkWO6fri8qi2x/TaskNinja-Prototype?node-id=1-3&p=f&page-id=0%3A1&starting-point-node-id=1%3A3&embed-host=portofolio&hotspot-hints=0&hide-ui=1&scaling=scale-down-width&content-scaling=fill"
+                    allow="clipboard-write; fullscreen"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                  /> */}
+                </WidgetCard>
               </div>
 
               {/* Row 3: horizontally scrollable widget strip */}
-              <div className="carousel h-full w-full">
+              <div className="carousel h-full w-full py-2">
                 <div className='items-center flex space-x-4'>
                   {techstackList.map((tech, i) => (
                     <div className="carousel-item" key={i}>
@@ -210,12 +210,12 @@ function Hero() {
               </div>
             </div>
           </motion.div>
-        </div>
+        </div >
 
-      </div>
+      </div >
 
 
-    </div>
+    </div >
   )
 }
 
