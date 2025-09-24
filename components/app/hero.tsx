@@ -151,7 +151,7 @@ function Hero() {
                   className="flex-[1]"
                 >
                   <div className="absolute bottom-4 left-4 flex-col text-black space-y-1 text-xs font-semibold">
-                    <Image src="/laurel-wreath.svg" height={30} width={30} alt={'GitHub'} className='' />
+                    <Image src="/laurel-wreath.svg" height={30} width={30} alt={'award'} className='' />
                     <p>Best Pitch <br />Award</p>
                   </div>
 

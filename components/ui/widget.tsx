@@ -39,10 +39,7 @@ export const WidgetCard = ({
                     animate={{ x: offset.x * (strength * 0.7), y: offset.y * (strength * 0.7) }}
                     transition={{ type: 'spring', stiffness: 100, damping: 12 }}
                 >
-                    <div style={{
-                        position: 'relative',
-                        // other styles
-                    }} className="glass-new">
+                    <div style={{ position: 'relative' }} className="glass-new">
                         <LiquidGlassFilters />
                         <div className="text-xs">{title}</div>
                     </div>

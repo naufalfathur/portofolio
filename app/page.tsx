@@ -18,7 +18,7 @@ export default function Home() {
       <div className="md:hidden">
         <Hero />
         <About />
-        <Experiences />
+        {/* <Experiences /> */}
         <ProjectSection
           title={"My Software Project"}
           desc={"I bring innovative ideas to life by building custom software applications that streamline processes and empower businesses."}
@@ -47,9 +47,9 @@ export default function Home() {
           <About />
         </FadeInSection>
 
-        <FadeInSection>
+        {/* <FadeInSection>
           <Experiences />
-        </FadeInSection>
+        </FadeInSection> */}
 
         <FadeInSection>
           <ProjectSection

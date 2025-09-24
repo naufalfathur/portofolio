@@ -4,6 +4,7 @@ import { Bitter } from "next/font/google";
 const bitter = Bitter({ subsets: ["latin"] });
 import { techstackList } from '../../public/data/techstacks'
 import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-glass';
+import { ArrowCircle } from '@/public/svgs';
 
 const achievements = [
   {
@@ -34,82 +35,60 @@ const achievements = [
 
 function About() {
   return (
-    <div id={'about'} className='about w-full max-w-6xl mx-auto px-6 h-[40vh] items-center justify-center flex flex-col'>
+    <div id={'about'} className='about w-full max-w-[90rem] mx-auto px-20 py-16 items-center justify-center flex flex-col bg-[#1b232a] rounded-3xl border-2 border-white shadow-2xl'>
 
-      {/* <div className='md:hidden flex-col space-y-4'>
-        <h2 className={`text-3xl font-extrabold ` + bitter.className}> Let&apos;s build something impactful.</h2>
-        <p className='text-justify text-xs'>
-          Experienced software developer (3+ years), building fast, user-focused websites, apps and MVPs.
-          Currently pursuing an MSc in Innovation Management at the University of Manchester, I bridge tech and business to help startups and SMEs launch, scale, and innovate.
-          <br></br>
-          <br></br>
-          <strong>Got a project in mind?</strong>
-          <br></br>
-          Let&apos;s talk. I&apos;m open to freelance, part-time, or collaborative opportunities.
-          Ready to discuss your next project? Contact me today!</p>
-        <div className='flex'>
-          <div className='block place-self-center w-1/2'>
-            <Image
-              alt=''
-              src={"/profile2.png"}
-              width={100} height={0}
-              quality={100}
-              className=''
-            />
-          </div>
-          <div className='w-1/2 space-y-2'>
-            <h2 className={`text-xl font-extrabold ` + bitter.className}> My Techstacks</h2>
-            <div className='grid grid-flow-row grid-cols-5 gap-3'>
-              {techstackList.map((tech, i) => (
-                <div className="tooltip" data-tip={tech.name} key={i}>
-                  <Image
-                    alt=''
-                    src={tech.icon}
-                    width={80} height={0}
-                    quality={100}
-                    className='w-20 h-10 saturate-0 icon'
-                  />
+      <div className='flex w-full relative justify-center'>
+
+        <div className="flex-2 flex-col space-y-2 absolute -bottom-10 left-0">
+          {achievements.slice(0, 4).map((ach, i) => (
+            <div key={i} className="bg-[#1F2937] rounded-xl text-white p-4 shadow-xl">
+              <div className="flex space-x-2">
+                <Image src="/laurel-wreath.svg" height={30} width={30} alt="award" />
+                <div className="flex flex-col">
+                  <span className="text-xs font-bold">{ach.award}</span>
+                  <span className="text-xs font-light">{ach.awardee}</span>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
+          ))}
+        </div>
+
+        <div className="ml-64 mr-80 px-10 text-white space-y-4">
+          <h2 className={`text-3xl font-extrabold`}> Let&apos;s build something impactful.</h2>
+          <p className='text-justify text-base'>
+            Experienced software developer (3+ years), building fast, user-focused websites, apps and MVPs.
+            Currently pursuing an MSc in Innovation Management at the University of Manchester, I bridge tech and business to help startups and SMEs launch, scale, and innovate.
+          </p>
         </div>
 
 
-      </div> */}
 
-
-      <div className='justify-center space-x-10'>
-        <div className='space-y-4'>
-          <h2 className={`text-3xl font-extrabold ` + bitter.className}> Let&apos;s build something impactful.</h2>
-          <p className='text-justify text-xs'>
-            Experienced software developer (3+ years), building fast, user-focused websites, apps and MVPs.
-            Currently pursuing an MSc in Innovation Management at the University of Manchester, I bridge tech and business to help startups and SMEs launch, scale, and innovate.
-            <br></br>
-            <br></br>
-            <strong>Got a project in mind?</strong>
-            <br></br>
-            Let&apos;s talk. I&apos;m open to freelance, part-time, or collaborative opportunities.
-            Ready to discuss your next project? Contact me today!</p>
-          <div className="carousel h-full w-full py-2 overflow-y-visible">
-            <div className='items-center flex space-x-4'>
-
-              {achievements.map((ach, i) => (
-                <div className="carousel-item" key={i}>
-                  <div style={{ position: 'relative', /* other styles */ }}>
-                    <LiquidGlassFilters />
-                    {ach.award}
-                  </div>
-                  <div className="glass-new text-xs !shadow-md !bg-slate-600/20">
-                    {ach.award}
-                  </div>
+        <div className='w-max flex-col space-y-2 absolute -top-24 -right-0 z-10 -rotate-6'>
+          {achievements.slice(4,).map((ach, i) => (
+            <div key={i} className="bg-[#1F2937] rounded-xl text-white p-4 shadow-xl">
+              <div className="flex space-x-2">
+                <Image src="/laurel-wreath.svg" height={30} width={30} alt="award" />
+                <div className="flex flex-col">
+                  <span className="text-xs font-bold">{ach.award}</span>
+                  <span className="text-xs font-light">{ach.awardee}</span>
                 </div>
-              ))}
-
+              </div>
             </div>
+          ))}
+        </div>
+
+        <div className="bg-white rounded-xl  p-4 shadow-xl w-[280px] absolute top-20 -right-0 hover:cursor-pointer icon">
+          <div className="flex space-x-2 justify-between">
+            <div className="flex flex-col">
+              <span className="text-xs font-light">Want to know more?</span>
+              <span className="text-xs font-bold">See my full experiences</span>
+            </div>
+            <ArrowCircle className='' />
           </div>
         </div>
       </div>
+
+
     </div>
   )
 }
