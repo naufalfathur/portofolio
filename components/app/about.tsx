@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Bitter } from "next/font/google";
 const bitter = Bitter({ subsets: ["latin"] });
 import { techstackList } from '../../public/data/techstacks'
+import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-glass';
 
 const achievements = [
   {
@@ -92,13 +93,19 @@ function About() {
             Ready to discuss your next project? Contact me today!</p>
           <div className="carousel h-full w-full py-2 overflow-y-visible">
             <div className='items-center flex space-x-4'>
+
               {achievements.map((ach, i) => (
                 <div className="carousel-item" key={i}>
+                  <div style={{ position: 'relative', /* other styles */ }}>
+                    <LiquidGlassFilters />
+                    {ach.award}
+                  </div>
                   <div className="glass-new text-xs !shadow-md !bg-slate-600/20">
                     {ach.award}
                   </div>
                 </div>
               ))}
+
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ import parse from 'html-react-parser';
 
 const heroContent = {
   badgeGreetingLine: 'Hi, Im <strong>Naufal Fathur</strong><br/>Welcome to my Portfolio !',
-  title: 'Creative Technologist for <br/> <br/> <br/> the next big ideas',
+  title: 'Creative Technologist for the next big ideas',
   subtitle:
     `Im <span classname="font-bold">Naufal</span> and Im the <span classname="font-bold">Co-Founder</span> of
   <span className="cursor-pointer tooltip icon text-[#2FA8FF] font-bold inline-flex items-start gap-1 align-bottom" data-tip="Visit the page">
@@ -85,7 +85,7 @@ function Hero() {
                   animate={{ filter: "blur(0)", opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                   key={index}
-                  className="md:text-5xl text-3xl font-extrabold text-[#1F2937] inline-block mr-1.5"
+                  className="md:text-6xl text-3xl font-extrabold text-[#1F2937] inline-block mr-1.5"
                 >
                   {parse(contentTitleWords)}
                 </motion.p>
