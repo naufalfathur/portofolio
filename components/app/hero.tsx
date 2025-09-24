@@ -47,9 +47,9 @@ function Hero() {
   }, []);
 
   return (
-    <div className='hero welcome flex flex-col space-y-8 h-[95vh] md:min-h-[85vh] justify-center'>
+    <div className='hero flex flex-col space-y-8 h-[95vh] md:min-h-[85vh] justify-center'>
 
-      <div className="h-3/5 flex w-7/12 space-x-20">
+      <div className="h-3/5 flex w-full max-w-6xl mx-auto px-6 space-x-20">
         <div className="hero-texts w-1/2 h-full flex flex-col space-y-8 justify-center">
 
           <div className="chat chat-start -mb-4">
@@ -190,7 +190,7 @@ function Hero() {
               </div>
 
               {/* Row 3: horizontally scrollable widget strip */}
-              <div className="carousel h-full w-full py-2">
+              <div className="carousel h-full w-full py-2 ">
                 <div className='items-center flex space-x-4'>
                   {techstackList.map((tech, i) => (
                     <div className="carousel-item" key={i}>
