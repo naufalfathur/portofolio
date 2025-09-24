@@ -5,14 +5,20 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { techstackList } from '@/public/data/techstacks';
 import { WidgetCard } from '../ui/widget';
+import parse from 'html-react-parser';
 
 const heroContent = {
-  badgeGreetingLine1: 'Hi, Im <strong>Naufal Fathur</strong>',
-  badgeGreetingLine2: 'Welcome to my Portfolio !',
+  badgeGreetingLine: 'Hi, Im <strong>Naufal Fathur</strong><br/>Welcome to my Portfolio !',
   title: 'Creative Technologist for <br/> <br/> <br/> the next big ideas',
-  subtitle: `I design and develop digital experiences that blend creativity with technology.
-With a background in digitalisation and strategy, I don’t just build things, I help businesses shape where they’re going.
-As the Technical Co-Founder of <span className="tooltip font-bold" data-tip="Visit the page"><Link href="https://generatif.co/" target="_blank" rel="noopener noreferrer">Generatif</Link></span>, I’ve worked at the intersection of creativity, technology, and business transformation.`,
+  subtitle:
+    `Im <span classname="font-bold">Naufal</span> and Im the <span classname="font-bold">Co-Founder</span> of
+  <span className="cursor-pointer tooltip icon text-[#2FA8FF] font-bold inline-flex items-start gap-1 align-bottom" data-tip="Visit the page">
+        <Image src="/generatif-ico.svg" height={20} width={20} alt={'generatif'} className='w-5 h-5 inline-block' />
+        <Link href="https://generatif.co/" target="_blank" rel="noopener noreferrer">Generatif</Link>
+    </span>, 
+  I design and develop digital experiences that blend creativity with technology.
+  With a background in digitalisation and strategy, I don’t just build things, I help businesses shape where they’re going.
+  I’ve worked at the intersection of creativity, technology, and business transformation.`,
   widget1Title: 'My Photograph',
   widget1Subtitle: '📍 Taken on Leeds, UK',
   widget2Title: 'Latest Project',
@@ -45,34 +51,30 @@ function Hero() {
 
       <div className="h-3/5 flex w-7/12 space-x-20">
         <div className="hero-texts w-1/2 h-full flex flex-col space-y-8 justify-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.6,
-              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
-            }}
-          >
-            <div className="badge badge-outline h-fit py-2 px-4 flex flex-row space-x-2 shadow-lg">
-              <div className="avatar">
-                <div className="md:w-10 md:h-10 w-8 h-8 rounded-full">
-                  <Image
-                    src={'/profile.jpeg'}
-                    alt={'naufal fathur'}
-                    width={42}
-                    height={0}
-                    quality={90}
-                  />
-                </div>
-              </div>
 
-              <div className='flex flex-col space-y-0 text-start items-start text-base text-[#5B5B5B]'>
-                <p className='text-xs' dangerouslySetInnerHTML={{ __html: heroContent.badgeGreetingLine1 }} />
-                <p className='text-xs' dangerouslySetInnerHTML={{ __html: heroContent.badgeGreetingLine2 }} />
+          <div className="chat chat-start -mb-4">
+            <div className="chat-image avatar">
+              <div className="md:w-12 md:h-12 w-8 h-8 rounded-full">
+                <Image
+                  src={'/profile.jpeg'}
+                  alt={'naufal fathur'}
+                  width={52}
+                  height={0}
+                  quality={90}
+                />
               </div>
-
             </div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.6,
+                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+              }}
+              className="chat-bubble text-sm">
+              <p>{parse(heroContent.badgeGreetingLine)}</p>
+            </motion.div>
+          </div>
 
 
           <div className='main-hero-title w-full'>
@@ -84,8 +86,9 @@ function Hero() {
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                   key={index}
                   className="md:text-5xl text-3xl font-extrabold text-[#1F2937] inline-block mr-1.5"
-                  dangerouslySetInnerHTML={{ __html: contentTitleWords }}
-                />
+                >
+                  {parse(contentTitleWords)}
+                </motion.p>
               ))}
             </h1>
           </div>
@@ -96,13 +99,7 @@ function Hero() {
               animate={{ filter: "blur(0)", opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="md:text-base text-base font-thin text-justify"
-              dangerouslySetInnerHTML={{
-                __html: heroContent.subtitle.replace(
-                  /<span className="tooltip font-bold" data-tip="Visit the page"><Link href="https:\/\/generatif\.co\/" target="_blank" rel="noopener noreferrer">Generatif<\/Link><\/span>/g,
-                  `<span class="tooltip font-bold" data-tip="Visit the page"><a href="https://generatif.co/" target="_blank" rel="noopener noreferrer">Generatif</a></span>`
-                ),
-              }}
-            />
+            >{parse(heroContent.subtitle)}</motion.p>
           </div>
         </div>
 
