@@ -35,7 +35,7 @@ function ProjectGrid({ projects }: any) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.9, ease: 'easeInOut' }}
-                className="absolute overlay2 pointer-events-none"
+                className="absolute overlay-card pointer-events-none"
                 aria-hidden
             />}
 
