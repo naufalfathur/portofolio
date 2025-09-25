@@ -141,10 +141,55 @@
   padding-right: 1.25rem;
 
   /* Subtle inner/outer shadow for depth */
-  box-shadow: inset 0 1px 12px rgba(255, 255, 255, 0.06), 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* Ensure nested elements inherit white text unless explicitly styled */
 .glass-new * {
   color: inherit;
+}
+
+.glass-new-new {
+  /* Frosted background */
+  background: rgba(220, 220, 220, 0.271);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+
+  /* White border */
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  /* matches rounded-xl */
+
+  /* Text styling inside */
+  color: #ffffff;
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  /* Subtle inner/outer shadow for depth */
+  box-shadow: inset 0 1px 12px rgba(255, 255, 255, 0.06), 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.glass-new-new * {
+  color: inherit;
+}
+
+.grids {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+    linear-gradient(to bottom, #80808012 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dot {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(#c4c6cb 1px, transparent 1px);
+  background-size: 16px 16px;
 }

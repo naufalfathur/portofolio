@@ -4,6 +4,7 @@ import Contact from "@/components/app/contact";
 import Experiences from "@/components/app/experiences";
 import Extras from "@/components/app/extras";
 import Hero from "@/components/app/hero";
+import ProjectGrid from "@/components/app/projectGrid";
 import FadeInSection from "@/components/ui/fade-in-section";
 import Footer from "@/components/ui/footer";
 import Navbar from "@/components/ui/navbar";
@@ -52,32 +53,11 @@ export default function Home() {
         </FadeInSection> */}
 
         <FadeInSection>
-          <ProjectSection
-            title={"My Software Project"}
-            desc={"I bring innovative ideas to life by building custom software applications that streamline processes and empower businesses."}
-            filter={"software"}
-          />
+          <ProjectGrid />
         </FadeInSection>
 
         <FadeInSection>
           <Agency />
-        </FadeInSection>
-
-        <FadeInSection>
-          <ProjectSection
-            title={"My Website Project"}
-            desc={"Some of my projects for clients to create user-friendly and visually captivating websites."}
-            filter={"website"}
-            titleOnLeft={false}
-          />
-        </FadeInSection>
-
-        <FadeInSection>
-          <ProjectSection
-            title={"My UI/UX Project"}
-            desc={"I craft intuitive user interfaces (UI) and user experiences (UX)"}
-            filter={"ui/ux"}
-          />
         </FadeInSection>
 
         {/* <Extras/> */}
