@@ -5,10 +5,19 @@ import Experiences from "@/components/app/experiences";
 import Extras from "@/components/app/extras";
 import Hero from "@/components/app/hero";
 import ProjectGrid from "@/components/app/projectGrid";
-import FadeInSection from "@/components/ui/fade-in-section";
+import FadeUpMotion from "@/components/ui/fade-up-motion";
 import Footer from "@/components/ui/footer";
 import Navbar from "@/components/ui/navbar";
 import ProjectSection from "@/components/ui/project-section";
+import { motion } from "framer-motion";
+
+const sections = [
+  { id: "hero", component: <Hero /> },
+  { id: "about", component: <About /> },
+  { id: "projects", component: <ProjectGrid /> },
+  { id: "agency", component: <Agency /> },
+  { id: "contact", component: <Contact /> },
+]
 
 export default function Home() {
   return (
@@ -18,54 +27,21 @@ export default function Home() {
       <Navbar />
 
       <div className="md:hidden">
-        <Hero />
-        <About />
-        {/* <Experiences /> */}
-        <ProjectSection
-          title={"My Software Project"}
-          desc={"I bring innovative ideas to life by building custom software applications that streamline processes and empower businesses."}
-          filter={"software"}
-        />
-        <Agency />
-        <ProjectSection
-          title={"My Website Project"}
-          desc={"Some of my projects for clients to create user-friendly and visually captivating websites."}
-          filter={"website"}
-        />
-        <ProjectSection
-          title={"My UI/UX Project"}
-          desc={"I craft intuitive user interfaces (UI) and user experiences (UX)"}
-          filter={"ui/ux"}
-        />
-        <Contact />
+        {sections.map((section) => (
+          <div id={section.id} key={section.id} className="w-full">
+            {section.component}
+          </div>
+        ))}
       </div>
 
       <div className="hidden md:block">
-        <FadeInSection>
-          <Hero />
-        </FadeInSection>
-
-        <FadeInSection>
-          <About />
-        </FadeInSection>
-
-        {/* <FadeInSection>
-          <Experiences />
-        </FadeInSection> */}
-
-        <FadeInSection>
-          <ProjectGrid />
-        </FadeInSection>
-
-        <FadeInSection>
-          <Agency />
-        </FadeInSection>
-
-        {/* <Extras/> */}
-
-        <FadeInSection>
-          <Contact />
-        </FadeInSection>
+        {sections.map((section) => (
+          <div id={section.id} key={section.id} className="w-full">
+            <FadeUpMotion>
+              {section.component}
+            </FadeUpMotion>
+          </div>
+        ))}
       </div>
 
 

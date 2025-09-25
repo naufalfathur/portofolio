@@ -7,8 +7,8 @@ import Image from 'next/image'
 import Link from 'next/link';
 import { MoveRight } from 'lucide-react';
 import Form from '../ui/form';
-import FadeInSection from '../ui/fade-in-section';
 import parse from 'html-react-parser';
+import FadeUpMotion from '../ui/fade-up-motion';
 
 interface ProjectProps {
   project: TProject
@@ -18,7 +18,7 @@ function Project({ project }: ProjectProps) {
   return (
     <div className='md:px-[20vw] space-y-4 py-10 px-4'>
 
-      <FadeInSection>
+      <FadeUpMotion>
 
         <div className="card w-full md:h-[65vh] h-[40vh] bg-base-100 shadow-xl image-full ">
           <figure>
@@ -33,7 +33,7 @@ function Project({ project }: ProjectProps) {
             />
           </figure>
           <div className="card-body flex flex-col justify-end rounded-xl cursor-pointer ">
-            {project.featured && 
+            {project.featured &&
               <div className={`badge capitalize badge-primary`}>Featured</div>
             }
             <h2 className={'md:text-8xl text-4xl font-extrabold card-title uppercase'} >{project.name}</h2>
@@ -45,9 +45,9 @@ function Project({ project }: ProjectProps) {
           </div>
         </div>
 
-      </FadeInSection>
+      </FadeUpMotion>
 
-      <FadeInSection>
+      <FadeUpMotion>
         <div className='md:space-x-8 py-6 flex md:flex-row flex-col'>
           <article className="prose space-y-4  w-full">
 
@@ -91,7 +91,7 @@ function Project({ project }: ProjectProps) {
             <Form title='Interested with this project ?' />
           </div>
         </div>
-      </FadeInSection>
+      </FadeUpMotion>
 
 
 

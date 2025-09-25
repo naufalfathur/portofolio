@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import { Bitter } from "next/font/google";
 import { Key, MoveLeft, MoveRight } from 'lucide-react';
 const bitter = Bitter({ subsets: ["latin"] });
-import { projectList } from '../../public/data/projects'
 import Image from 'next/image'
 import Link from 'next/link';
 import { Project } from '@/types';
@@ -18,6 +17,7 @@ const ProjectContent = {
 
 function ProjectGrid({ projects }: any) {
     const [highlightedProjectData, setHighlightedProjectData] = useState<Project[]>([])
+    const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
         fetch('/api/projects')
@@ -28,11 +28,19 @@ function ProjectGrid({ projects }: any) {
             })
             .catch(err => console.error('Error fetching from API:', err));
     }, []);
-
-    const filteredObjects = projectList.reverse().slice(0, 6);
     return (
         <LiquidGlassProvider >
-            <div className="w-full max-w-6xl mx-auto space-y-20 my-10 p-6 h-full">
+
+            {isHovered && <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.9, ease: 'easeInOut' }}
+                className="absolute overlay pointer-events-none"
+                aria-hidden
+            />}
+
+            <div className="w-full max-w-6xl mx-auto space-y-20 my-10 p-6 h-full relative">
+
 
                 <div className='flex flex-col space-y-2 text-center '>
                     <h2 className={`text-3xl font-extrabold ` + bitter.className}> {ProjectContent.title}</h2>
@@ -48,7 +56,10 @@ function ProjectGrid({ projects }: any) {
                 <div className=' grid grid-cols-2 gap-4'>
                     {highlightedProjectData.map((project, i) => (
                         <Link href={`/project/${project.id}`} key={i}>
-                            <div className="card w-full h-[480px] glass !shadow-xl cursor-pointer relative overflow-clip" >
+                            <div
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
+                                className="card w-full h-[480px] glass !shadow-xl cursor-pointer relative overflow-clip hover:z-[200]" >
                                 <LiquidGlassFilters />
                                 <div className="flex-col space-y-2 justify-center items-center  p-12">
                                     <div className="flex justify-between space-x-5">

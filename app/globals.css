@@ -193,3 +193,8 @@
   background-image: radial-gradient(#cfd2d8 1px, transparent 1px);
   background-size: 16px 16px;
 }
+
+.overlay {
+  background: #ffffffeb;
+  z-index: 100;
+}
