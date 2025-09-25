@@ -12,7 +12,8 @@ import ProjectSection from "@/components/ui/project-section";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen md:w-full flex-col items-center justify-between  ">
+    <main className="flex min-h-screen md:w-full flex-col items-center justify-between  relative">
+      <div className="absolute inset dot z-1 pointer-events-none"></div>
 
       <Navbar />
 

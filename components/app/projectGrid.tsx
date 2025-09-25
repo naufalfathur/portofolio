@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { Project } from '@/types';
 import { ArrowCircle } from '@/public/svgs';
 import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-glass';
+import { motion } from 'framer-motion';
 
 const ProjectContent = {
     title: "Lorem ipsum  dolor sit amet consectetur",
@@ -31,34 +32,41 @@ function ProjectGrid({ projects }: any) {
     const filteredObjects = projectList.reverse().slice(0, 6);
     return (
         <LiquidGlassProvider >
-            <div className="relative">
-                <div className="absolute inset-0 grids pointer-events-none -z-10"></div>
-                <div className="w-full max-w-6xl mx-auto space-y-20 my-10 p-6 h-full">
+            <div className="w-full max-w-6xl mx-auto space-y-20 my-10 p-6 h-full">
 
-                    <div className='flex flex-col space-y-2 text-center '>
-                        <h2 className={`text-3xl font-extrabold ` + bitter.className}> {ProjectContent.title}</h2>
-                        <p className='text-sm font-light'>{ProjectContent.desc}</p>
-                        <Link href="/project" className=''>
-                            <button className="btn btn-outline">
-                                View All Projects
-                                <MoveRight />
-                            </button>
-                        </Link>
-                    </div>
+                <div className='flex flex-col space-y-2 text-center '>
+                    <h2 className={`text-3xl font-extrabold ` + bitter.className}> {ProjectContent.title}</h2>
+                    <p className='text-sm font-light'>{ProjectContent.desc}</p>
+                    <Link href="/project" className=''>
+                        <button className="btn btn-outline">
+                            View All Projects
+                            <MoveRight />
+                        </button>
+                    </Link>
+                </div>
 
-                    <div className=' grid grid-cols-2 gap-4'>
-                        {highlightedProjectData.map((project, i) => (
-                            <Link href={`/project/${project.id}`} key={i}>
-                                <div className="card w-full h-[480px] glass !shadow-xl cursor-pointer relative" >
-                                    <LiquidGlassFilters />
-                                    <div className="flex-col space-y-2 justify-center items-center  p-8">
-                                        <div className="flex justify-between space-x-5">
-                                            <h2 className={`text-2xl font-extrabold card-title `} >{project.name}</h2>
-                                            <ArrowCircle className='-rotate-45' width={50} height={50} />
-                                        </div>
-                                        <p className='text-md text-justify text-slate-500'>{project.descTitle}</p>
+                <div className=' grid grid-cols-2 gap-4'>
+                    {highlightedProjectData.map((project, i) => (
+                        <Link href={`/project/${project.id}`} key={i}>
+                            <div className="card w-full h-[480px] glass !shadow-xl cursor-pointer relative overflow-clip" >
+                                <LiquidGlassFilters />
+                                <div className="flex-col space-y-2 justify-center items-center  p-12">
+                                    <div className="flex justify-between space-x-5">
+                                        <h2 className={`text-2xl font-extrabold card-title `} >{project.name}</h2>
+                                        <ArrowCircle className='-rotate-45' width={50} height={50} circFill='#B2B2B232' />
                                     </div>
-                                    <div className='absolute bottom-0 w-full justify-center flex'>
+                                    <p className='text-sm text-justify text-slate-500 font-light'>{project.descTitle}</p>
+                                </div>
+                                <motion.div
+                                    initial={{ y: -200 }}
+                                    whileHover={{ y: -230 }}
+                                    transition={{
+                                        type: "spring",
+                                        bounce: 0.4,
+                                        duration: 0.8,
+                                    }}
+                                    className=''>
+                                    <div className='w-full justify-center flex   pt-44'>
                                         <Image
                                             src={project.thumbnail?.fields.file.url ? ('https:/' + project.thumbnail.fields.file.url) : '/logo.svg'}
                                             alt={project.name}
@@ -67,12 +75,12 @@ function ProjectGrid({ projects }: any) {
                                             quality={90}
                                         />
                                     </div>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-
+                                </motion.div>
+                            </div>
+                        </Link>
+                    ))}
                 </div>
+
             </div>
         </LiquidGlassProvider>
     )
