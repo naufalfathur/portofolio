@@ -9,12 +9,13 @@ import ProjectGrid from '@/components/app/projectGrid';
 function ProjectsPage() {
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between  ">
+        <main className="flex min-h-screen flex-col items-center justify-between relative ">
+            <div className="absolute inset dot z-0 pointer-events-none"></div>
             <Navbar />
-            <div className='md:px-[15vw] px-4 space-y-4 py-24'>
+            <div className='md:px-[15vw] px-4 space-y-4 py-24 z-10'>
                 <h2 className={`text-3xl font-extrabold text-center w-full` + bitter.className}> All Project</h2>
                 <p className='text-sm font-light text-center'>Showcase of my projects for clients and self development to create user-friendly and visually digital solutions.</p>
-                <div className='projects-grid'>
+                <div className='projects-grid relative'>
                     <ProjectGrid isFeatured={false} withTitle={false} />
                 </div>
             </div>

@@ -86,7 +86,7 @@ function ProjectGrid({ isFeatured, withTitle }: ProjectGridProps) {
                                     className=''>
                                     <div className='w-full justify-center flex pt-44'>
                                         <Image
-                                            src={project.thumbnail?.fields.file.url ? ('https:/' + project.thumbnail.fields.file.url) : '/logo.svg'}
+                                            src={project.thumbnail?.fields.file.url ? ('https:' + project.thumbnail.fields.file.url) : '/logo.svg'}
                                             alt={project.name}
                                             width={450}
                                             height={0}
