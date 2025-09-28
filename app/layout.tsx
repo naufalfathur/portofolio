@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" >
       <GoogleTagManager gtmId="GTM-5RNJH6NR" />
-      <script src='script.js' defer></script>
+      {/* <script src='script.js' defer></script> */}
       <body className={figtree.className}>
         {children}
         <div className='logo-floating fixed z-50 bottom-20 right-5 md:right-40 floating tooltip tooltip-open tooltip-top tooltip-warning cursor-pointer' data-tip="Click to work with me!">

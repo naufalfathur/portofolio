@@ -64,6 +64,10 @@ function Hero() {
                 />
               </div>
             </div>
+            <div className="chat-header flex space-x-2 items-center text-xs mb-1">
+              <p className='!text-orange-500'>⏺</p>
+              <p className='font-semibold'> Available for work</p>
+            </div>
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}

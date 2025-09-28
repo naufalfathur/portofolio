@@ -1,14 +1,3 @@
-export type TProject = {
-  name: string,
-  type: string,
-  featured: boolean,
-  img: string,
-  url: string,
-  descTitle: string,
-  desc: string[],
-  technologies: string[],
-}
-
 export type AssetFile = {
   url: string;
   details: {
@@ -37,9 +26,10 @@ export type Asset = {
   fields: AssetFields;
 };
 
-export interface Project {
+export interface TProject {
   id: string;               // Contentful entry ID (or slug)
   name: string;             // Entry title
+  ProjectDate: string;      // New field for project date
   slug: string;             // Slug
   featured: boolean;        // Featured flag
   thumbnail?: Asset;        // Media object
@@ -49,7 +39,8 @@ export interface Project {
   technologies?: string[];  // List of technologies
   background?: string;      // Long text background
   url?: string;             // External URL
-  image?: Asset;            // Media object
-  embedAssets?: any;        // JSON object, can type more strictly if known
+  themeColor: string;       // New field for theme color
+  mainSectionImg: Asset;    // New field for main section image
+  otherSectionImg: Asset[]; // New field for other section images (multiple)
   desc?: string;            // Long text description
 }

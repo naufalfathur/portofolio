@@ -125,6 +125,14 @@
   animation: brighten-on-hover 0.5s ease-in-out forwards, scale-on-hover 0.5s ease-in-out forwards;
 }
 
+.popup-fade:hover {
+  animation: ease-in-out forwards, scale-on-hover 0.5s ease-in-out forwards;
+}
+
+.popup-fade-fast:hover {
+  animation: ease-in-out forwards, scale-on-hover 0.3s ease-in-out forwards;
+}
+
 /* === Custom Glass Effect (overrides DaisyUI .glass) === */
 .glass-new {
   /* White border */

@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 const sections = [
   { id: "hero", component: <Hero /> },
   { id: "about", component: <About /> },
-  { id: "projects", component: <ProjectGrid /> },
+  { id: "projects", component: <ProjectGrid isFeatured={true} withTitle={true} /> },
   { id: "agency", component: <Agency /> },
   { id: "contact", component: <Contact /> },
 ]

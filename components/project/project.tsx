@@ -1,105 +1,186 @@
+'use client'
 import { TProject } from '@/types'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Bitter } from "next/font/google";
 import { techstackList } from '@/public/data/techstacks';
 const bitter = Bitter({ subsets: ["latin"] });
 import Image from 'next/image'
 import Link from 'next/link';
-import { MoveRight } from 'lucide-react';
+import { MoveRight, Sparkle, Sparkles } from 'lucide-react';
 import Form from '../ui/form';
 import parse from 'html-react-parser';
 import FadeUpMotion from '../ui/fade-up-motion';
+import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-glass';
+import { ArrowCircle } from '@/public/svgs';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import MediaAssetsSection from './mediaAssetsSection';
+import { motion } from 'framer-motion';
 
 interface ProjectProps {
-  project: TProject
+  slug: string
 }
 
-function Project({ project }: ProjectProps) {
+function Project({ slug }: ProjectProps) {
+  const [projectData, setProjectData] = useState<TProject>()
+  const [themeColor, setThemeColor] = useState<string>()
+
+  useEffect(() => {
+    fetch('/api/projects')
+      .then(res => res.json())
+      .then((data: TProject[]) => {
+        const project = data.filter(project => project.slug == slug)[0];
+        setProjectData(project);
+        setThemeColor(project.themeColor)
+        console.log('server: contentful res', project);
+      })
+      .catch(err => console.error('Error fetching from API:', err));
+  }, []);
+
   return (
-    <div className='md:px-[20vw] space-y-4 py-10 px-4'>
-
+    <LiquidGlassProvider>
       <FadeUpMotion>
+        <div className='w-full max-w-6xl mx-auto space-y-4 py-10'>
+          <div className='flex flex-col justify-center items-center space-y-2 font-light'>
 
-        <div className="card w-full md:h-[65vh] h-[40vh] bg-base-100 shadow-xl image-full ">
-          <figure>
+
             <Image
-              src={project.img}
-              alt={project.name}
-              width={0}
+              src={projectData?.thumbnail?.fields.file.url ? ('https:/' + projectData.thumbnail.fields.file.url) : '/logo.svg'}
+              alt={projectData?.name ?? 'Project thumbnail'}
+              width={450}
               height={0}
-              sizes='100vw'
               quality={90}
-              style={{ width: 'auto', height: '100%' }}
             />
-          </figure>
-          <div className="card-body flex flex-col justify-end rounded-xl cursor-pointer ">
-            {project.featured &&
-              <div className={`badge capitalize badge-primary`}>Featured</div>
-            }
-            <h2 className={'md:text-8xl text-4xl font-extrabold card-title uppercase'} >{project.name}</h2>
-            {project.url.length > 0 &&
-              <Link href={project.url} className="btn w-fit">
-                Visit Site
-                <MoveRight />
-              </Link>}
-          </div>
-        </div>
+            <div className='title-section flex-col w-full text-center'>
+              <h1 className='text-3xl font-bold mt-4'>{projectData?.name}</h1>
+              <p className='text-sm mt-1'>{projectData?.descTitle}</p>
+              <div className="divider"></div>
+            </div>
 
-      </FadeUpMotion>
+            <div className='short-desc-section flex w-full space-x-10'>
 
-      <FadeUpMotion>
-        <div className='md:space-x-8 py-6 flex md:flex-row flex-col'>
-          <article className="prose space-y-4  w-full">
+              <div className='roles flex-col text-left space-y-2 w-1/4'>
+                <h1 className='text-xl font-bold mt-4'>My Role</h1>
+                <div className="flex-col space-y-2">
+                  {projectData?.role?.map((role, i) => (
+                    <div key={i} className='relative card !shadow-xl flex-row py-2 space-x-2 w-full px-5 popup-fade'>
+                      <LiquidGlassFilters />
+                      <Sparkles className='!text-[#1B232E]/60 w-4' />
+                      <p className='text-xs !text-[#1B232E]/60 font-bold mt-1'>{role}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-            <h2 className={`text-xl font-extrabold ` + bitter.className}> Techstacks</h2>
-
-
-            <div className='flex'>
-              {project.technologies.map((tech, i) => (
-                <div key={i}>
-                  {
-                    techstackList.filter((techstack) => techstack.name === tech).map(((techs, i) => (
-                      <div className="tooltip" data-tip={techs.name} key={i}>
+              <div className='short-desc flex-col text-left space-y-4 w-3/4'>
+                <h1 className='text-xl font-bold'>Tech Stacks</h1>
+                <div className="">
+                  <div className='items-center flex space-x-4 mb-2'>
+                    {projectData?.technologies?.map((tech, i) => (
+                      <div className="carousel-item flex-col text-center space-y-2" key={i}>
                         <Image
                           alt=''
-                          src={techs.icon}
-                          width={100} height={0}
+                          src={techstackList.find(item => item.name === tech)?.icon || '/default-icon.svg'}
+                          width={80} height={0}
                           quality={100}
-                          className='w-20 h-10 saturate-0 icon'
+                          className='w-10 h-10 saturate-0 icon'
                         />
+                        <p className='text-xs font-bold text-black/50'>{tech}</p>
                       </div>
-                    )))
-                  }
+                    ))}
+                  </div>
                 </div>
-              ))}
+
+                <div className="project-bg flex-col w-full space-y-2">
+                  <h1 className='text-xl font-bold'>Project Background</h1>
+                  <p className='text-sm/6 text-justify text-gray-600 whitespace-pre-line'>{projectData?.background}</p>
+                </div>
+
+                <div className="flex w-full space-x-4">
+                  <div className="bg-[#1F2937] rounded-xl text-white py-2 px-8 shadow-xl w-fit popup-fade cursor-pointer">
+                    <div className="flex space-x-2 items-center">
+                      <span className="text-xs font-bold">Read Details</span>
+                      <ArrowCircle className='rotate-90' width={30} height={30} circFill='#B2B2B232' />
+                    </div>
+                  </div>
+                  {projectData?.url && projectData.url.length > 0 && (
+                    <div className="rounded-xl text-[#1F2937] py-2 px-8 shadow-xl w-fit popup-fade cursor-pointer">
+                      <div className="flex space-x-2 items-center">
+                        <span className="text-xs font-bold">Visit website</span>
+                        <ArrowCircle className='-rotate-45' width={30} height={30} circFill='#B2B2B232' />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
 
-            <div className='text-justify space-y-4 py-4'>
-              <p className='text-justify font-bold'>{project.descTitle}</p>
+            <div className="divider !mt-4"></div>
 
+            <div className='mediaAssets w-full h-[550px] p-4'>
+              <div className="flex w-full h-full space-x-4">
 
-              {project.desc.map((des, i) => (
-                <ul key={i}>
-                  <li>{parse(des)}</li>
-                </ul>
-              ))}
+                <div className="mainSection w-1/4 h-full rounded-3xl overflow-clip" style={{
+                  backgroundColor: themeColor
+                    ? `#${themeColor}`
+                    : '#ccc', // fallback color
+                }}>
+                  <motion.div
+                    className="relative w-full h-full overflow-hidden rounded-3xl"
+                    whileHover={{ scale: 1.05 }}
+                    initial={{ scale: 1 }}
+                    transition={{
+                      duration: 0.8,
+                      scale: { type: "spring", visualDuration: 0.4, bounce: 0.8 },
+                    }}
+                    style={{ transformOrigin: "center center", willChange: "transform" }}
+                  >
+                    <Image
+                      alt=""
+                      src={projectData ? `https:${projectData.mainSectionImg.fields.file.url}` : "/logo.png"}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      quality={100}
+                      priority={false}
+                    />
+                  </motion.div>
+                </div>
+                <div className='otherSection w-3/4 h-full'>
+                  <MediaAssetsSection
+                    themeColor={themeColor ?? "#ccc"}
+                    assetQty={projectData?.otherSectionImg?.length ?? 1}
+                    otherSectionImg={projectData?.otherSectionImg ?? []}
+                  />
+                </div>
+              </div>
             </div>
-          </article>
 
-          <div className='md:w-1/2 space-y-4 py-10 md:px-10 '>
+            <div className="project-description flex-col w-4/5 space-y-2 !mt-4">
+              <div className='text-md leading-7 whitespace-pre-line text-justify text-gray-600'>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeRaw]}
+                  components={{
+                    ul: ({ node, ...props }) => <ul className="list-disc list-inside !whitespace-normal" {...props} />,
+                    ol: ({ node, ...props }) => <ol className="list-decimal list-inside !whitespace-normal" {...props} />,
+                    strong: ({ node, ...props }) => <strong className="font-bold text-lg" {...props} />,
+                    em: ({ node, ...props }) => <em className="italic" {...props} />
+                  }}
+                >
+                  {projectData?.desc ?? ''}
+                </ReactMarkdown>
+              </div>
+            </div>
 
-            <Form title='Interested with this project ?' />
+
+
           </div>
         </div>
       </FadeUpMotion>
 
-
-
-
-
-
-
-    </div>
+    </LiquidGlassProvider >
   )
 }
 

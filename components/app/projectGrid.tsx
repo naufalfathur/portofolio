@@ -5,7 +5,7 @@ import { Key, MoveLeft, MoveRight } from 'lucide-react';
 const bitter = Bitter({ subsets: ["latin"] });
 import Image from 'next/image'
 import Link from 'next/link';
-import { Project } from '@/types';
+import { TProject } from '@/types';
 import { ArrowCircle } from '@/public/svgs';
 import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-glass';
 import { motion } from 'framer-motion';
@@ -15,19 +15,26 @@ const ProjectContent = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 }
 
-function ProjectGrid({ projects }: any) {
-    const [highlightedProjectData, setHighlightedProjectData] = useState<Project[]>([])
+interface ProjectGridProps {
+    isFeatured: boolean,
+    withTitle: boolean,
+}
+
+function ProjectGrid({ isFeatured, withTitle }: ProjectGridProps) {
+    const [projectsData, setProjectsData] = useState<TProject[]>([])
     const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
         fetch('/api/projects')
             .then(res => res.json())
-            .then((data: Project[]) => {
-                const featuredProjects = data.filter(project => project.featured).reverse();
-                setHighlightedProjectData(featuredProjects);
+            .then((data: TProject[]) => {
+                let projects = isFeatured ? data.filter(project => project.featured) : data;
+                projects = projects.sort((a, b) => new Date(b.ProjectDate).getTime() - new Date(a.ProjectDate).getTime());
+                setProjectsData(projects);
             })
             .catch(err => console.error('Error fetching from API:', err));
     }, []);
+
     return (
         <LiquidGlassProvider >
 
@@ -42,7 +49,7 @@ function ProjectGrid({ projects }: any) {
             <div className="w-full max-w-6xl mx-auto space-y-20 my-10 p-6 h-full relative">
 
 
-                <div className='flex flex-col space-y-2 text-center '>
+                {withTitle && (<div className='flex flex-col space-y-2 text-center '>
                     <h2 className={`text-3xl font-extrabold ` + bitter.className}> {ProjectContent.title}</h2>
                     <p className='text-sm font-light'>{ProjectContent.desc}</p>
                     <Link href="/project" className=''>
@@ -51,11 +58,11 @@ function ProjectGrid({ projects }: any) {
                             <MoveRight />
                         </button>
                     </Link>
-                </div>
+                </div>)}
 
                 <div className=' grid grid-cols-2 gap-4'>
-                    {highlightedProjectData.map((project, i) => (
-                        <Link href={`/project/${project.id}`} key={i}>
+                    {projectsData.map((project, i) => (
+                        <Link href={`/project/${project.slug}`} key={i}>
                             <div
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}
@@ -77,13 +84,14 @@ function ProjectGrid({ projects }: any) {
                                         duration: 0.8,
                                     }}
                                     className=''>
-                                    <div className='w-full justify-center flex   pt-44'>
+                                    <div className='w-full justify-center flex pt-44'>
                                         <Image
                                             src={project.thumbnail?.fields.file.url ? ('https:/' + project.thumbnail.fields.file.url) : '/logo.svg'}
                                             alt={project.name}
                                             width={450}
                                             height={0}
                                             quality={90}
+                                            className='rounded-xl'
                                         />
                                     </div>
                                 </motion.div>
