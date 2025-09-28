@@ -18,8 +18,36 @@ function MediaAssetsSection({ themeColor, assetQty, otherSectionImg }: mediaAsse
     return (
         <div className="w-full h-full">
             {assetQty === 1 ? (
-                <div className="layoutA h-full flex flex-col space-y-4 rounded-xl" style={bgStyle}>
-                    {/* content */}
+                <div className="layoutA h-full flex flex-col space-y-4 rounded-3xl overflow-clip" style={bgStyle}>
+                    {otherSectionImg[0] && otherSectionImg[0].fields.file.contentType == "application/pdf" ? (
+                        <div>
+                            <iframe
+                                src={otherSectionImg ? ('https:' + otherSectionImg[0].fields.file.url) : '/logo.png'}
+                                className="w-full h-[80vh] border"
+                                title="MediaAsset PDF"
+                            />
+                        </div>
+                    ) : (
+                        <motion.div
+                            className="relative w-full h-full overflow-hidden rounded-3xl"
+                            whileHover={{ scale: 1.05 }}
+                            initial={{ scale: 1 }}
+                            transition={{
+                                duration: 0.8,
+                                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                            }}
+                            style={{ transformOrigin: "center center", willChange: "transform" }}
+                        >
+                            <Image
+                                alt=''
+                                src={otherSectionImg[0] ? ('https:' + otherSectionImg[0].fields.file.url) : '/logo.png'}
+                                width={otherSectionImg[0] ? otherSectionImg[0].fields.file.details.image?.width : 400}
+                                height={0}
+                                quality={100}
+                                className='w-full h-full object-cover'
+                            />
+                        </motion.div>
+                    )}
                 </div>
             ) : (
                 <div className="layoutB h-full flex flex-col space-y-4">
