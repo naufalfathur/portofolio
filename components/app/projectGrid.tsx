@@ -1,8 +1,5 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { Bitter } from "next/font/google";
-import { Key, MoveLeft, MoveRight } from 'lucide-react';
-const bitter = Bitter({ subsets: ["latin"] });
 import Image from 'next/image'
 import Link from 'next/link';
 import { TProject } from '@/types';

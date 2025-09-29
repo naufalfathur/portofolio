@@ -5,6 +5,7 @@ const bitter = Bitter({ subsets: ["latin"] });
 import { techstackList } from '../../public/data/techstacks'
 import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-glass';
 import { ArrowCircle } from '@/public/svgs';
+import Link from 'next/link';
 
 const achievements = [
   {
@@ -77,16 +78,19 @@ function About() {
           ))}
         </div>
 
-        <div className="bg-white rounded-xl  p-4 shadow-xl w-[280px] absolute top-20 -right-0 hover:cursor-pointer icon">
-          <div className="flex space-x-2 justify-between">
-            <div className="flex flex-col">
-              <span className="text-xs font-light">Want to know more?</span>
-              <span className="text-xs font-bold">See my full experiences</span>
+        <Link href="/cv" className=''>
+          <button className="bg-white rounded-xl  p-4 shadow-xl w-[280px] absolute top-20 -right-0 popup-fade">
+            <div className="flex space-x-2 justify-between">
+              <div className="flex flex-col text-left">
+                <span className="text-xs font-light">Want to know more?</span>
+                <span className="text-xs font-bold">See my full experiences</span>
+              </div>
+              <ArrowCircle className='' />
             </div>
-            <ArrowCircle className='' />
-          </div>
-        </div>
+          </button>
+        </Link>
       </div>
+
 
 
     </div>
