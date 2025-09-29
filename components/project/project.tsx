@@ -98,19 +98,19 @@ function Project({ slug }: ProjectProps) {
                 </div>
 
                 <div className="flex w-full space-x-4">
-                  <div className="bg-[#1F2937] rounded-xl text-white py-2 px-8 shadow-xl w-fit popup-fade cursor-pointer">
+                  <button className="bg-[#1F2937] rounded-xl text-white py-2 px-8 shadow-xl w-fit popup-fade cursor-pointer">
                     <div className="flex space-x-2 items-center">
                       <span className="text-xs font-bold">Read Details</span>
                       <ArrowCircle className='rotate-90' width={30} height={30} circFill='#B2B2B232' />
                     </div>
-                  </div>
+                  </button>
                   {projectData?.url && projectData.url.length > 0 && (
-                    <div className="rounded-xl text-[#1F2937] py-2 px-8 shadow-xl w-fit popup-fade cursor-pointer">
+                    <button className="rounded-xl text-[#1F2937] py-2 px-8 shadow-xl w-fit popup-fade cursor-pointer">
                       <div className="flex space-x-2 items-center">
                         <span className="text-xs font-bold">Visit website</span>
                         <ArrowCircle className='-rotate-45' width={30} height={30} circFill='#B2B2B232' />
                       </div>
-                    </div>
+                    </button>
                   )}
                 </div>
               </div>

@@ -11,8 +11,8 @@ import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-g
 import { motion } from 'framer-motion';
 
 const ProjectContent = {
-    title: "Lorem ipsum  dolor sit amet consectetur",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    title: "Selected Works",
+    desc: "A curated selection of projects showcasing my work across design, development, and digital strategy. Each project reflects a different challenge, from concept to execution."
 }
 
 interface ProjectGridProps {
@@ -46,18 +46,27 @@ function ProjectGrid({ isFeatured, withTitle }: ProjectGridProps) {
                 aria-hidden
             />}
 
-            <div className="w-full max-w-6xl mx-auto space-y-20 my-10 p-6 h-full relative">
+            <div className="w-full max-w-6xl mx-auto space-y-8 my-20 p-6 h-full relative">
 
 
-                {withTitle && (<div className='flex flex-col space-y-2 text-center '>
-                    <h2 className={`text-3xl font-extrabold ` + bitter.className}> {ProjectContent.title}</h2>
-                    <p className='text-sm font-light'>{ProjectContent.desc}</p>
-                    <Link href="/project" className=''>
-                        <button className="btn btn-outline">
-                            View All Projects
-                            <MoveRight />
-                        </button>
-                    </Link>
+                {withTitle && (<div className='flex flex-col space-y-8 text-left items-center'>
+                    <div className="grid grid-cols-3 w-full ">
+                        <div className="flex-col items-start col-span-2 space-y-2">
+                            <h2 className={`text-5xl font-extrabold`}>{ProjectContent.title}</h2>
+                            <p className='text-sm font-light text-justify '>{ProjectContent.desc}</p>
+                        </div>
+                        <div className="col-span-1 text-end content-end">
+                            <Link href="/project" className=''>
+                                <button className="bg-[#1F2937] rounded-xl text-white py-2 px-8 shadow-xl w-fit popup-fade cursor-pointer">
+                                    <div className="flex space-x-2 items-center">
+                                        <span className="text-xs font-bold">View All Projects</span>
+                                        <ArrowCircle className='-rotate-45' width={30} height={30} circFill='#B2B2B232' />
+                                    </div>
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className='divider'></div>
                 </div>)}
 
                 <div className=' grid grid-cols-2 gap-4'>
