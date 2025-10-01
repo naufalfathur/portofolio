@@ -2,7 +2,7 @@ import Footer from '@/components/ui/footer'
 import Navbar from '@/components/ui/navbar'
 import React from 'react'
 import { Bitter } from "next/font/google";
-import Form from '@/components/ui/form';
+import EmailForm from '@/components/contact/email-form';
 const bitter = Bitter({ subsets: ["latin"] });
 
 function ProjectsPage() {
@@ -17,7 +17,7 @@ function ProjectsPage() {
                     <h1 className="md:text-4xl text-xl font-extrabold text-left text-[#B3B6BA]">
                         Fill out your details and I&apos;ll be in touch.</h1>
                 </div>
-                <Form title='Contact Form' />
+                <EmailForm title='Contact Form' />
             </div>
             <Footer />
         </main>
