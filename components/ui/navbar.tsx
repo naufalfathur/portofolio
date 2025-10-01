@@ -10,6 +10,7 @@ const navigation = [
   { name: 'Projects', href: '/project', current: false },
   { name: 'CV', href: '/cv', current: false },
   { name: 'Designs', href: '/design', current: false },
+  { name: 'Photos', href: '/photos', current: false },
   { name: 'Contact', href: '/contact', current: false }
 ]
 
@@ -21,7 +22,7 @@ const config = {
 
 function Navbar() {
   return (
-    <div className="navbar glass lg:w-7/12 md:w-full sticky top-8 z-50 rounded-full border shadow-lg ">
+    <div className="navbar glass lg:w-7/12 md:w-full sticky top-8 z-[999999] rounded-full border shadow-lg ">
       <LiquidGlassFilters />
       <div className="flex-1">
         <Link className="btn btn-ghost text-xl" href='/'>

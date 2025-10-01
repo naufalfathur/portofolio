@@ -2,9 +2,7 @@ import Contact from '@/components/app/contact';
 import Footer from '@/components/ui/footer'
 import Navbar from '@/components/ui/navbar'
 import React from 'react'
-import { Bitter } from "next/font/google";
 import DocFile from '@/components/docfile/docfile';
-const bitter = Bitter({ subsets: ["latin"] });
 
 
 function DesignPage() {
@@ -12,12 +10,10 @@ function DesignPage() {
         <main className="flex min-h-screen flex-col items-center justify-between  ">
             <div className="absolute inset dot z-0 pointer-events-none"></div>
             <Navbar />
-            <div className='md:px-[15vw] px-4 space-y-4 py-24 fade-in z-50'>
-                <h2 className={`text-3xl font-extrabold text-center w-full`}> Design Portfolio</h2>
+            <div className=' max-w-6xl w-full px-4 space-y-4 py-24 fade-in z-50'>
+                <h2 className={`text-3xl font-extrabold text-center w-full`}>Designs</h2>
                 <p className='text-sm font-light text-center'>
-                    A multidisciplinary design portfolio showcasing work across branding, visual design, UI/UX, and web development.
-                    With a strong foundation in both creativity and technology, each project is crafted to deliver purposeful, user-centered solutions, ranging
-                    from digital products and brand identities to websites and visual assets.
+                    A multidisciplinary showcase of branding, visual design, UI/UX, and web projects. Each piece combines creativity and technology to deliver thoughtful, user-centered solutions.
                 </p>
                 <div className='grid gap-4 md:grid-cols-3 grid-cols-2 pt-10'>
                     <div className="w-full col-span-full">

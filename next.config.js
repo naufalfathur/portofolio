@@ -26,6 +26,12 @@ const nextConfig = {
                 hostname: "assets.codepen.io",
                 port: "",
                 pathname: "/**"
+            },
+            {
+                protocol: "https",
+                hostname: "res.cloudinary.com",
+                port: "",
+                pathname: "/**"
             }
         ],
         // optional: ensure Next serves modern formats where possible
