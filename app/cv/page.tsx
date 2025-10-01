@@ -6,6 +6,7 @@ import { Bitter } from "next/font/google";
 const bitter = Bitter({ subsets: ["latin"] });
 import Image from 'next/image'
 import Link from 'next/link';
+import DocFile from '@/components/docfile/docfile';
 
 function CVpage() {
 
@@ -19,20 +20,7 @@ function CVpage() {
                 </p>
                 <div className='grid gap-4 md:grid-cols-3 grid-cols-2 pt-10'>
                     <div className="w-full col-span-full">
-                        <iframe
-                            src="/Naufal_Wahid_CV.pdf"
-                            className="w-full h-[80vh] border"
-                            title="Design Portfolio PDF"
-                        />
-                        <div className="text-center mt-4">
-                            <a
-                                href="/Naufal_Wahid_CV.pdf"
-                                download
-                                className={`text-2xl font-extrabold text-center w-full` + bitter.className}
-                            >
-                                Download PDF
-                            </a>
-                        </div>
+                        <DocFile category={'CV'} />
                     </div>
                 </div>
             </div>

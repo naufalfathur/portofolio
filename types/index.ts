@@ -44,3 +44,10 @@ export interface TProject {
   otherSectionImg: Asset[]; // New field for other section images (multiple)
   desc?: string;            // Long text description
 }
+
+export interface TDocFile {
+  id: string;               // Contentful entry ID (or slug)
+  name: string;
+  file: Asset;
+  category: string;
+}

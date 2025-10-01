@@ -3,12 +3,11 @@ import Footer from '@/components/ui/footer'
 import Navbar from '@/components/ui/navbar'
 import React from 'react'
 import { Bitter } from "next/font/google";
+import DocFile from '@/components/docfile/docfile';
 const bitter = Bitter({ subsets: ["latin"] });
-import Image from 'next/image'
-import Link from 'next/link';
+
 
 function DesignPage() {
-
     return (
         <main className="flex min-h-screen flex-col items-center justify-between  ">
             <Navbar />
@@ -21,20 +20,7 @@ function DesignPage() {
                 </p>
                 <div className='grid gap-4 md:grid-cols-3 grid-cols-2 pt-10'>
                     <div className="w-full col-span-full">
-                        <iframe
-                            src="/design_portfolio.pdf"
-                            className="w-full h-[80vh] border"
-                            title="Design Portfolio PDF"
-                        />
-                        <div className="text-center mt-4">
-                            <a
-                                href="/design_portfolio.pdf"
-                                download
-                                className={`text-2xl font-extrabold text-center w-full` + bitter.className}
-                            >
-                                Download PDF
-                            </a>
-                        </div>
+                        <DocFile category={'Portfolio'} />
                         <div className='mt-4 gap-2 grid-cols-2'>
                             <p className="text-sm font-light text-center mb-4">
                                 Below are a few interactive showcases of my design work on Figma.
