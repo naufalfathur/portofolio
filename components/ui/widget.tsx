@@ -1,5 +1,5 @@
 import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-glass';
-import { motion } from 'framer-motion';
+import * as m from "motion/react-m"
 import React from 'react'
 
 const config = {
@@ -28,13 +28,13 @@ export const WidgetCard = ({
 }) => {
     return (
         <LiquidGlassProvider value={config} >
-            <motion.div
+            <m.div
                 className={`relative ${heightClass} overflow-visible rounded-2xl bg-cover bg-center ${className}`}
                 style={bgImage ? { backgroundImage: `url('${bgImage}')` } : { backgroundColor: '#DCDCDC' }}
                 animate={{ x: offset.x * strength, y: offset.y * strength }}
                 transition={{ type: 'spring', stiffness: 100, damping: 12 }}
             >
-                <motion.div
+                <m.div
                     className="absolute -top-4 right-4 z-30"
                     animate={{ x: offset.x * (strength * 0.7), y: offset.y * (strength * 0.7) }}
                     transition={{ type: 'spring', stiffness: 100, damping: 12 }}
@@ -44,7 +44,7 @@ export const WidgetCard = ({
                         <div className="text-xs">{title}</div>
                     </div>
 
-                </motion.div>
+                </m.div>
 
                 <div className="absolute inset-0 z-20 rounded-2xl overflow-hidden">
                     {subtitle ? (
@@ -54,7 +54,7 @@ export const WidgetCard = ({
                     ) : null}
                     {children}
                 </div>
-            </motion.div>
+            </m.div>
         </LiquidGlassProvider >
     );
 };

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import * as m from "motion/react-m"
 import { techstackList } from '@/public/data/techstacks';
 import { WidgetCard } from '../ui/widget';
 import parse from 'html-react-parser';
@@ -68,7 +68,7 @@ function Hero() {
               <p className='!text-orange-500'>⏺</p>
               <p className='font-semibold'> Available for work</p>
             </div>
-            <motion.div
+            <m.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -77,14 +77,14 @@ function Hero() {
               }}
               className="chat-bubble text-sm">
               <p>{parse(heroContent.badgeGreetingLine)}</p>
-            </motion.div>
+            </m.div>
           </div>
 
 
           <div className='main-hero-title w-full'>
             <h1>
               {contentTitleWords.map((contentTitleWords, index) => (
-                <motion.p
+                <m.p
                   initial={{ filter: "blur(10px)", opacity: 0, y: 12 }}
                   animate={{ filter: "blur(0)", opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
@@ -92,25 +92,25 @@ function Hero() {
                   className="md:text-6xl text-3xl font-extrabold text-[#1F2937] inline-block mr-1.5"
                 >
                   {parse(contentTitleWords)}
-                </motion.p>
+                </m.p>
               ))}
             </h1>
           </div>
 
           <div className='main-hero-subtitle'>
-            <motion.p
+            <m.p
               initial={{ filter: "blur(10px)", opacity: 0, y: 12 }}
               animate={{ filter: "blur(0)", opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="md:text-base text-base font-thin text-justify"
-            >{parse(heroContent.subtitle)}</motion.p>
+            >{parse(heroContent.subtitle)}</m.p>
           </div>
         </div>
 
 
         <div className="hero-widgets w-1/2 h-full flex flex-col space-y-8 justify-center items-center py-8 md:mt-0 -mt-10">
           {/* Widgets container */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
@@ -123,23 +123,23 @@ function Hero() {
                   <WidgetCard
                     title={heroContent.widget1Title}
                     subtitle={heroContent.widget1Subtitle}
-                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/1tjUn2AJ0H7pp2FwqXvwc9/4d55f87b823680dd2c30eb07f29c8c0e/842FA9DF-D81F-4AF4-B06B-026B09018ABA.JPG"
+                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/1tjUn2AJ0H7pp2FwqXvwc9/4d55f87b823680dd2c30eb07f29c8c0e/842FA9DF-D81F-4AF4-B06B-026B09018ABA.JPG?fm=webp"
                     offset={w1Offset}
                     strength={0.4}
                     heightClass="flex-[2]"
                   />
                   <WidgetCard
                     title={heroContent.widget3Title}
-                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/6X40wHgGsOR1qYwJgZXJXi/f61378ef99f52839880d390d29cd04f9/swhig.png"
+                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/6X40wHgGsOR1qYwJgZXJXi/f61378ef99f52839880d390d29cd04f9/swhig.png?fm=webp"
                     offset={w1Offset}
                     strength={0.4}
                     heightClass="flex-[1]"
                   />
 
                   {/* Overlay element crossing between Widget 1 & 3 */}
-                  <motion.div
+                  <m.div
                     className="pointer-events-none absolute bottom-0 -left-10 h-48 w-52 z-20 bg-contain bg-no-repeat bg-center"
-                    style={{ backgroundImage: "url('https://images.ctfassets.net/wtyk6zs1a32v/4v5ihXSzWrKjr8GTnaY7tL/1112aadb40c4b380b74264aecd88532b/swhigphone.png')" }}
+                    style={{ backgroundImage: "url('https://images.ctfassets.net/wtyk6zs1a32v/4v5ihXSzWrKjr8GTnaY7tL/1112aadb40c4b380b74264aecd88532b/swhigphone.png?fm=webp')" }}
                     animate={{ x: w1Offset.x * 0.4, y: w1Offset.y * 0.4 }}
                     transition={{ type: 'spring', stiffness: 120, damping: 12 }}
                   />
@@ -159,7 +159,7 @@ function Hero() {
                     <p>Best Pitch <br />Award</p>
                   </div>
 
-                  <motion.div
+                  <m.div
                     className="w-full h-full flex justify-center items-center p-4"
                     style={{ perspective: 1000 }}
                     initial={{ rotateZ: -20, rotateX: 0, y: 0, x: 40 }}
@@ -168,28 +168,15 @@ function Hero() {
                   >
                     {/* Gradient overlay (visible by default, hides on hover) */}
                     <Image
-                      src="https://images.ctfassets.net/wtyk6zs1a32v/Kx0faiSYFGUxhDpOGGdAo/da73e0d5365ac2e987e59e0ad0a29a65/tnmockup.png"
+                      src="https://images.ctfassets.net/wtyk6zs1a32v/Kx0faiSYFGUxhDpOGGdAo/da73e0d5365ac2e987e59e0ad0a29a65/tnmockup.png?fm=webp"
                       alt="TaskNinja Mockup"
                       width={400}
                       height={0}
-                      quality={100}
+                      quality={60}
                       className="object-contain w-full h-full will-change-transformright"
                     />
 
-                  </motion.div>
-
-
-
-                  {/* <iframe
-                    title="TaskNinja Prototype"
-                    className="w-full h-full rounded-2xl p-4"
-                    style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
-                    src="https://embed.figma.com/proto/Dl8tGDfe5xkWO6fri8qi2x/TaskNinja-Prototype?node-id=1-3&p=f&page-id=0%3A1&starting-point-node-id=1%3A3&embed-host=portofolio&hotspot-hints=0&hide-ui=1&scaling=scale-down-width&content-scaling=fill"
-                    allow="clipboard-write; fullscreen"
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                  /> */}
+                  </m.div>
                 </WidgetCard>
               </div>
 
@@ -202,7 +189,7 @@ function Hero() {
                         alt=''
                         src={tech.icon}
                         width={80} height={0}
-                        quality={100}
+                        quality={60}
                         className='w-10 h-10 saturate-0 icon'
                       />
                     </div>
@@ -210,7 +197,7 @@ function Hero() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div >
 
       </div >

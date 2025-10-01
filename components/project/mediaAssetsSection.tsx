@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Asset } from '@/types';
-import { motion } from 'framer-motion';
+import * as m from "motion/react-m"
 
 interface mediaAssetsSectionProps {
     themeColor: string,
@@ -28,7 +28,7 @@ function MediaAssetsSection({ themeColor, assetQty, otherSectionImg }: mediaAsse
                             />
                         </div>
                     ) : (
-                        <motion.div
+                        <m.div
                             className="relative w-full h-full overflow-hidden rounded-3xl"
                             whileHover={{ scale: 1.05 }}
                             initial={{ scale: 1 }}
@@ -46,14 +46,14 @@ function MediaAssetsSection({ themeColor, assetQty, otherSectionImg }: mediaAsse
                                 quality={100}
                                 className='w-full h-full object-cover'
                             />
-                        </motion.div>
+                        </m.div>
                     )}
                 </div>
             ) : (
                 <div className="layoutB h-full flex flex-col space-y-4">
                     <div className="grid grid-cols-9 gap-4 w-full h-full">
                         <div className="col-span-4 rounded-3xl overflow-clip" style={bgStyle}>
-                            <motion.div
+                            <m.div
                                 className="relative w-full h-full overflow-hidden rounded-3xl"
                                 whileHover={{ scale: 1.05 }}
                                 initial={{ scale: 1 }}
@@ -71,10 +71,10 @@ function MediaAssetsSection({ themeColor, assetQty, otherSectionImg }: mediaAsse
                                     quality={100}
                                     className='w-full h-full object-cover'
                                 />
-                            </motion.div>
+                            </m.div>
                         </div>
                         <div className="col-span-5 rounded-3xl overflow-clip" style={bgStyle}>
-                            <motion.div
+                            <m.div
                                 className="relative w-full h-full overflow-hidden rounded-3xl"
                                 whileHover={{ scale: 1.05 }}
                                 initial={{ scale: 1 }}
@@ -91,12 +91,12 @@ function MediaAssetsSection({ themeColor, assetQty, otherSectionImg }: mediaAsse
                                     quality={100}
                                     className='w-full h-full object-cover'
                                 />
-                            </motion.div>
+                            </m.div>
                         </div>
                     </div>
                     <div className="grid grid-cols-5 gap-4 w-full h-full">
                         <div className="col-span-3 rounded-3xl overflow-clip" style={bgStyle}>
-                            <motion.div
+                            <m.div
                                 className="relative w-full h-full overflow-hidden rounded-3xl"
                                 whileHover={{ scale: 1.05 }}
                                 initial={{ scale: 1 }}
@@ -114,10 +114,10 @@ function MediaAssetsSection({ themeColor, assetQty, otherSectionImg }: mediaAsse
                                     quality={100}
                                     className='w-full h-full object-cover'
                                 />
-                            </motion.div>
+                            </m.div>
                         </div>
                         <div className="col-span-2 rounded-3xl overflow-clip" style={bgStyle}>
-                            <motion.div
+                            <m.div
                                 initial={{ y: 10 }}
                                 whileHover={{ y: 0 }}
                                 transition={{
@@ -135,7 +135,7 @@ function MediaAssetsSection({ themeColor, assetQty, otherSectionImg }: mediaAsse
                                     quality={100}
                                     className='w-full h-full object-cover'
                                 />
-                            </motion.div>
+                            </m.div>
                         </div>
                     </div>
                 </div>

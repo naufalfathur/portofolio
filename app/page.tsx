@@ -1,15 +1,12 @@
 import About from "@/components/app/about";
 import Agency from "@/components/app/agency";
 import Contact from "@/components/app/contact";
-import Experiences from "@/components/app/experiences";
-import Extras from "@/components/app/extras";
 import Hero from "@/components/app/hero";
 import ProjectGrid from "@/components/app/projectGrid";
 import FadeUpMotion from "@/components/ui/fade-up-motion";
 import Footer from "@/components/ui/footer";
 import Navbar from "@/components/ui/navbar";
-import ProjectSection from "@/components/ui/project-section";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation } from "motion/react"
 
 const sections = [
   { id: "hero", component: <Hero /> },
@@ -26,26 +23,26 @@ export default function Home() {
 
       <Navbar />
 
-      <div className="md:hidden">
-        {sections.map((section) => (
-          <div id={section.id} key={section.id} className="w-full">
-            {section.component}
-          </div>
-        ))}
-      </div>
+      <LazyMotion features={domAnimation}>
 
-      <div className="hidden md:block">
-        {sections.map((section) => (
-          <div id={section.id} key={section.id} className="w-full">
-            <FadeUpMotion>
+        <div className="md:hidden">
+          {sections.map((section) => (
+            <div id={section.id} key={section.id} className="w-full">
               {section.component}
-            </FadeUpMotion>
-          </div>
-        ))}
-      </div>
+            </div>
+          ))}
+        </div>
 
-
-
+        <div className="hidden md:block">
+          {sections.map((section) => (
+            <div id={section.id} key={section.id} className="w-full">
+              <FadeUpMotion>
+                {section.component}
+              </FadeUpMotion>
+            </div>
+          ))}
+        </div>
+      </LazyMotion>
       <Footer />
     </main>
   );

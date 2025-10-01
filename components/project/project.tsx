@@ -3,12 +3,9 @@ import { TProject } from '@/types'
 import React, { useEffect, useState } from 'react'
 import { Bitter } from "next/font/google";
 import { techstackList } from '@/public/data/techstacks';
-const bitter = Bitter({ subsets: ["latin"] });
 import Image from 'next/image'
 import Link from 'next/link';
 import { MoveRight, Sparkle, Sparkles } from 'lucide-react';
-import Form from '../ui/form';
-import parse from 'html-react-parser';
 import FadeUpMotion from '../ui/fade-up-motion';
 import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-glass';
 import { ArrowCircle } from '@/public/svgs';
@@ -16,7 +13,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import MediaAssetsSection from './mediaAssetsSection';
-import { motion } from 'framer-motion';
+import * as m from "motion/react-m"
 
 interface ProjectProps {
   slug: string
@@ -200,7 +197,7 @@ function Project({ slug }: ProjectProps) {
                   {(!projectData || !mainSectionUrl) ? (
                     <div className="skeleton w-full h-full rounded-3xl" />
                   ) : (
-                    <motion.div
+                    <m.div
                       className="relative w-full h-full overflow-hidden rounded-3xl"
                       whileHover={{ scale: 1.05 }}
                       initial={{ scale: 1 }}
@@ -219,7 +216,7 @@ function Project({ slug }: ProjectProps) {
                         quality={100}
                         priority={false}
                       />
-                    </motion.div>
+                    </m.div>
                   )}
                 </div>
 

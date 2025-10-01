@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { TProject } from '@/types';
 import { ArrowCircle } from '@/public/svgs';
 import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-glass';
-import { motion } from 'framer-motion';
+import * as m from "motion/react-m"
 
 const ProjectContent = {
     title: "Selected Works",
@@ -35,7 +35,7 @@ function ProjectGrid({ isFeatured, withTitle }: ProjectGridProps) {
     return (
         <LiquidGlassProvider >
 
-            {isHovered && <motion.div
+            {isHovered && <m.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.9, ease: 'easeInOut' }}
@@ -81,7 +81,7 @@ function ProjectGrid({ isFeatured, withTitle }: ProjectGridProps) {
                                     </div>
                                     <p className='text-sm text-justify text-slate-500 font-light'>{project.descTitle}</p>
                                 </div>
-                                <motion.div
+                                <m.div
                                     initial={{ y: -200 }}
                                     whileHover={{ y: -230 }}
                                     transition={{
@@ -100,7 +100,7 @@ function ProjectGrid({ isFeatured, withTitle }: ProjectGridProps) {
                                             className='rounded-xl'
                                         />
                                     </div>
-                                </motion.div>
+                                </m.div>
                             </div>
                         </Link>
                     ))}

@@ -25,10 +25,10 @@ function Footer() {
         </aside>
         <nav className="grid-flow-col gap-4 justify-self-end md:w-fit w-1/2 justify-end">
           <a href='https://github.com/naufalfathur'>
-            <Image src="/github-icon.svg" height={30} width={30} alt={'github'} className='saturate-0 brightness-200'/>
+            <Image src="/github-icon.svg" height={30} width={30} alt={'github'} quality={80} className='saturate-0 brightness-200' />
           </a>
           <a href='https://www.linkedin.com/in/naufalfathur/'>
-            <Image src="/linkedin-icon.svg" height={30} width={30} alt={'github'} className='saturate-0 brightness-200'/>
+            <Image src="/linkedin-icon.svg" height={30} width={30} alt={'github'} quality={80} className='saturate-0 brightness-200' />
           </a>
         </nav>
       </footer>

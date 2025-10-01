@@ -1,5 +1,6 @@
 'use client'
-import { motion } from 'framer-motion';
+
+import * as m from "motion/react-m"
 import React from 'react'
 
 type FadeUpMotionProps = {
@@ -8,7 +9,7 @@ type FadeUpMotionProps = {
 
 function FadeUpMotion({ children }: FadeUpMotionProps) {
     return (
-        <motion.div
+        <m.div
             initial={{ filter: "blur(5px)", y: 30, opacity: 0 }}
             whileInView={{
                 filter: "blur(0)",
@@ -19,7 +20,7 @@ function FadeUpMotion({ children }: FadeUpMotionProps) {
             transition={{ duration: 0.7, ease: "easeIn" }}
         >
             {children}
-        </motion.div>
+        </m.div>
     )
 }
 

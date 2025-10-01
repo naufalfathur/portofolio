@@ -1,12 +1,30 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: [
-            "images.pexels.com",
-            "generatif.co",
-            "images.ctfassets.net"
-        ]
+        // allow next/image to optimize images coming from these remote hosts
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "images.ctfassets.net",
+                port: "",
+                pathname: "/**"
+            },
+            {
+                protocol: "https",
+                hostname: "images.pexels.com",
+                port: "",
+                pathname: "/**"
+            },
+            {
+                protocol: "https",
+                hostname: "generatif.co",
+                port: "",
+                pathname: "/**"
+            }
+        ],
+        // optional: ensure Next serves modern formats where possible
+        // formats: ['image/avif', 'image/webp'],
     }
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

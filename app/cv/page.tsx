@@ -1,7 +1,6 @@
 import Contact from '@/components/app/contact';
 import Footer from '@/components/ui/footer'
 import Navbar from '@/components/ui/navbar'
-import { projectList } from '@/public/data/projects';
 import React from 'react'
 import { Bitter } from "next/font/google";
 const bitter = Bitter({ subsets: ["latin"] });

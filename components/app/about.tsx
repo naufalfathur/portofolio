@@ -2,8 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import { Bitter } from "next/font/google";
 const bitter = Bitter({ subsets: ["latin"] });
-import { techstackList } from '../../public/data/techstacks'
-import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-glass';
 import { ArrowCircle } from '@/public/svgs';
 import Link from 'next/link';
 
@@ -44,7 +42,7 @@ function About() {
           {achievements.slice(0, 4).map((ach, i) => (
             <div key={i} className="bg-[#1F2937] rounded-xl text-white p-4 shadow-xl">
               <div className="flex space-x-2">
-                <Image src="/laurel-wreath.svg" height={30} width={30} alt="award" />
+                <Image src="/laurel-wreath.svg" height={30} width={30} alt="award" quality={80} />
                 <div className="flex flex-col">
                   <span className="text-xs font-bold">{ach.award}</span>
                   <span className="text-xs font-light">{ach.awardee}</span>
@@ -68,7 +66,7 @@ function About() {
           {achievements.slice(4,).map((ach, i) => (
             <div key={i} className="bg-[#1F2937] rounded-xl text-white p-4 shadow-xl">
               <div className="flex space-x-2">
-                <Image src="/laurel-wreath.svg" height={30} width={30} alt="award" />
+                <Image src="/laurel-wreath.svg" height={30} width={30} alt="award" quality={80} />
                 <div className="flex flex-col">
                   <span className="text-xs font-bold">{ach.award}</span>
                   <span className="text-xs font-light">{ach.awardee}</span>
