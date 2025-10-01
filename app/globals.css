@@ -55,6 +55,10 @@
   animation: fadeIn 1s ease-in both;
 }
 
+.fade-an {
+  animation: fade 1s ease-in;
+}
+
 .video-container {
   position: relative;
 }

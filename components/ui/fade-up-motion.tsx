@@ -17,7 +17,7 @@ function FadeUpMotion({ children }: FadeUpMotionProps) {
                 opacity: 1,
 
             }}
-            transition={{ duration: 0.7, ease: "easeIn" }}
+            transition={{ duration: 0.4, ease: "easeIn" }}
         >
             {children}
         </m.div>

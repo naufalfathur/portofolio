@@ -4,13 +4,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 function Agency() {
     return (
-        <div className='md:py-20 md:px-[15vw] px-4 w-full mb-10'>
+        <div className='md:py-20 md:px-[15vw] px-8 w-full mb-10'>
             <div className="card lg:card-side h-full py-10 video-container">
-                <video className="video rounded-2xl hidden md:flex" autoPlay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
-                    <source src="https://generatif.co/storage/2023/05/pexels-dan-cristian-paduret-4508069-1920x1080-50fps.mp4" type="video/mp4" />
-                </video>
+                <Image
+                    src={'https://assets.codepen.io/6093409/river.jpg'}
+                    alt={'generatif'}
+                    width={800}
+                    height={0}
+                    quality={50}
+                    className='rounded-2xl hidden md:flex w-full h-full absolute object-cover z-0'
+                />
                 <div className='overlay md:bg-[#181C1F]/80 bg-[#171E38] rounded-2xl'></div>
-                <div className="card-body w-full caption py-10 text-neutral-content">
+                <div className="card-body w-full caption py-10 px-10 text-neutral-content">
                     <div className='w-[150px] py-4'>
                         <Image
                             src={'https://generatif.co/storage/2023/06/generatif-300x66.png'}

@@ -7,9 +7,9 @@ import { MainLogo } from '../../public/svgs';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-  { name: 'Design Portfolio', href: '/design', current: false },
   { name: 'Projects', href: '/project', current: false },
   { name: 'CV', href: '/cv', current: false },
+  { name: 'Designs', href: '/design', current: false },
   { name: 'Contact', href: '/contact', current: false }
 ]
 

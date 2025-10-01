@@ -10,9 +10,10 @@ const bitter = Bitter({ subsets: ["latin"] });
 function DesignPage() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between  ">
+            <div className="absolute inset dot z-0 pointer-events-none"></div>
             <Navbar />
-            <div className='md:px-[15vw] px-4 space-y-4 py-24'>
-                <h2 className={`text-3xl font-extrabold text-center w-full` + bitter.className}> Design Portfolio</h2>
+            <div className='md:px-[15vw] px-4 space-y-4 py-24 fade-in z-50'>
+                <h2 className={`text-3xl font-extrabold text-center w-full`}> Design Portfolio</h2>
                 <p className='text-sm font-light text-center'>
                     A multidisciplinary design portfolio showcasing work across branding, visual design, UI/UX, and web development.
                     With a strong foundation in both creativity and technology, each project is crafted to deliver purposeful, user-centered solutions, ranging

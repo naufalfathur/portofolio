@@ -123,19 +123,16 @@ function Hero() {
                   <WidgetCard
                     title={heroContent.widget1Title}
                     subtitle={heroContent.widget1Subtitle}
-                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/1tjUn2AJ0H7pp2FwqXvwc9/4d55f87b823680dd2c30eb07f29c8c0e/842FA9DF-D81F-4AF4-B06B-026B09018ABA.JPG?fm=webp"
+                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/1tjUn2AJ0H7pp2FwqXvwc9/4d55f87b823680dd2c30eb07f29c8c0e/842FA9DF-D81F-4AF4-B06B-026B09018ABA.JPG?fm=webp&w=600"
                     offset={w1Offset}
                     strength={0.4}
-                    heightClass="flex-[2]"
-                  />
+                    heightClass="flex-[2]" link={''} />
                   <WidgetCard
                     title={heroContent.widget3Title}
-                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/6X40wHgGsOR1qYwJgZXJXi/f61378ef99f52839880d390d29cd04f9/swhig.png?fm=webp"
+                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/6X40wHgGsOR1qYwJgZXJXi/c131003d1ae68e6103b6da376fd4242c/swifthumbnail.png?fm=webp&w=500"
                     offset={w1Offset}
                     strength={0.4}
-                    heightClass="flex-[1]"
-                  />
-
+                    heightClass="flex-[1]" link={'/project'} />
                   {/* Overlay element crossing between Widget 1 & 3 */}
                   <m.div
                     className="pointer-events-none absolute bottom-0 -left-10 h-48 w-52 z-20 bg-contain bg-no-repeat bg-center"
@@ -152,7 +149,7 @@ function Hero() {
                   offset={w1Offset}
                   strength={0.4}
                   heightClass="h-[25rem]"
-                  className="flex-[1]"
+                  className="flex-[1]" link={'/project'}
                 >
                   <div className="absolute bottom-4 left-4 flex-col text-black space-y-1 text-xs font-semibold">
                     <Image src="/laurel-wreath.svg" height={30} width={30} alt={'award'} className='' />

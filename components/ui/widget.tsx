@@ -1,5 +1,6 @@
 import { LiquidGlassFilters, LiquidGlassProvider } from '@gracefullight/liquid-glass';
 import * as m from "motion/react-m"
+import Link from 'next/link';
 import React from 'react'
 
 const config = {
@@ -15,6 +16,7 @@ export const WidgetCard = ({
     heightClass = 'h-56',
     offset = { x: 0, y: 0 },
     strength = 0.6,
+    link = '',
     children,
 }: {
     title: string;
@@ -24,6 +26,7 @@ export const WidgetCard = ({
     heightClass?: string;
     offset?: { x: number; y: number };
     strength?: number;
+    link?: string;
     children?: React.ReactNode;
 }) => {
     return (
@@ -45,16 +48,19 @@ export const WidgetCard = ({
                     </div>
 
                 </m.div>
+                <Link href={link} className='cursor-pointer'>
 
-                <div className="absolute inset-0 z-20 rounded-2xl overflow-hidden">
-                    {subtitle ? (
-                        <div className="absolute bottom-4 right-4 text-white/90 text-xs font-semibold drop-shadow">
-                            {subtitle}
-                        </div>
-                    ) : null}
-                    {children}
-                </div>
+                    <div className="absolute inset-0 z-20 rounded-2xl overflow-hidden">
+                        {subtitle ? (
+                            <div className="absolute bottom-4 right-4 text-white/90 text-xs font-semibold drop-shadow">
+                                {subtitle}
+                            </div>
+                        ) : null}
+                        {children}
+                    </div>
+                </Link>
             </m.div>
+
         </LiquidGlassProvider >
     );
 };

@@ -20,6 +20,12 @@ const nextConfig = {
                 hostname: "generatif.co",
                 port: "",
                 pathname: "/**"
+            },
+            {
+                protocol: "https",
+                hostname: "assets.codepen.io",
+                port: "",
+                pathname: "/**"
             }
         ],
         // optional: ensure Next serves modern formats where possible
