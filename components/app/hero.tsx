@@ -129,14 +129,14 @@ function Hero() {
                     heightClass="flex-[2]" link={''} />
                   <WidgetCard
                     title={heroContent.widget3Title}
-                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/6X40wHgGsOR1qYwJgZXJXi/c131003d1ae68e6103b6da376fd4242c/swifthumbnail.png?fm=webp&w=500"
+                    bgImage="https://images.ctfassets.net/wtyk6zs1a32v/7GRKU0QRNW1z1llgX2oqHd/67b7bf0b7b3067da45e6ce9ee5ec10f2/highlihgt.png?fm=webp&w=500"
                     offset={w1Offset}
                     strength={0.4}
                     heightClass="flex-[1]" link={'/project'} />
                   {/* Overlay element crossing between Widget 1 & 3 */}
                   <m.div
                     className="pointer-events-none absolute bottom-0 -left-10 h-48 w-52 z-20 bg-contain bg-no-repeat bg-center"
-                    style={{ backgroundImage: "url('https://images.ctfassets.net/wtyk6zs1a32v/4v5ihXSzWrKjr8GTnaY7tL/1112aadb40c4b380b74264aecd88532b/swhigphone.png?fm=webp')" }}
+                    style={{ backgroundImage: "url('https://images.ctfassets.net/wtyk6zs1a32v/4WCtSFxlo5Qv34D1XEQL0E/49b71d5a64277b3a162e07c8c703a9c3/glery.png?fm=webp')" }}
                     animate={{ x: w1Offset.x * 0.4, y: w1Offset.y * 0.4 }}
                     transition={{ type: 'spring', stiffness: 120, damping: 12 }}
                   />
