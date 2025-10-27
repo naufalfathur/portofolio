@@ -2,7 +2,9 @@
 
 This is my personal portfolio website built with **Next.js**, showcasing my work, skills, and contact information. The site is designed to be fast, visually engaging, and easy to maintain.
 
-## 🚀 Tech Stack
+**Live Site:** [naufalfathur.is-a.dev](https://naufalfathur.is-a.dev/)
+
+## Tech Stack
 
 - **Frontend:** [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/), [daisyUI](https://daisyui.com/)
