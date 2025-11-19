@@ -4,10 +4,10 @@ export async function GET() {
     const CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME!;
     const API_KEY = process.env.CLOUDINARY_API_KEY!;
     const API_SECRET = process.env.CLOUDINARY_API_SECRET!;
-    const FOLDER_NAME = 'Portf';
+    const FOLDER_NAME = 'home';
 
     const res = await fetch(
-        `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/resources/image/upload?prefix=${FOLDER_NAME}/&max_results=60`,
+        `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/resources/image?max_results=100`,
         {
             headers: {
                 Authorization:
