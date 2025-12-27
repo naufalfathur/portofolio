@@ -16,7 +16,7 @@
     "html-react-parser": "5.2.6",
     "lucide-react": "0.544.0",
     "motion": "^12.23.22",
-    "next": "15.5.4",
+    "next": "15.5.9",
     "nodemailer": "^7.0.6",
     "react": "19.1.1",
     "react-dom": "19.1.1",
